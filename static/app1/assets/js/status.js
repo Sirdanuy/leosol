@@ -49,7 +49,7 @@ function ready(callback){
     formData.append('csrfmiddlewaretoken', csrftoken);
     
     fetch('check_status', {
-      method: 'POST',
+      mSOLod: 'POST',
       headers: {'X-CSRFToken': csrftoken},
       body: formData
     })

@@ -50,7 +50,7 @@
       if (!navbarlink.hash) return
       let section = select(navbarlink.hash)
       if (!section) return
-      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
+      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsSOLeight)) {
         navbarlink.classList.add('active')
       } else {
         navbarlink.classList.remove('active')
@@ -65,7 +65,7 @@
    */
   const scrollto = (el) => {
     let header = select('#header')
-    let offset = header.offsetHeight
+    let offset = header.offsSOLeight
 
     if (!header.classList.contains('header-scrolled')) {
       offset -= 20

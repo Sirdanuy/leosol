@@ -1,1603 +1,1192 @@
+<!DOCTYPE html>
 <html lang="en">
+
+
+
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<meta name="theme-color" content="#ffffff">
-	<meta property="og:url">
-	<meta name="twitter:card" content="summary_large_image">
-	<meta property="og:type" content="object">
-	<meta name="twitter:image:src" content="">
-	<meta property="og:image" content="">
-	<meta property="og:description" name="description" content="With DANAV as an initiative we are fostering a space that would allow readers and writers to engage and emerge as an individual in the community and bring their story forward.">
-	<meta name="twitter:description" content="With DANAV as an initiative we are fostering a space that would allow readers and writers to engage and emerge as an individual in the community and bring their story forward.">
-	<meta name="twitter:site" content="Danav">
-	<meta property="og:title" content="Danav">
-	<meta name="twitter:title" content="Danav">
-	<meta property="og:site_name" content="Danav">
-	<title>Danav</title>
-	<link rel="shortcut icon" href="img/7830041bbb905b78ea0c52ce63d50cf7.webp" type="image/x-icon">
-	<link rel="icon" href="img/7830041bbb905b78ea0c52ce63d50cf7.webp" type="image/x-icon">
-	<link rel="preconnect" href="https://fonts.googleapis.com/">
-	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&amp;display=swap" rel="stylesheet">
-	<style>
-	@import url('https://fonts.googleapis.com/css2?family=Short+Stack&amp;display=swap');
-	/* @font-face { font-family: Vera; font-weight: 400; src: url("./fonts/Vera.ttf"); font-display: swap; font-style: normal; } @font-face { font-family: Vera; font-weight: 600; src: url("./fonts/VeraBd.ttf"); font-display: swap; font-style: normal; } */
-	</style>
-	<style>
-	*,
-	*::before,
-	*::after {
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-		scrollbar-width: thin;
-		scrollbar-color: white black;
-		font-family: 'Montserrat', sans-serif;
-		letter-spacing: -0.03em;
-	}
-	
-	*::-webkit-scrollbar-thumb {
-		background-color: white;
-	}
-	
-	*::-webkit-scrollbar {
-		background-color: black;
-		width: 7px;
-	}
-	
-	:root {
-		font-size: 14px;
-		overflow-x: hidden;
-	}
-	
-	a {
-		color: var(--color);
-		text-decoration: none;
-		position: relative;
-	}
-	
-	a:hover {
-		text-decoration: underline;
-	}
-	/* a::after { content: ''; position: absolute; border: 1px solid currentColor; width: 100%; left: 0%; bottom: -3px; pointer-events: none; opacity: 0; transition: opacity 0.1s; } a:hover::after { opacity: 1; } */
-	
-	button,
-	input {
-		font-family: inherit;
-		border: none;
-		background-color: bisque;
-		font-size: inherit;
-	}
-	
-	button:hover,
-	button:focus,
-	input:hover,
-	input:focus {
-		outline: none;
-		filter: brightness(1.1) saturate(1.1);
-	}
-	
-	button {
-		cursor: pointer;
-	}
-	
-	b {
-		font-weight: 800;
-	}
-	
-	@media (min-width: 801px) {
-		:root {
-			font-size: 12px;
-		}
-	}
-	
-	@media (max-width: 600px) {
-		:root {
-			font-size: 11px;
-		}
-	}
-	
-	@media (max-width: 500px) {
-		:root {
-			font-size: 10px;
-		}
-	}
-	
-	@media (max-width: 380px) {
-		:root {
-			font-size: 9px;
-		}
-	}
-	
-	@media (max-width: 330px) {
-		:root {
-			font-size: 8px;
-		}
-	}
-	
-	@media (max-width: 290px) {
-		:root {
-			font-size: 7px;
-		}
-	}
-	
-	@media (min-resolution: 100dpi) {
-		body {
-			font-size: 0.9em;
-		}
-	}
-	
-	@media (min-resolution: 200dpi) {
-		body {
-			font-size: 0.8em;
-		}
-	}
-	
-	@media (min-resolution: 300dpi) {
-		body {
-			font-size: 0.7em;
-		}
-	}
-	/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9pbmRleC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxTQUFTO0lBQ1QsVUFBVTtJQUNWLHNCQUFzQjs7SUFFdEIscUJBQXFCO0lBQ3JCLDRCQUE0QjtJQUM1QixxQ0FBcUM7SUFDckMsdUJBQXVCO0FBQzNCOztBQUVBO0lBQ0ksdUJBQXVCO0FBQzNCOztBQUVBO0lBQ0ksdUJBQXVCO0lBQ3ZCLFVBQVU7QUFDZDs7QUFFQTtJQUNJLGVBQWU7SUFDZixrQkFBa0I7QUFDdEI7O0FBRUE7SUFDSSxtQkFBbUI7SUFDbkIscUJBQXFCO0lBQ3JCLGtCQUFrQjtBQUN0Qjs7QUFFQTtJQUNJLDBCQUEwQjtBQUM5Qjs7QUFFQTs7Ozs7Ozs7Ozs7Ozs7R0FjRzs7QUFFSDtJQUNJLG9CQUFvQjtJQUNwQixZQUFZO0lBQ1osd0JBQXdCO0lBQ3hCLGtCQUFrQjtBQUN0Qjs7QUFFQTtJQUNJLGFBQWE7SUFDYixxQ0FBcUM7QUFDekM7O0FBRUE7SUFDSSxlQUFlO0FBQ25COztBQUVBO0lBQ0ksZ0JBQWdCO0FBQ3BCOztBQUVBO0lBQ0k7UUFDSSxlQUFlO0lBQ25CO0FBQ0o7O0FBRUE7SUFDSTtRQUNJLGVBQWU7SUFDbkI7QUFDSjs7QUFFQTtJQUNJO1FBQ0ksZUFBZTtJQUNuQjtBQUNKOztBQUVBO0lBQ0k7UUFDSSxjQUFjO0lBQ2xCO0FBQ0o7O0FBRUE7SUFDSTtRQUNJLGNBQWM7SUFDbEI7QUFDSjs7QUFFQTtJQUNJO1FBQ0ksY0FBYztJQUNsQjtBQUNKOztBQUVBO0lBQ0k7UUFDSSxnQkFBZ0I7SUFDcEI7QUFDSjs7QUFFQTtJQUNJO1FBQ0ksZ0JBQWdCO0lBQ3BCO0FBQ0o7O0FBRUE7SUFDSTtRQUNJLGdCQUFnQjtJQUNwQjtBQUNKIiwic291cmNlc0NvbnRlbnQiOlsiKiwgKjo6YmVmb3JlLCAqOjphZnRlciB7XG4gICAgbWFyZ2luOiAwO1xuICAgIHBhZGRpbmc6IDA7XG4gICAgYm94LXNpemluZzogYm9yZGVyLWJveDtcblxuICAgIHNjcm9sbGJhci13aWR0aDogdGhpbjtcbiAgICBzY3JvbGxiYXItY29sb3I6IHdoaXRlIGJsYWNrO1xuICAgIGZvbnQtZmFtaWx5OiAnTW9udHNlcnJhdCcsIHNhbnMtc2VyaWY7XG4gICAgbGV0dGVyLXNwYWNpbmc6IC0wLjAzZW07XG59XG5cbio6Oi13ZWJraXQtc2Nyb2xsYmFyLXRodW1iIHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbn1cblxuKjo6LXdlYmtpdC1zY3JvbGxiYXIge1xuICAgIGJhY2tncm91bmQtY29sb3I6IGJsYWNrO1xuICAgIHdpZHRoOiA3cHg7XG59XG5cbjpyb290IHtcbiAgICBmb250LXNpemU6IDE0cHg7XG4gICAgb3ZlcmZsb3cteDogaGlkZGVuO1xufVxuXG5hIHtcbiAgICBjb2xvcjogdmFyKC0tY29sb3IpO1xuICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG59XG5cbmE6aG92ZXIge1xuICAgIHRleHQtZGVjb3JhdGlvbjogdW5kZXJsaW5lO1xufVxuXG4vKiBhOjphZnRlciB7XG4gICAgY29udGVudDogJyc7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIGN1cnJlbnRDb2xvcjtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBsZWZ0OiAwJTtcbiAgICBib3R0b206IC0zcHg7XG4gICAgcG9pbnRlci1ldmVudHM6IG5vbmU7XG4gICAgb3BhY2l0eTogMDtcbiAgICB0cmFuc2l0aW9uOiBvcGFjaXR5IDAuMXM7XG59XG5cbmE6aG92ZXI6OmFmdGVyIHtcbiAgICBvcGFjaXR5OiAxO1xufSAqL1xuXG5idXR0b24sIGlucHV0IHtcbiAgICBmb250LWZhbWlseTogaW5oZXJpdDtcbiAgICBib3JkZXI6IG5vbmU7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogYmlzcXVlO1xuICAgIGZvbnQtc2l6ZTogaW5oZXJpdDtcbn1cblxuYnV0dG9uOmhvdmVyLCBidXR0b246Zm9jdXMsIGlucHV0OmhvdmVyLCBpbnB1dDpmb2N1cyB7XG4gICAgb3V0bGluZTogbm9uZTtcbiAgICBmaWx0ZXI6IGJyaWdodG5lc3MoMS4xKSBzYXR1cmF0ZSgxLjEpO1xufVxuXG5idXR0b24ge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbn1cblxuYiB7XG4gICAgZm9udC13ZWlnaHQ6IDgwMDtcbn1cblxuQG1lZGlhIChtaW4td2lkdGg6IDgwMXB4KSB7XG4gICAgOnJvb3Qge1xuICAgICAgICBmb250LXNpemU6IDEycHg7XG4gICAgfVxufVxuXG5AbWVkaWEgKG1heC13aWR0aDogNjAwcHgpIHtcbiAgICA6cm9vdCB7XG4gICAgICAgIGZvbnQtc2l6ZTogMTFweDtcbiAgICB9XG59XG5cbkBtZWRpYSAobWF4LXdpZHRoOiA1MDBweCkge1xuICAgIDpyb290IHtcbiAgICAgICAgZm9udC1zaXplOiAxMHB4O1xuICAgIH1cbn1cblxuQG1lZGlhIChtYXgtd2lkdGg6IDM4MHB4KSB7XG4gICAgOnJvb3Qge1xuICAgICAgICBmb250LXNpemU6IDlweDtcbiAgICB9XG59XG5cbkBtZWRpYSAobWF4LXdpZHRoOiAzMzBweCkge1xuICAgIDpyb290IHtcbiAgICAgICAgZm9udC1zaXplOiA4cHg7XG4gICAgfVxufVxuXG5AbWVkaWEgKG1heC13aWR0aDogMjkwcHgpIHtcbiAgICA6cm9vdCB7XG4gICAgICAgIGZvbnQtc2l6ZTogN3B4O1xuICAgIH1cbn1cblxuQG1lZGlhIChtaW4tcmVzb2x1dGlvbjogMTAwZHBpKSB7XG4gICAgYm9keSB7XG4gICAgICAgIGZvbnQtc2l6ZTogMC45ZW07XG4gICAgfVxufVxuXG5AbWVkaWEgKG1pbi1yZXNvbHV0aW9uOiAyMDBkcGkpIHtcbiAgICBib2R5IHtcbiAgICAgICAgZm9udC1zaXplOiAwLjhlbTtcbiAgICB9XG59XG5cbkBtZWRpYSAobWluLXJlc29sdXRpb246IDMwMGRwaSkge1xuICAgIGJvZHkge1xuICAgICAgICBmb250LXNpemU6IDAuN2VtO1xuICAgIH1cbn1cbiJdLCJzb3VyY2VSb290IjoiIn0= */
-	</style>
-	<style>
-	#landing {
-		overflow-x: hidden;
-	}
-	
-	#overview-carousel {
-		background: url(../everseed.com/1ac7040f6e2e12840edd439e007a4384.png) no-repeat;
-		background-size: cover;
-		margin-top: -15em;
-		position: relative;
-		background-position: center top;
-	}
-	/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy92aWV3cy9MYW5kaW5nLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGtCQUFrQjtBQUN0Qjs7QUFFQTtJQUNJLDZEQUE0RjtJQUM1RixzQkFBc0I7SUFDdEIsaUJBQWlCO0lBQ2pCLGtCQUFrQjtJQUNsQiwrQkFBK0I7QUFDbkMiLCJzb3VyY2VzQ29udGVudCI6WyIjbGFuZGluZyB7XG4gICAgb3ZlcmZsb3cteDogaGlkZGVuO1xufVxuXG4jb3ZlcnZpZXctY2Fyb3VzZWwge1xuICAgIGJhY2tncm91bmQ6IHVybChcIi4uL2Fzc2V0cy9iYWNrZ3JvdW5kXFwgYXJ0L3RyYWlsZXIgYW5kIHVzcHMgYmFja2dyb3VuZCBzbWFsbC5wbmdcIikgbm8tcmVwZWF0O1xuICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG4gICAgbWFyZ2luLXRvcDogLTE1ZW07XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlciB0b3A7XG59Il0sInNvdXJjZVJvb3QiOiIifQ== */
-	</style>
-	<style>
-	#splash {
-		height: 65vw;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: column;
-		gap: 1em;
-		min-height: 60em;
-		position: relative;
-		padding-bottom: 10em;
-	}
-	
-	#splash > * {
-		position: relative;
-	}
-	
-	#splash-background {
-		position: fixed;
-		top: 0;
-		left: 0;
-		/* width: 100%; */
-		height: calc(100vh + 13em);
-		object-fit: cover;
-		object-position: center -13em;
-		z-index: -1;
-		filter: brightness(60%) contrast(0.9) saturate(1.3);
-	}
-	
-	#splash > img:not(#splash-arrow):nth-of-type(1) {
-		height: 20em;
-		max-width: 75vw;
-		object-fit: contain;
-		font-size: 0.75em;
-		margin-top: -40em;
-	}
-	
-	#splash > img:not(#splash-arrow):nth-of-type(2) {
-		height: 5.5em;
-		max-width: 75vw;
-		object-fit: contain;
-		font-size: 0.75em;
-		margin-bottom: 6em;
-	}
-	
-	#splash button {
-		font-size: 1.2em;
-	}
-	
-	#splash button:nth-of-type(1):not(:hover) .hover-text {
-		display: none;
-	}
-	
-	#splash button:nth-of-type(1):hover span:not(.hover-text) {
-		display: none;
-	}
-	
-	#splash-buttons-container {
-		display: flex;
-		gap: 3em;
-	}
-	
-	#splash-arrow {
-		width: 4em;
-		z-index: 10;
-		position: relative;
-		filter: sepia(0.8) contrast(1.8) brightness(0.8);
-	}
-	
-	@media (min-width: 1400px) {
-		#splash-arrow {
-			position: absolute;
-			top: calc(100vh - 5em - 3vh);
-		}
-	}
-	
-	@media (max-width: 1400px) {
-		#splash {
-			height: 80em;
-    background-position: center;
-    position: fixed;
-		}
-		#splash > img:not(#splash-arrow):nth-of-type(1) {
-			margin-top: -10em;
-		}
-		#splash-arrow {
-			margin-bottom: -20em;
-			margin-top: 5em;
-		}
-	}
-	
-	@media (max-width: 1200px) {
-		#splash > img:not(#splash-arrow) {
-			height: auto;
-			width: 100%;
-		}
-		#splash-buttons-container {
-			flex-direction: column;
-			gap: 1em;
-		}
-	}
-	
-	#overview-overlay {
-		position: bottom;
-		width: 160em;
-		min-width: 100%;
-		bottom: 0vw;
-		object-fit: cover;
-		object-position: bottom;
-		max-width: none;
-		pointer-events: none;
-		object-fit: cover;
-		padding-bottom: 0%;
-		/* animation: fade-in 1.5s ease-in-out forwards; */
-	}
-	/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9jb21wb25lbnRzL1NwbGFzaC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxZQUFZO0lBQ1osYUFBYTtJQUNiLG1CQUFtQjtJQUNuQix1QkFBdUI7SUFDdkIsc0JBQXNCO0lBQ3RCLFFBQVE7SUFDUixnQkFBZ0I7SUFDaEIsa0JBQWtCO0lBQ2xCLG9CQUFvQjtBQUN4Qjs7QUFFQTtJQUNJLGtCQUFrQjtBQUN0Qjs7QUFFQTtJQUNJLGVBQWU7SUFDZixNQUFNO0lBQ04sT0FBTztJQUNQLFdBQVc7SUFDWCwwQkFBMEI7SUFDMUIsaUJBQWlCO0lBQ2pCLDZCQUE2QjtJQUM3QixXQUFXO0lBQ1gsbURBQW1EO0FBQ3ZEOztBQUVBO0lBQ0ksWUFBWTtJQUNaLGVBQWU7SUFDZixtQkFBbUI7SUFDbkIsaUJBQWlCO0lBQ2pCLGlCQUFpQjtBQUNyQjs7QUFFQTtJQUNJLGFBQWE7SUFDYixlQUFlO0lBQ2YsbUJBQW1CO0lBQ25CLGlCQUFpQjtJQUNqQixrQkFBa0I7QUFDdEI7O0FBRUE7SUFDSSxnQkFBZ0I7QUFDcEI7O0FBRUE7SUFDSSxhQUFhO0FBQ2pCOztBQUVBO0lBQ0ksYUFBYTtBQUNqQjs7QUFFQTtJQUNJLGFBQWE7SUFDYixRQUFRO0FBQ1o7O0FBRUE7SUFDSSxVQUFVO0lBQ1YsV0FBVztJQUNYLGtCQUFrQjtJQUNsQixnREFBZ0Q7QUFDcEQ7O0FBRUE7SUFDSTtRQUNJLGtCQUFrQjtRQUNsQiw0QkFBNEI7SUFDaEM7QUFDSjs7QUFFQTtJQUNJO1FBQ0ksWUFBWTtJQUNoQjs7SUFFQTtRQUNJLGlCQUFpQjtJQUNyQjs7SUFFQTtRQUNJLG9CQUFvQjtRQUNwQixlQUFlO0lBQ25CO0FBQ0o7O0FBRUE7SUFDSTtRQUNJLFlBQVk7UUFDWixXQUFXO0lBQ2Y7O0lBRUE7UUFDSSxzQkFBc0I7UUFDdEIsUUFBUTtJQUNaO0FBQ0o7O0FBRUE7SUFDSSxrQkFBa0I7SUFDbEIsWUFBWTtJQUNaLGVBQWU7SUFDZixXQUFXO0lBQ1gsaUJBQWlCO0lBQ2pCLDhCQUE4QjtJQUM5QixlQUFlO0lBQ2Ysb0JBQW9CO0lBQ3BCLGlCQUFpQjtJQUNqQixrREFBa0Q7QUFDdEQiLCJzb3VyY2VzQ29udGVudCI6WyIjc3BsYXNoIHtcbiAgICBoZWlnaHQ6IDY1dnc7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gICAgZ2FwOiAxZW07XG4gICAgbWluLWhlaWdodDogNjBlbTtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgcGFkZGluZy1ib3R0b206IDEwZW07XG59XG5cbiNzcGxhc2ggPiAqIHtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG59XG5cbiNzcGxhc2gtYmFja2dyb3VuZCB7XG4gICAgcG9zaXRpb246IGZpeGVkO1xuICAgIHRvcDogMDtcbiAgICBsZWZ0OiAwO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGhlaWdodDogY2FsYygxMDB2aCArIDEzZW0pO1xuICAgIG9iamVjdC1maXQ6IGNvdmVyO1xuICAgIG9iamVjdC1wb3NpdGlvbjogY2VudGVyIC0xM2VtO1xuICAgIHotaW5kZXg6IC0xO1xuICAgIGZpbHRlcjogYnJpZ2h0bmVzcyg2MCUpIGNvbnRyYXN0KDAuOSkgc2F0dXJhdGUoMS4zKTtcbn1cblxuI3NwbGFzaCA+IGltZzpub3QoI3NwbGFzaC1hcnJvdyk6bnRoLW9mLXR5cGUoMSkge1xuICAgIGhlaWdodDogMjBlbTtcbiAgICBtYXgtd2lkdGg6IDc1dnc7XG4gICAgb2JqZWN0LWZpdDogY29udGFpbjtcbiAgICBmb250LXNpemU6IDAuNzVlbTtcbiAgICBtYXJnaW4tdG9wOiAtNDBlbTtcbn1cblxuI3NwbGFzaCA+IGltZzpub3QoI3NwbGFzaC1hcnJvdyk6bnRoLW9mLXR5cGUoMikge1xuICAgIGhlaWdodDogNS41ZW07XG4gICAgbWF4LXdpZHRoOiA3NXZ3O1xuICAgIG9iamVjdC1maXQ6IGNvbnRhaW47XG4gICAgZm9udC1zaXplOiAwLjc1ZW07XG4gICAgbWFyZ2luLWJvdHRvbTogNmVtO1xufVxuXG4jc3BsYXNoIGJ1dHRvbiB7XG4gICAgZm9udC1zaXplOiAxLjJlbTtcbn1cblxuI3NwbGFzaCBidXR0b246bnRoLW9mLXR5cGUoMSk6bm90KDpob3ZlcikgLmhvdmVyLXRleHQge1xuICAgIGRpc3BsYXk6IG5vbmU7XG59XG5cbiNzcGxhc2ggYnV0dG9uOm50aC1vZi10eXBlKDEpOmhvdmVyIHNwYW46bm90KC5ob3Zlci10ZXh0KSB7XG4gICAgZGlzcGxheTogbm9uZTtcbn1cblxuI3NwbGFzaC1idXR0b25zLWNvbnRhaW5lciB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBnYXA6IDNlbTtcbn1cblxuI3NwbGFzaC1hcnJvdyB7XG4gICAgd2lkdGg6IDRlbTtcbiAgICB6LWluZGV4OiAxMDtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgZmlsdGVyOiBzZXBpYSgwLjgpIGNvbnRyYXN0KDEuOCkgYnJpZ2h0bmVzcygwLjgpO1xufVxuXG5AbWVkaWEgKG1pbi13aWR0aDogMTQwMHB4KSB7XG4gICAgI3NwbGFzaC1hcnJvdyB7XG4gICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgICAgdG9wOiBjYWxjKDEwMHZoIC0gNWVtIC0gM3ZoKTtcbiAgICB9XG59XG5cbkBtZWRpYSAobWF4LXdpZHRoOiAxNDAwcHgpIHtcbiAgICAjc3BsYXNoIHtcbiAgICAgICAgaGVpZ2h0OiA4MGVtO1xuICAgIH1cbiAgICBcbiAgICAjc3BsYXNoID4gaW1nOm5vdCgjc3BsYXNoLWFycm93KTpudGgtb2YtdHlwZSgxKSB7XG4gICAgICAgIG1hcmdpbi10b3A6IC0xMGVtO1xuICAgIH1cblxuICAgICNzcGxhc2gtYXJyb3cge1xuICAgICAgICBtYXJnaW4tYm90dG9tOiAtMjBlbTtcbiAgICAgICAgbWFyZ2luLXRvcDogNWVtO1xuICAgIH1cbn1cblxuQG1lZGlhIChtYXgtd2lkdGg6IDEyMDBweCkge1xuICAgICNzcGxhc2ggPiBpbWc6bm90KCNzcGxhc2gtYXJyb3cpIHtcbiAgICAgICAgaGVpZ2h0OiBhdXRvO1xuICAgICAgICB3aWR0aDogMTAwJTtcbiAgICB9XG5cbiAgICAjc3BsYXNoLWJ1dHRvbnMtY29udGFpbmVyIHtcbiAgICAgICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICAgICAgZ2FwOiAxZW07XG4gICAgfVxufVxuXG4jb3ZlcnZpZXctb3ZlcmxheSB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIHdpZHRoOiAxNjBlbTtcbiAgICBtaW4td2lkdGg6IDEwMCU7XG4gICAgYm90dG9tOiAwdnc7XG4gICAgb2JqZWN0LWZpdDogY292ZXI7XG4gICAgb2JqZWN0LXBvc2l0aW9uOiBjZW50ZXIgYm90dG9tO1xuICAgIG1heC13aWR0aDogbm9uZTtcbiAgICBwb2ludGVyLWV2ZW50czogbm9uZTtcbiAgICBvYmplY3QtZml0OiBjb3ZlcjtcbiAgICAvKiBhbmltYXRpb246IGZhZGUtaW4gMS41cyBlYXNlLWluLW91dCBmb3J3YXJkczsgKi9cbn0iXSwic291cmNlUm9vdCI6IiJ9 */
-	</style>
-	<style>
-	.plank-button {
-		background-color: transparent;
-		position: relative;
-	}
-	
-	.plank-button > img {
-		/* height: 4em; */ 
-    opacity: 0.3;
-    position: sticky;
-	margin: 450px;
-	}
-	
-	.plank-button > div {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: column;
-		padding-bottom: 0.8em;
-		font-weight: bold;
-		font-size: 1.2em;
-		/* color: rgb(143, 87, 36); */
-	}
-	
-	.plank-button:hover {
-		filter: brightness(110%) saturate(115%);
-	}
-	/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9jb21wb25lbnRzL1BsYW5rQnV0dG9uLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLDZCQUE2QjtJQUM3QixrQkFBa0I7QUFDdEI7O0FBRUE7SUFDSSxXQUFXO0FBQ2Y7O0FBRUE7SUFDSSxrQkFBa0I7SUFDbEIsTUFBTTtJQUNOLE9BQU87SUFDUCxXQUFXO0lBQ1gsWUFBWTtJQUNaLGFBQWE7SUFDYixtQkFBbUI7SUFDbkIsdUJBQXVCO0lBQ3ZCLHNCQUFzQjtJQUN0QixxQkFBcUI7SUFDckIsaUJBQWlCO0lBQ2pCLGdCQUFnQjtJQUNoQix1QkFBdUI7QUFDM0I7O0FBRUE7SUFDSSx1Q0FBdUM7QUFDM0MiLCJzb3VyY2VzQ29udGVudCI6WyIucGxhbmstYnV0dG9uIHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB0cmFuc3BhcmVudDtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG59XG5cbi5wbGFuay1idXR0b24gPiBpbWcge1xuICAgIGhlaWdodDogNGVtO1xufVxuXG4ucGxhbmstYnV0dG9uID4gZGl2IHtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgdG9wOiAwO1xuICAgIGxlZnQ6IDA7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgIHBhZGRpbmctYm90dG9tOiAwLjhlbTtcbiAgICBmb250LXdlaWdodDogYm9sZDtcbiAgICBmb250LXNpemU6IDEuMmVtO1xuICAgIGNvbG9yOiByZ2IoMTQzLCA4NywgMzYpO1xufVxuXG4ucGxhbmstYnV0dG9uOmhvdmVyIHtcbiAgICBmaWx0ZXI6IGJyaWdodG5lc3MoMTEwJSkgc2F0dXJhdGUoMTE1JSk7XG59Il0sInNvdXJjZVJvb3QiOiIifQ== */
-	</style>
-	<style>
-	#carousel {
-		width: 100%;
-		position: relative;
-		overflow: hidden;
-		font-size: 1.3em;
-		/* background: url("../assets/background art/USPs Background.jpg") no-repeat center top; */
-		background-size: cover;
-		height: 66.4vw;
-		align-content: center;
-		filter: brightness(108%) saturate(1.1);
-	}
-	
-	#carousel #carousel-container {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		display: grid;
-		transition: transform 0.5s ease-in-out;
-		padding-bottom: 10em;
-	}
-	
-	#carousel .carousel-slide {
-		height: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		position: relative;
-		transform: translateX(0.2em);
-	}
-	
-	#carousel .carousel-slide img {
-		height: 35em;
-		position: relative;
-	}
-	/* #carousel .carousel-slide .description::before, #carousel .carousel-slide .description::after { content: ""; position: absolute; width: 4em; height: 100%; background-size: 100% calc(100% - 1px); background-repeat: no-repeat; } #carousel .carousel-slide .description::before { background-image: url("../assets/wooden banners/USPs_frame_left corner.png"); background-position: right center; left: calc(-4em + 1px); transform: translateY(1px); } #carousel .carousel-slide .description::after { background-image: url("../assets/wooden banners/USPs_frame_right corner(updated).png"); background-position: left 0px; right: calc(-3.5em + 1px); transform: translateY(1px); } */
-	
-	#carousel .carousel-slide .left {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: column;
-		position: relative;
-	}
-	
-	#carousel .carousel-slide .description {
-		height: 18em;
-		width: 30em;
-		font-weight: 400;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		color: rgba(219, 182, 152, 0.6);
-		background: url(https://everseed.com/c1f6cbe447320e8187071204cb06a68d.webp) center center;
-		background-size: contain;
-		background-repeat: no-repeat;
-		position: relative;
-		padding: 4em;
-		/* right: -1.5em; */
-		z-index: 0;
-	}
-	
-	#carousel .carousel-slide h1 {
-		position: relative;
-		width: calc(100% + 3em);
-		height: 2em;
-		margin-bottom: 1em;
-		background: url(../everseed.com/b7965498ab9ed66cb61666cd07fea0dc.png) no-repeat center;
-		background-size: contain;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		font-size: 2.4em;
-		font-weight: 700;
-		color: rgba(13, 1, 17, 0.6);
-		margin-right: -0.2em;
-	}
-	
-	#carousel .carousel-slide h1 span {
-		font-size: 0.65em;
-	}
-	
-	#carousel .carousel-slide .description p {
-		text-align: center;
-		font-size: 1.35em;
-		line-height: 1.3em;
-	}
-	
-	.carousel-bubbles {
-		position: absolute;
-		bottom: -3em;
-		width: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		gap: 0.5em;
-	}
-	
-	.carousel-bubbles button {
-		width: 1.2em;
-		height: 1.2em;
-		border-radius: 50%;
-		background-color: rgb(230, 191, 109);
-		border: none;
-		outline: none;
-		cursor: pointer;
-		opacity: 0.3;
-		transition: opacity 0.1s ease-in-out, background-color 0.1s ease-in-out;
-	}
-	
-	.carousel-bubbles button.active,
-	.carousel-bubbles button:hover {
-		opacity: 1;
-	}
-	
-	#carousel-next-button,
-	#carousel-previous-button {
-		position: absolute;
-		top: calc(50% - 5em);
-		width: 6em;
-		height: 8em;
-		border: none;
-		outline: none;
-		cursor: pointer;
-		transition: opacity 0.05s ease-in-out;
-		z-index: 2;
-		background: url(https://everseed.com/58632f7a6f6c526bc93cde3276905d3e.svg) center no-repeat;
-		background-size: contain;
-	}
-	
-	#carousel-previous-button {
-		left: calc(15vw - 5em);
-		transform: scaleX(-1) translateY(-50%);
-	}
-	
-	#carousel-next-button {
-		right: calc(15vw - 5em);
-		transform: translateY(-50%);
-	}
-	
-	#carousel-next-button:hover,
-	#carousel-previous-button:hover {
-		filter: brightness(1.1) saturate(1.1);
-	}
-	
-	@media (max-width: 1900px) {
-		#carousel-previous-button {
-			left: calc(10vw - 5em);
-		}
-		#carousel-next-button {
-			right: calc(10vw - 5em);
-		}
-	}
-	
-	@media (max-width: 1600px) {
-		#carousel {
-			height: 80em;
-		}
-		#carousel .carousel-slide {
-			font-size: 0.9em;
-		}
-	}
-	
-	@media (min-width: 1451px) {
-		#carousel .carousel-slide .left {
-			margin-bottom: 5.8em;
-		}
-		#carousel .carousel-slide .description {
-			margin-right: -4em;
-			padding-right: 6em;
-		}
-		#carousel .mobile {
-			display: none;
-		}
-		#carousel .carousel-slide {
-			transform: translateX(-1em);
-		}
-		#carousel .carousel-slide h1 {
-			left: 0.3em;
-		}
-		.carousel-bubbles {
-			margin-left: 3em;
-		}
-	}
-	
-	@media (max-width: 1450px) {
-		#carousel {
-			height: 100em;
-		}
-		#carousel .carousel-slide h1 {
-			left: -0.3em;
-		}
-		#carousel .desktop {
-			display: none;
-		}
-		#carousel .carousel-slide {
-			flex-direction: column;
-		}
-		#carousel .carousel-slide .description {
-			margin-top: 3em;
-		}
-		#carousel .carousel-slide .description p {
-			font-size: 1.7em;
-		}
-	}
-	
-	@media (max-width: 1200px) {
-		/* #carousel { height: 60em; } */
-		#carousel .carousel-slide img {
-			height: 35em;
-		}
-		#carousel .carousel-slide .description p {
-			font-size: 2em;
-			line-height: 1.2em;
-		}
-		.carousel-bubbles {
-			height: 0em;
-		}
-		.carousel-bubbles button {
-			width: 1.4em;
-			height: 1.4em;
-		}
-	}
-	
-	@media (max-width: 900px) {
-		#carousel {
-			font-size: 1.1em;
-		}
-		#carousel-previous-button {
-			left: 2em;
-			font-size: 0.9em;
-		}
-		#carousel-next-button {
-			right: 2em;
-			font-size: 0.9em;
-		}
-		#carousel .carousel-slide h1 {
-			font-size: 3em;
-		}
-		#carousel .carousel-slide .description p {
-			font-size: 1.7em;
-			line-height: 1.2em;
-		}
-		#carousel .carousel-slide img {
-			font-size: 0.85em;
-		}
-	}
-	
-	@media (max-width: 670px) {
-		#carousel {
-			font-size: 1em;
-		}
-	}
-	
-	@media (max-width: 470px) {
-		#carousel .carousel-slide img {
-			font-size: 0.85em;
-		}
-	}
-	/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9jb21wb25lbnRzL0Nhcm91c2VsLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLFdBQVc7SUFDWCxrQkFBa0I7SUFDbEIsZ0JBQWdCO0lBQ2hCLGdCQUFnQjtJQUNoQiwwRkFBMEY7SUFDMUYsc0JBQXNCO0lBQ3RCLGNBQWM7SUFDZCxxQkFBcUI7SUFDckIsc0NBQXNDO0FBQzFDOztBQUVBO0lBQ0ksa0JBQWtCO0lBQ2xCLE1BQU07SUFDTixPQUFPO0lBQ1AsV0FBVztJQUNYLFlBQVk7SUFDWixhQUFhO0lBQ2Isc0NBQXNDO0lBQ3RDLG9CQUFvQjtBQUN4Qjs7QUFFQTtJQUNJLFlBQVk7SUFDWixhQUFhO0lBQ2IsdUJBQXVCO0lBQ3ZCLG1CQUFtQjtJQUNuQixrQkFBa0I7SUFDbEIsNEJBQTRCO0FBQ2hDOztBQUVBO0lBQ0ksWUFBWTtJQUNaLGtCQUFrQjtBQUN0Qjs7QUFFQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0dBcUJHOztBQUVIO0lBQ0ksYUFBYTtJQUNiLG1CQUFtQjtJQUNuQix1QkFBdUI7SUFDdkIsc0JBQXNCO0lBQ3RCLGtCQUFrQjtBQUN0Qjs7QUFFQTtJQUNJLFlBQVk7SUFDWixXQUFXO0lBQ1gsZ0JBQWdCO0lBQ2hCLGFBQWE7SUFDYixtQkFBbUI7SUFDbkIsdUJBQXVCO0lBQ3ZCLCtCQUErQjtJQUMvQixpRUFBeUU7SUFDekUsd0JBQXdCO0lBQ3hCLDRCQUE0QjtJQUM1QixrQkFBa0I7SUFDbEIsWUFBWTtJQUNaLG1CQUFtQjtJQUNuQixVQUFVO0FBQ2Q7O0FBRUE7SUFDSSxrQkFBa0I7SUFDbEIsdUJBQXVCO0lBQ3ZCLFdBQVc7SUFDWCxrQkFBa0I7SUFDbEIsb0VBQWtFO0lBQ2xFLHdCQUF3QjtJQUN4QixhQUFhO0lBQ2IsbUJBQW1CO0lBQ25CLHVCQUF1QjtJQUN2QixnQkFBZ0I7SUFDaEIsZ0JBQWdCO0lBQ2hCLDJCQUEyQjtJQUMzQixvQkFBb0I7QUFDeEI7O0FBRUE7SUFDSSxpQkFBaUI7QUFDckI7O0FBRUE7SUFDSSxrQkFBa0I7SUFDbEIsaUJBQWlCO0lBQ2pCLGtCQUFrQjtBQUN0Qjs7QUFFQTtJQUNJLGtCQUFrQjtJQUNsQixZQUFZO0lBQ1osV0FBVztJQUNYLGFBQWE7SUFDYix1QkFBdUI7SUFDdkIsbUJBQW1CO0lBQ25CLFVBQVU7QUFDZDs7QUFFQTtJQUNJLFlBQVk7SUFDWixhQUFhO0lBQ2Isa0JBQWtCO0lBQ2xCLG9DQUFvQztJQUNwQyxZQUFZO0lBQ1osYUFBYTtJQUNiLGVBQWU7SUFDZixZQUFZO0lBQ1osdUVBQXVFO0FBQzNFOztBQUVBO0lBQ0ksVUFBVTtBQUNkOztBQUVBO0lBQ0ksa0JBQWtCO0lBQ2xCLG9CQUFvQjtJQUNwQixVQUFVO0lBQ1YsV0FBVztJQUNYLFlBQVk7SUFDWixhQUFhO0lBQ2IsZUFBZTtJQUNmLHFDQUFxQztJQUNyQyxVQUFVO0lBQ1Ysb0VBQXVEO0lBQ3ZELHdCQUF3QjtBQUM1Qjs7QUFFQTtJQUNJLHNCQUFzQjtJQUN0QixzQ0FBc0M7QUFDMUM7O0FBRUE7SUFDSSx1QkFBdUI7SUFDdkIsMkJBQTJCO0FBQy9COztBQUVBO0lBQ0kscUNBQXFDO0FBQ3pDOztBQUVBO0lBQ0k7UUFDSSxzQkFBc0I7SUFDMUI7O0lBRUE7UUFDSSx1QkFBdUI7SUFDM0I7QUFDSjs7QUFFQTtJQUNJO1FBQ0ksWUFBWTtJQUNoQjs7SUFFQTtRQUNJLGdCQUFnQjtJQUNwQjtBQUNKOztBQUVBO0lBQ0k7UUFDSSxvQkFBb0I7SUFDeEI7O0lBRUE7UUFDSSxrQkFBa0I7UUFDbEIsa0JBQWtCO0lBQ3RCOztJQUVBO1FBQ0ksYUFBYTtJQUNqQjs7SUFFQTtRQUNJLDJCQUEyQjtJQUMvQjs7SUFFQTtRQUNJLFdBQVc7SUFDZjs7SUFFQTtRQUNJLGdCQUFnQjtJQUNwQjtBQUNKOztBQUVBO0lBQ0k7UUFDSSxhQUFhO0lBQ2pCOztJQUVBO1FBQ0ksWUFBWTtJQUNoQjs7SUFFQTtRQUNJLGFBQWE7SUFDakI7O0lBRUE7UUFDSSxzQkFBc0I7SUFDMUI7O0lBRUE7UUFDSSxlQUFlO0lBQ25COztJQUVBO1FBQ0ksZ0JBQWdCO0lBQ3BCO0FBQ0o7O0FBRUE7SUFDSTs7T0FFRzs7SUFFSDtRQUNJLFlBQVk7SUFDaEI7O0lBRUE7UUFDSSxjQUFjO1FBQ2Qsa0JBQWtCO0lBQ3RCOztJQUVBO1FBQ0ksV0FBVztJQUNmOztJQUVBO1FBQ0ksWUFBWTtRQUNaLGFBQWE7SUFDakI7QUFDSjs7QUFFQTtJQUNJO1FBQ0ksZ0JBQWdCO0lBQ3BCOztJQUVBO1FBQ0ksU0FBUztRQUNULGdCQUFnQjtJQUNwQjs7SUFFQTtRQUNJLFVBQVU7UUFDVixnQkFBZ0I7SUFDcEI7O0lBRUE7UUFDSSxjQUFjO0lBQ2xCOztJQUVBO1FBQ0ksZ0JBQWdCO1FBQ2hCLGtCQUFrQjtJQUN0Qjs7SUFFQTtRQUNJLGlCQUFpQjtJQUNyQjtBQUNKOztBQUVBO0lBQ0k7UUFDSSxjQUFjO0lBQ2xCO0FBQ0o7O0FBRUE7SUFDSTtRQUNJLGlCQUFpQjtJQUNyQjtBQUNKIiwic291cmNlc0NvbnRlbnQiOlsiI2Nhcm91c2VsIHtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgICBmb250LXNpemU6IDEuM2VtO1xuICAgIC8qIGJhY2tncm91bmQ6IHVybChcIi4uL2Fzc2V0cy9iYWNrZ3JvdW5kIGFydC9VU1BzIEJhY2tncm91bmQuanBnXCIpIG5vLXJlcGVhdCBjZW50ZXIgdG9wOyAqL1xuICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG4gICAgaGVpZ2h0OiA2Ni40dnc7XG4gICAgYWxpZ24tY29udGVudDogY2VudGVyO1xuICAgIGZpbHRlcjogYnJpZ2h0bmVzcygxMDglKSBzYXR1cmF0ZSgxLjEpO1xufVxuXG4jY2Fyb3VzZWwgI2Nhcm91c2VsLWNvbnRhaW5lciB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIHRvcDogMDtcbiAgICBsZWZ0OiAwO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGhlaWdodDogMTAwJTtcbiAgICBkaXNwbGF5OiBncmlkO1xuICAgIHRyYW5zaXRpb246IHRyYW5zZm9ybSAwLjVzIGVhc2UtaW4tb3V0O1xuICAgIHBhZGRpbmctYm90dG9tOiAxMGVtO1xufVxuXG4jY2Fyb3VzZWwgLmNhcm91c2VsLXNsaWRlIHtcbiAgICBoZWlnaHQ6IDEwMCU7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVgoMC4yZW0pO1xufVxuXG4jY2Fyb3VzZWwgLmNhcm91c2VsLXNsaWRlIGltZyB7XG4gICAgaGVpZ2h0OiAzNWVtO1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbn1cblxuLyogI2Nhcm91c2VsIC5jYXJvdXNlbC1zbGlkZSAuZGVzY3JpcHRpb246OmJlZm9yZSwgI2Nhcm91c2VsIC5jYXJvdXNlbC1zbGlkZSAuZGVzY3JpcHRpb246OmFmdGVyIHtcbiAgICBjb250ZW50OiBcIlwiO1xuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICB3aWR0aDogNGVtO1xuICAgIGhlaWdodDogMTAwJTtcbiAgICBiYWNrZ3JvdW5kLXNpemU6IDEwMCUgY2FsYygxMDAlIC0gMXB4KTtcbiAgICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xufVxuXG4jY2Fyb3VzZWwgLmNhcm91c2VsLXNsaWRlIC5kZXNjcmlwdGlvbjo6YmVmb3JlIHtcbiAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoXCIuLi9hc3NldHMvd29vZGVuIGJhbm5lcnMvVVNQc19mcmFtZV9sZWZ0IGNvcm5lci5wbmdcIik7XG4gICAgYmFja2dyb3VuZC1wb3NpdGlvbjogcmlnaHQgY2VudGVyO1xuICAgIGxlZnQ6IGNhbGMoLTRlbSArIDFweCk7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDFweCk7XG59XG5cbiNjYXJvdXNlbCAuY2Fyb3VzZWwtc2xpZGUgLmRlc2NyaXB0aW9uOjphZnRlciB7XG4gICAgYmFja2dyb3VuZC1pbWFnZTogdXJsKFwiLi4vYXNzZXRzL3dvb2RlbiBiYW5uZXJzL1VTUHNfZnJhbWVfcmlnaHQgY29ybmVyKHVwZGF0ZWQpLnBuZ1wiKTtcbiAgICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBsZWZ0IDBweDtcbiAgICByaWdodDogY2FsYygtMy41ZW0gKyAxcHgpO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xufSAqL1xuXG4jY2Fyb3VzZWwgLmNhcm91c2VsLXNsaWRlIC5sZWZ0IHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG59IFxuXG4jY2Fyb3VzZWwgLmNhcm91c2VsLXNsaWRlIC5kZXNjcmlwdGlvbiB7XG4gICAgaGVpZ2h0OiAxOGVtO1xuICAgIHdpZHRoOiAzMGVtO1xuICAgIGZvbnQtd2VpZ2h0OiA0MDA7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgIGNvbG9yOiByZ2JhKDIxOSwgMTgyLCAxNTIsIDAuNik7XG4gICAgYmFja2dyb3VuZDogdXJsKFwiLi4vYXNzZXRzL3dvb2RlbiBiYW5uZXJzL1VTUHNfZnJhbWUud2VicFwiKSBjZW50ZXIgY2VudGVyO1xuICAgIGJhY2tncm91bmQtc2l6ZTogY29udGFpbjtcbiAgICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICBwYWRkaW5nOiA0ZW07XG4gICAgLyogcmlnaHQ6IC0xLjVlbTsgKi9cbiAgICB6LWluZGV4OiAwO1xufVxuXG4jY2Fyb3VzZWwgLmNhcm91c2VsLXNsaWRlIGgxIHtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgd2lkdGg6IGNhbGMoMTAwJSArIDNlbSk7XG4gICAgaGVpZ2h0OiAyZW07XG4gICAgbWFyZ2luLWJvdHRvbTogMWVtO1xuICAgIGJhY2tncm91bmQ6IHVybChcIi4uL2Fzc2V0cy9VU1BzX1RpdGxlX0ZyYW1lLnBuZ1wiKSBuby1yZXBlYXQgY2VudGVyO1xuICAgIGJhY2tncm91bmQtc2l6ZTogY29udGFpbjtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgZm9udC1zaXplOiAyLjRlbTtcbiAgICBmb250LXdlaWdodDogNzAwO1xuICAgIGNvbG9yOiByZ2JhKDEzLCAxLCAxNywgMC42KTtcbiAgICBtYXJnaW4tcmlnaHQ6IC0wLjJlbTtcbn1cblxuI2Nhcm91c2VsIC5jYXJvdXNlbC1zbGlkZSBoMSBzcGFuIHtcbiAgICBmb250LXNpemU6IDAuNjVlbTtcbn1cblxuI2Nhcm91c2VsIC5jYXJvdXNlbC1zbGlkZSAuZGVzY3JpcHRpb24gcCB7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIGZvbnQtc2l6ZTogMS4zNWVtO1xuICAgIGxpbmUtaGVpZ2h0OiAxLjNlbTtcbn1cblxuLmNhcm91c2VsLWJ1YmJsZXMge1xuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICBib3R0b206IC0zZW07XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGdhcDogMC41ZW07XG59XG5cbi5jYXJvdXNlbC1idWJibGVzIGJ1dHRvbiB7XG4gICAgd2lkdGg6IDEuMmVtO1xuICAgIGhlaWdodDogMS4yZW07XG4gICAgYm9yZGVyLXJhZGl1czogNTAlO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYigyMzAsIDE5MSwgMTA5KTtcbiAgICBib3JkZXI6IG5vbmU7XG4gICAgb3V0bGluZTogbm9uZTtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgb3BhY2l0eTogMC4zO1xuICAgIHRyYW5zaXRpb246IG9wYWNpdHkgMC4xcyBlYXNlLWluLW91dCwgYmFja2dyb3VuZC1jb2xvciAwLjFzIGVhc2UtaW4tb3V0O1xufVxuXG4uY2Fyb3VzZWwtYnViYmxlcyBidXR0b24uYWN0aXZlLCAuY2Fyb3VzZWwtYnViYmxlcyBidXR0b246aG92ZXIge1xuICAgIG9wYWNpdHk6IDE7XG59XG5cbiNjYXJvdXNlbC1uZXh0LWJ1dHRvbiwgI2Nhcm91c2VsLXByZXZpb3VzLWJ1dHRvbiB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIHRvcDogY2FsYyg1MCUgLSA1ZW0pO1xuICAgIHdpZHRoOiA2ZW07XG4gICAgaGVpZ2h0OiA4ZW07XG4gICAgYm9yZGVyOiBub25lO1xuICAgIG91dGxpbmU6IG5vbmU7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIHRyYW5zaXRpb246IG9wYWNpdHkgMC4wNXMgZWFzZS1pbi1vdXQ7XG4gICAgei1pbmRleDogMjtcbiAgICBiYWNrZ3JvdW5kOiB1cmwoXCIuLi9hc3NldHMvYXJyb3cuc3ZnXCIpIGNlbnRlciBuby1yZXBlYXQ7XG4gICAgYmFja2dyb3VuZC1zaXplOiBjb250YWluO1xufVxuXG4jY2Fyb3VzZWwtcHJldmlvdXMtYnV0dG9uIHtcbiAgICBsZWZ0OiBjYWxjKDE1dncgLSA1ZW0pO1xuICAgIHRyYW5zZm9ybTogc2NhbGVYKC0xKSB0cmFuc2xhdGVZKC01MCUpO1xufVxuXG4jY2Fyb3VzZWwtbmV4dC1idXR0b24ge1xuICAgIHJpZ2h0OiBjYWxjKDE1dncgLSA1ZW0pO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgtNTAlKTtcbn1cblxuI2Nhcm91c2VsLW5leHQtYnV0dG9uOmhvdmVyLCAjY2Fyb3VzZWwtcHJldmlvdXMtYnV0dG9uOmhvdmVyIHtcbiAgICBmaWx0ZXI6IGJyaWdodG5lc3MoMS4xKSBzYXR1cmF0ZSgxLjEpO1xufVxuXG5AbWVkaWEgKG1heC13aWR0aDogMTkwMHB4KSB7XG4gICAgI2Nhcm91c2VsLXByZXZpb3VzLWJ1dHRvbiB7XG4gICAgICAgIGxlZnQ6IGNhbGMoMTB2dyAtIDVlbSk7XG4gICAgfVxuICAgIFxuICAgICNjYXJvdXNlbC1uZXh0LWJ1dHRvbiB7XG4gICAgICAgIHJpZ2h0OiBjYWxjKDEwdncgLSA1ZW0pO1xuICAgIH1cbn1cblxuQG1lZGlhIChtYXgtd2lkdGg6IDE2MDBweCkge1xuICAgICNjYXJvdXNlbCB7XG4gICAgICAgIGhlaWdodDogODBlbTtcbiAgICB9XG5cbiAgICAjY2Fyb3VzZWwgLmNhcm91c2VsLXNsaWRlIHtcbiAgICAgICAgZm9udC1zaXplOiAwLjllbTtcbiAgICB9IFxufVxuXG5AbWVkaWEgKG1pbi13aWR0aDogMTQ1MXB4KSB7XG4gICAgI2Nhcm91c2VsIC5jYXJvdXNlbC1zbGlkZSAubGVmdCB7XG4gICAgICAgIG1hcmdpbi1ib3R0b206IDUuOGVtO1xuICAgIH1cblxuICAgICNjYXJvdXNlbCAuY2Fyb3VzZWwtc2xpZGUgLmRlc2NyaXB0aW9uIHtcbiAgICAgICAgbWFyZ2luLXJpZ2h0OiAtNGVtO1xuICAgICAgICBwYWRkaW5nLXJpZ2h0OiA2ZW07XG4gICAgfVxuXG4gICAgI2Nhcm91c2VsIC5tb2JpbGUge1xuICAgICAgICBkaXNwbGF5OiBub25lO1xuICAgIH0gXG4gICAgXG4gICAgI2Nhcm91c2VsIC5jYXJvdXNlbC1zbGlkZSB7XG4gICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWCgtMWVtKTtcbiAgICB9XG5cbiAgICAjY2Fyb3VzZWwgLmNhcm91c2VsLXNsaWRlIGgxIHtcbiAgICAgICAgbGVmdDogMC4zZW07XG4gICAgfVxuXG4gICAgLmNhcm91c2VsLWJ1YmJsZXMge1xuICAgICAgICBtYXJnaW4tbGVmdDogM2VtO1xuICAgIH1cbn1cblxuQG1lZGlhIChtYXgtd2lkdGg6IDE0NTBweCkge1xuICAgICNjYXJvdXNlbCB7XG4gICAgICAgIGhlaWdodDogMTAwZW07XG4gICAgfVxuXG4gICAgI2Nhcm91c2VsIC5jYXJvdXNlbC1zbGlkZSBoMSB7XG4gICAgICAgIGxlZnQ6IC0wLjNlbTtcbiAgICB9XG5cbiAgICAjY2Fyb3VzZWwgLmRlc2t0b3Age1xuICAgICAgICBkaXNwbGF5OiBub25lO1xuICAgIH0gXG5cbiAgICAjY2Fyb3VzZWwgLmNhcm91c2VsLXNsaWRlIHtcbiAgICAgICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICB9XG5cbiAgICAjY2Fyb3VzZWwgLmNhcm91c2VsLXNsaWRlIC5kZXNjcmlwdGlvbiB7XG4gICAgICAgIG1hcmdpbi10b3A6IDNlbTtcbiAgICB9XG5cbiAgICAjY2Fyb3VzZWwgLmNhcm91c2VsLXNsaWRlIC5kZXNjcmlwdGlvbiBwIHtcbiAgICAgICAgZm9udC1zaXplOiAxLjdlbTtcbiAgICB9XG59XG5cbkBtZWRpYSAobWF4LXdpZHRoOiAxMjAwcHgpIHtcbiAgICAvKiAjY2Fyb3VzZWwge1xuICAgICAgICBoZWlnaHQ6IDYwZW07XG4gICAgfSAqL1xuXG4gICAgI2Nhcm91c2VsIC5jYXJvdXNlbC1zbGlkZSBpbWcge1xuICAgICAgICBoZWlnaHQ6IDM1ZW07XG4gICAgfVxuXG4gICAgI2Nhcm91c2VsIC5jYXJvdXNlbC1zbGlkZSAuZGVzY3JpcHRpb24gcCB7XG4gICAgICAgIGZvbnQtc2l6ZTogMmVtO1xuICAgICAgICBsaW5lLWhlaWdodDogMS4yZW07XG4gICAgfVxuXG4gICAgLmNhcm91c2VsLWJ1YmJsZXMge1xuICAgICAgICBoZWlnaHQ6IDBlbTtcbiAgICB9XG5cbiAgICAuY2Fyb3VzZWwtYnViYmxlcyBidXR0b24ge1xuICAgICAgICB3aWR0aDogMS40ZW07XG4gICAgICAgIGhlaWdodDogMS40ZW07XG4gICAgfVxufVxuXG5AbWVkaWEgKG1heC13aWR0aDogOTAwcHgpIHtcbiAgICAjY2Fyb3VzZWwge1xuICAgICAgICBmb250LXNpemU6IDEuMWVtO1xuICAgIH1cblxuICAgICNjYXJvdXNlbC1wcmV2aW91cy1idXR0b24ge1xuICAgICAgICBsZWZ0OiAyZW07XG4gICAgICAgIGZvbnQtc2l6ZTogMC45ZW07XG4gICAgfVxuXG4gICAgI2Nhcm91c2VsLW5leHQtYnV0dG9uIHtcbiAgICAgICAgcmlnaHQ6IDJlbTtcbiAgICAgICAgZm9udC1zaXplOiAwLjllbTtcbiAgICB9XG5cbiAgICAjY2Fyb3VzZWwgLmNhcm91c2VsLXNsaWRlIGgxIHtcbiAgICAgICAgZm9udC1zaXplOiAzZW07XG4gICAgfVxuXG4gICAgI2Nhcm91c2VsIC5jYXJvdXNlbC1zbGlkZSAuZGVzY3JpcHRpb24gcCB7XG4gICAgICAgIGZvbnQtc2l6ZTogMS43ZW07XG4gICAgICAgIGxpbmUtaGVpZ2h0OiAxLjJlbTtcbiAgICB9XG4gICAgXG4gICAgI2Nhcm91c2VsIC5jYXJvdXNlbC1zbGlkZSBpbWcge1xuICAgICAgICBmb250LXNpemU6IDAuODVlbTtcbiAgICB9XG59XG5cbkBtZWRpYSAobWF4LXdpZHRoOiA2NzBweCkge1xuICAgICNjYXJvdXNlbCB7XG4gICAgICAgIGZvbnQtc2l6ZTogMWVtO1xuICAgIH1cbn1cblxuQG1lZGlhIChtYXgtd2lkdGg6IDQ3MHB4KSB7XG4gICAgI2Nhcm91c2VsIC5jYXJvdXNlbC1zbGlkZSBpbWcge1xuICAgICAgICBmb250LXNpemU6IDAuODVlbTtcbiAgICB9XG59Il0sInNvdXJjZVJvb3QiOiIifQ== */
-	</style>
-	<style>
-	#roadmap {
-		height: 105em;
-		background: url(https://everseed.com/6936b1886aeecaaa8856eb04d78ccd2c.webp) no-repeat center center;
-		background-size: cover;
-		position: relative;
-		padding-top: 8em;
-		margin-bottom: -10em;
-	}
-	
-	#roadmap::before {
-		content: "";
-		position: absolute;
-		top: 8em;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: url(../everseed.com/d364e3f77adaa05328c852a033e5690a.png) no-repeat center 15em;
-		background-size: auto calc(71% - 10em);
-	}
-	
-	@media (max-width: 1500px) {
-		#roadmap {
-			padding-top: 10em;
-		}
-		#roadmap::before {
-			/* background-size: auto 120%; background-position: center center; top: 0; */
-			display: none;
-		}
-	}
-	
-	#roadmap h1 {
-		background-image: url(../everseed.com/22175aa6b35cd66fec1e050a2d252569.png);
-		background-repeat: no-repeat;
-		background-size: auto 100%;
-		background-position: center center;
-		text-align: center;
-		position: relative;
-		top: 2em;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		padding-top: 1em;
-		width: 100%;
-		margin: 0 auto;
-		height: 10rem;
-		margin-bottom: 8rem;
-	}
-	
-	#roadmap h1 span {
-		font-size: 1.7em;
-		color: rgb(68, 23, 23);
-		opacity: 0.6;
-	}
-	
-	#roadmap-container {
-		height: 58em;
-		width: 100%;
-		max-width: 85em;
-		margin: 0 auto;
-		padding: 0 4em;
-		padding-top: 1em;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-	
-	#roadmap-trail {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		height: 100%;
-		min-width: 22em;
-		position: relative;
-	}
-	
-	#roadmap-content {
-		flex-grow: 1;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		max-width: 45em;
-		position: relative;
-		margin: 0 auto;
-		height: 60%;
-	}
-	
-	#roadmap-content > * {
-		width: 100%;
-	}
-	
-	#roadmap-content div {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
-		background-image: url(../everseed.com/c25219cbb9dcf6fcadec9152e0683af4.png);
-		background-size: 100% 100%;
-		padding: 0 4em;
-	}
-	
-	#roadmap-content div h2 {
-		font-size: 2.8em;
-		color: white;
-		/* text-shadow: -3px 3px 0 rgba(0, 0, 0, 0.5); */
-		margin-bottom: 0.2em;
-		font-weight: 600;
-	}
-	
-	#roadmap-content div p {
-		font-size: 1.6em;
-		font-weight: 400;
-		opacity: 0.8;
-		color: rgb(255, 231, 195);
-	}
-	
-	@media (max-width: 1000px) {
-		#roadmap-container {
-			padding: 0 2em;
-		}
-		#roadmap-trail {
-			font-size: 0.8em;
-			min-width: 20em;
-		}
-		#roadmap-content div h2 {
-			font-size: 2.5em;
-		}
-		#roadmap-content div p {
-			font-size: 1.5em;
-		}
-	}
-	
-	@media (max-width: 800px) {
-		#roadmap-container {
-			padding: 0 2em;
-			flex-direction: column;
-			justify-content: center;
-		}
-		#roadmap-trail {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			width: 5em;
-			height: 50em;
-			transform: rotate(-90deg);
-			overflow: hidden;
-			margin-top: -10em;
-			margin-bottom: -15em;
-			z-index: 5;
-			font-size: 0.8em;
-		}
-		#roadmap-trail > *:not(#roadmap-trail-path) {
-			transform: rotate(90deg);
-		}
-		#roadmap-content {
-			flex-grow: 0;
-		}
-		#roadmap-content div {
-			padding: 0 2em;
-		}
-	}
-	
-	#roadmap-trail > * {
-		position: relative;
-	}
-	
-	#roadmap-trail #roadmap-trail-path {
-		position: absolute;
-		height: 35em;
-	}
-	
-	#roadmap-trail .quarter {
-		position: relative;
-		width: 8em;
-		height: 8em;
-	}
-	
-	#roadmap-trail .quarter .tortoise {
-		position: absolute;
-		width: 8em;
-		left: 50%;
-		top: 50%;
-		transform: translateX(-50%) translateY(-50%);
-		transition: opacity 0.2s;
-	}
-	
-	#roadmap-trail .quarter .tortoise.hidden {
-		pointer-events: none;
-		opacity: 0;
-	}
-	
-	#roadmap-trail .quarter button {
-		width: 100%;
-		height: 100%;
-		background-color: transparent;
-		padding: 0;
-	}
-	
-	#roadmap-trail .quarter button:hover,
-	#roadmap-trail .quarter button:focus {
-		filter: brightness(1.2) saturate(1.2);
-	}
-	
-	#roadmap-trail button .quarter-icon {
-		width: 100%;
-		height: 100%;
-		object-fit: contain;
-		object-position: center;
-	}
-	
-	#roadmap-trail #roadmap-castle {
-		width: 10em;
-		top: 1em;
-		right: 1em;
-	}
-	
-	#roadmap-trail .q1 {
-		right: -1.5em;
-	}
-	
-	#roadmap-trail .q2 {
-		right: 5em;
-		top: 2.5em;
-	}
-	
-	#roadmap-trail .q3 {
-		top: 4em;
-		left: 4.3em;
-	}
-	
-	#roadmap-trail .q4 {
-		top: 3em;
-		right: 5.5em;
-	}
-	
-	#roadmap-trail #roadmap-tortoise img {
-		width: 100%;
-		height: 100%;
-		object-fit: contain;
-		object-position: center;
-	}
-	/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9jb21wb25lbnRzL1JvYWRtYXAuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksYUFBYTtJQUNiLDJFQUE0RjtJQUM1RixzQkFBc0I7SUFDdEIsa0JBQWtCO0lBQ2xCLGdCQUFnQjtJQUNoQixvQkFBb0I7QUFDeEI7O0FBRUE7SUFDSSxXQUFXO0lBQ1gsa0JBQWtCO0lBQ2xCLFFBQVE7SUFDUixPQUFPO0lBQ1AsV0FBVztJQUNYLFlBQVk7SUFDWix5RUFBMEU7SUFDMUUsc0NBQXNDO0FBQzFDOztBQUVBO0lBQ0k7UUFDSSxpQkFBaUI7SUFDckI7O0lBRUE7UUFDSTs7aUJBRVM7O1FBRVQsYUFBYTtJQUNqQjtBQUNKOztBQUVBO0lBQ0kseURBQTRFO0lBQzVFLDRCQUE0QjtJQUM1QiwwQkFBMEI7SUFDMUIsa0NBQWtDO0lBQ2xDLGtCQUFrQjtJQUNsQixrQkFBa0I7SUFDbEIsUUFBUTtJQUNSLGFBQWE7SUFDYixtQkFBbUI7SUFDbkIsdUJBQXVCO0lBQ3ZCLGdCQUFnQjtJQUNoQixXQUFXO0lBQ1gsY0FBYztJQUNkLGFBQWE7SUFDYixtQkFBbUI7QUFDdkI7O0FBRUE7SUFDSSxnQkFBZ0I7SUFDaEIsc0JBQXNCO0lBQ3RCLFlBQVk7QUFDaEI7O0FBRUE7SUFDSSxZQUFZO0lBQ1osV0FBVztJQUNYLGVBQWU7SUFDZixjQUFjO0lBQ2QsY0FBYztJQUNkLGdCQUFnQjtJQUNoQixhQUFhO0lBQ2IsOEJBQThCO0lBQzlCLG1CQUFtQjtBQUN2Qjs7QUFFQTtJQUNJLGFBQWE7SUFDYixzQkFBc0I7SUFDdEIsbUJBQW1CO0lBQ25CLHVCQUF1QjtJQUN2QixZQUFZO0lBQ1osZUFBZTtJQUNmLGtCQUFrQjtBQUN0Qjs7QUFFQTtJQUNJLFlBQVk7SUFDWixhQUFhO0lBQ2Isc0JBQXNCO0lBQ3RCLG1CQUFtQjtJQUNuQix1QkFBdUI7SUFDdkIsZUFBZTtJQUNmLGtCQUFrQjtJQUNsQixjQUFjO0lBQ2QsV0FBVztBQUNmOztBQUVBO0lBQ0ksV0FBVztBQUNmOztBQUVBO0lBQ0ksYUFBYTtJQUNiLHNCQUFzQjtJQUN0QixtQkFBbUI7SUFDbkIsa0JBQWtCO0lBQ2xCLHlEQUEwRTtJQUMxRSwwQkFBMEI7SUFDMUIsY0FBYztBQUNsQjs7QUFFQTtJQUNJLGdCQUFnQjtJQUNoQixZQUFZO0lBQ1osZ0RBQWdEO0lBQ2hELG9CQUFvQjtJQUNwQixnQkFBZ0I7QUFDcEI7O0FBRUE7SUFDSSxnQkFBZ0I7SUFDaEIsZ0JBQWdCO0lBQ2hCLFlBQVk7SUFDWix5QkFBeUI7QUFDN0I7O0FBRUE7SUFDSTtRQUNJLGNBQWM7SUFDbEI7O0lBRUE7UUFDSSxnQkFBZ0I7UUFDaEIsZUFBZTtJQUNuQjs7SUFFQTtRQUNJLGdCQUFnQjtJQUNwQjs7SUFFQTtRQUNJLGdCQUFnQjtJQUNwQjtBQUNKOztBQUVBO0lBQ0k7UUFDSSxjQUFjO1FBQ2Qsc0JBQXNCO1FBQ3RCLHVCQUF1QjtJQUMzQjs7SUFFQTtRQUNJLGFBQWE7UUFDYixzQkFBc0I7UUFDdEIsbUJBQW1CO1FBQ25CLHVCQUF1QjtRQUN2QixVQUFVO1FBQ1YsWUFBWTtRQUNaLHlCQUF5QjtRQUN6QixnQkFBZ0I7UUFDaEIsaUJBQWlCO1FBQ2pCLG9CQUFvQjtRQUNwQixVQUFVO1FBQ1YsZ0JBQWdCO0lBQ3BCOztJQUVBO1FBQ0ksd0JBQXdCO0lBQzVCOztJQUVBO1FBQ0ksWUFBWTtJQUNoQjs7SUFFQTtRQUNJLGNBQWM7SUFDbEI7QUFDSjs7QUFFQTtJQUNJLGtCQUFrQjtBQUN0Qjs7QUFFQTtJQUNJLGtCQUFrQjtJQUNsQixZQUFZO0FBQ2hCOztBQUVBO0lBQ0ksa0JBQWtCO0lBQ2xCLFVBQVU7SUFDVixXQUFXO0FBQ2Y7O0FBRUE7SUFDSSxrQkFBa0I7SUFDbEIsVUFBVTtJQUNWLFNBQVM7SUFDVCxRQUFRO0lBQ1IsNENBQTRDO0lBQzVDLHdCQUF3QjtBQUM1Qjs7QUFFQTtJQUNJLG9CQUFvQjtJQUNwQixVQUFVO0FBQ2Q7O0FBRUE7SUFDSSxXQUFXO0lBQ1gsWUFBWTtJQUNaLDZCQUE2QjtJQUM3QixVQUFVO0FBQ2Q7O0FBRUE7SUFDSSxxQ0FBcUM7QUFDekM7O0FBRUE7SUFDSSxXQUFXO0lBQ1gsWUFBWTtJQUNaLG1CQUFtQjtJQUNuQix1QkFBdUI7QUFDM0I7O0FBRUE7SUFDSSxXQUFXO0lBQ1gsUUFBUTtJQUNSLFVBQVU7QUFDZDs7QUFFQTtJQUNJLGFBQWE7QUFDakI7O0FBRUE7SUFDSSxVQUFVO0lBQ1YsVUFBVTtBQUNkOztBQUVBO0lBQ0ksUUFBUTtJQUNSLFdBQVc7QUFDZjs7QUFFQTtJQUNJLFFBQVE7SUFDUixZQUFZO0FBQ2hCOztBQUVBO0lBQ0ksV0FBVztJQUNYLFlBQVk7SUFDWixtQkFBbUI7SUFDbkIsdUJBQXVCO0FBQzNCIiwic291cmNlc0NvbnRlbnQiOlsiI3JvYWRtYXAge1xuICAgIGhlaWdodDogMTA1ZW07XG4gICAgYmFja2dyb3VuZDogdXJsKFwiLi4vYXNzZXRzL2JhY2tncm91bmRcXCBhcnQvUm9hZG1hcF9iYWNrZ3JvdW5kLndlYnBcIikgbm8tcmVwZWF0IGNlbnRlciBjZW50ZXI7XG4gICAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgcGFkZGluZy10b3A6IDhlbTtcbiAgICBtYXJnaW4tYm90dG9tOiAtMTBlbTtcbn1cblxuI3JvYWRtYXA6OmJlZm9yZSB7XG4gICAgY29udGVudDogXCJcIjtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgdG9wOiA4ZW07XG4gICAgbGVmdDogMDtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBoZWlnaHQ6IDEwMCU7XG4gICAgYmFja2dyb3VuZDogdXJsKFwiLi4vYXNzZXRzL1JvYWRtYXBfIEJhY2tncm91bmQucG5nXCIpIG5vLXJlcGVhdCBjZW50ZXIgMTVlbTtcbiAgICBiYWNrZ3JvdW5kLXNpemU6IGF1dG8gY2FsYyg3MSUgLSAxMGVtKTtcbn1cblxuQG1lZGlhIChtYXgtd2lkdGg6IDE1MDBweCkge1xuICAgICNyb2FkbWFwIHtcbiAgICAgICAgcGFkZGluZy10b3A6IDEwZW07XG4gICAgfVxuXG4gICAgI3JvYWRtYXA6OmJlZm9yZSB7XG4gICAgICAgIC8qIGJhY2tncm91bmQtc2l6ZTogYXV0byAxMjAlO1xuICAgICAgICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXIgY2VudGVyO1xuICAgICAgICB0b3A6IDA7ICovXG5cbiAgICAgICAgZGlzcGxheTogbm9uZTtcbiAgICB9XG59XG5cbiNyb2FkbWFwIGgxIHtcbiAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoXCIuLi9hc3NldHMvUm9hZG1hcF9hbmRfUGV0TkZUX1RpdGxlX0ZyYW1lKHNob3J0KS5wbmdcIik7XG4gICAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcbiAgICBiYWNrZ3JvdW5kLXNpemU6IGF1dG8gMTAwJTtcbiAgICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXIgY2VudGVyO1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgdG9wOiAyZW07XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgIHBhZGRpbmctdG9wOiAxZW07XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgbWFyZ2luOiAwIGF1dG87XG4gICAgaGVpZ2h0OiAxMHJlbTtcbiAgICBtYXJnaW4tYm90dG9tOiA4cmVtO1xufVxuXG4jcm9hZG1hcCBoMSBzcGFuIHtcbiAgICBmb250LXNpemU6IDEuN2VtO1xuICAgIGNvbG9yOiByZ2IoNjgsIDIzLCAyMyk7XG4gICAgb3BhY2l0eTogMC42O1xufVxuXG4jcm9hZG1hcC1jb250YWluZXIge1xuICAgIGhlaWdodDogNThlbTtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBtYXgtd2lkdGg6IDg1ZW07XG4gICAgbWFyZ2luOiAwIGF1dG87XG4gICAgcGFkZGluZzogMCA0ZW07XG4gICAgcGFkZGluZy10b3A6IDFlbTtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xufVxuXG4jcm9hZG1hcC10cmFpbCB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIG1pbi13aWR0aDogMjJlbTtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG59XG5cbiNyb2FkbWFwLWNvbnRlbnQge1xuICAgIGZsZXgtZ3JvdzogMTtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBtYXgtd2lkdGg6IDQ1ZW07XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIG1hcmdpbjogMCBhdXRvO1xuICAgIGhlaWdodDogNjAlO1xufVxuXG4jcm9hZG1hcC1jb250ZW50ID4gKiB7XG4gICAgd2lkdGg6IDEwMCU7XG59XG5cbiNyb2FkbWFwLWNvbnRlbnQgZGl2IHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgYmFja2dyb3VuZC1pbWFnZTogdXJsKFwiLi4vYXNzZXRzL3dvb2RlbiBiYW5uZXJzL1JvYWRtYXAgZnJhbWVfY2VudGVyLnBuZ1wiKTtcbiAgICBiYWNrZ3JvdW5kLXNpemU6IDEwMCUgMTAwJTtcbiAgICBwYWRkaW5nOiAwIDRlbTtcbn1cblxuI3JvYWRtYXAtY29udGVudCBkaXYgaDIge1xuICAgIGZvbnQtc2l6ZTogMi44ZW07XG4gICAgY29sb3I6IHdoaXRlO1xuICAgIC8qIHRleHQtc2hhZG93OiAtM3B4IDNweCAwIHJnYmEoMCwgMCwgMCwgMC41KTsgKi9cbiAgICBtYXJnaW4tYm90dG9tOiAwLjJlbTtcbiAgICBmb250LXdlaWdodDogNjAwO1xufVxuXG4jcm9hZG1hcC1jb250ZW50IGRpdiBwIHtcbiAgICBmb250LXNpemU6IDEuNmVtO1xuICAgIGZvbnQtd2VpZ2h0OiA0MDA7XG4gICAgb3BhY2l0eTogMC44O1xuICAgIGNvbG9yOiByZ2IoMjU1LCAyMzEsIDE5NSk7XG59XG5cbkBtZWRpYSAobWF4LXdpZHRoOiAxMDAwcHgpIHtcbiAgICAjcm9hZG1hcC1jb250YWluZXIge1xuICAgICAgICBwYWRkaW5nOiAwIDJlbTtcbiAgICB9XG4gICAgXG4gICAgI3JvYWRtYXAtdHJhaWwge1xuICAgICAgICBmb250LXNpemU6IDAuOGVtO1xuICAgICAgICBtaW4td2lkdGg6IDIwZW07XG4gICAgfVxuXG4gICAgI3JvYWRtYXAtY29udGVudCBkaXYgaDIge1xuICAgICAgICBmb250LXNpemU6IDIuNWVtO1xuICAgIH1cbiAgICBcbiAgICAjcm9hZG1hcC1jb250ZW50IGRpdiBwIHtcbiAgICAgICAgZm9udC1zaXplOiAxLjVlbTtcbiAgICB9XG59XG5cbkBtZWRpYSAobWF4LXdpZHRoOiA4MDBweCkge1xuICAgICNyb2FkbWFwLWNvbnRhaW5lciB7XG4gICAgICAgIHBhZGRpbmc6IDAgMmVtO1xuICAgICAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICB9XG5cbiAgICAjcm9hZG1hcC10cmFpbCB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogNWVtO1xuICAgICAgICBoZWlnaHQ6IDUwZW07XG4gICAgICAgIHRyYW5zZm9ybTogcm90YXRlKC05MGRlZyk7XG4gICAgICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgICAgIG1hcmdpbi10b3A6IC0xMGVtO1xuICAgICAgICBtYXJnaW4tYm90dG9tOiAtMTVlbTtcbiAgICAgICAgei1pbmRleDogNTtcbiAgICAgICAgZm9udC1zaXplOiAwLjhlbTtcbiAgICB9XG5cbiAgICAjcm9hZG1hcC10cmFpbCA+ICo6bm90KCNyb2FkbWFwLXRyYWlsLXBhdGgpIHtcbiAgICAgICAgdHJhbnNmb3JtOiByb3RhdGUoOTBkZWcpO1xuICAgIH1cblxuICAgICNyb2FkbWFwLWNvbnRlbnQge1xuICAgICAgICBmbGV4LWdyb3c6IDA7XG4gICAgfVxuXG4gICAgI3JvYWRtYXAtY29udGVudCBkaXYge1xuICAgICAgICBwYWRkaW5nOiAwIDJlbTtcbiAgICB9XG59XG5cbiNyb2FkbWFwLXRyYWlsID4gKiB7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xufVxuXG4jcm9hZG1hcC10cmFpbCAjcm9hZG1hcC10cmFpbC1wYXRoIHtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgaGVpZ2h0OiAzNWVtO1xufVxuXG4jcm9hZG1hcC10cmFpbCAucXVhcnRlciB7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIHdpZHRoOiA4ZW07XG4gICAgaGVpZ2h0OiA4ZW07XG59XG5cbiNyb2FkbWFwLXRyYWlsIC5xdWFydGVyIC50b3J0b2lzZSB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIHdpZHRoOiA4ZW07XG4gICAgbGVmdDogNTAlO1xuICAgIHRvcDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWCgtNTAlKSB0cmFuc2xhdGVZKC01MCUpO1xuICAgIHRyYW5zaXRpb246IG9wYWNpdHkgMC4ycztcbn1cblxuI3JvYWRtYXAtdHJhaWwgLnF1YXJ0ZXIgLnRvcnRvaXNlLmhpZGRlbiB7XG4gICAgcG9pbnRlci1ldmVudHM6IG5vbmU7XG4gICAgb3BhY2l0eTogMDtcbn1cblxuI3JvYWRtYXAtdHJhaWwgLnF1YXJ0ZXIgYnV0dG9uIHtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBoZWlnaHQ6IDEwMCU7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdHJhbnNwYXJlbnQ7XG4gICAgcGFkZGluZzogMDtcbn1cblxuI3JvYWRtYXAtdHJhaWwgLnF1YXJ0ZXIgYnV0dG9uOmhvdmVyLCAjcm9hZG1hcC10cmFpbCAucXVhcnRlciBidXR0b246Zm9jdXMge1xuICAgIGZpbHRlcjogYnJpZ2h0bmVzcygxLjIpIHNhdHVyYXRlKDEuMik7XG59XG5cbiNyb2FkbWFwLXRyYWlsIGJ1dHRvbiAucXVhcnRlci1pY29uIHtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBoZWlnaHQ6IDEwMCU7XG4gICAgb2JqZWN0LWZpdDogY29udGFpbjtcbiAgICBvYmplY3QtcG9zaXRpb246IGNlbnRlcjtcbn1cblxuI3JvYWRtYXAtdHJhaWwgI3JvYWRtYXAtY2FzdGxlIHtcbiAgICB3aWR0aDogMTBlbTtcbiAgICB0b3A6IDFlbTtcbiAgICByaWdodDogMWVtO1xufVxuXG4jcm9hZG1hcC10cmFpbCAucTEge1xuICAgIHJpZ2h0OiAtMS41ZW07XG59XG5cbiNyb2FkbWFwLXRyYWlsIC5xMiB7XG4gICAgcmlnaHQ6IDVlbTtcbiAgICB0b3A6IDIuNWVtO1xufVxuXG4jcm9hZG1hcC10cmFpbCAucTMge1xuICAgIHRvcDogNGVtO1xuICAgIGxlZnQ6IDQuM2VtO1xufVxuXG4jcm9hZG1hcC10cmFpbCAucTQge1xuICAgIHRvcDogM2VtO1xuICAgIHJpZ2h0OiA1LjVlbTtcbn1cblxuI3JvYWRtYXAtdHJhaWwgI3JvYWRtYXAtdG9ydG9pc2UgaW1nIHtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBoZWlnaHQ6IDEwMCU7XG4gICAgb2JqZWN0LWZpdDogY29udGFpbjtcbiAgICBvYmplY3QtcG9zaXRpb246IGNlbnRlcjtcbn0iXSwic291cmNlUm9vdCI6IiJ9 */
-	</style>
-	<style>
-	#social {
-		display: flex;
-		justify-content: flex-start;
-		align-items: center;
-		flex-direction: column;
-		padding: 16em 5em;
-		text-align: center;
-		color: rgb(168, 114, 14);
-		font-weight: bold;
-		gap: 3em;
-		background: url(https://everseed.com/6485168a96362a080a029e468e1af3be.webp) no-repeat center top;
-		background-size: cover;
-		position: relative;
-		z-index: 3;
-	}
-	
-	#social-logo {
-		margin-bottom: 2em;
-	}
-	
-	#social-logo svg {
-		width: 40em;
-		max-width: 80vw;
-		color: #8a6e46;
-	}
-	
-	#social > p {
-		font-size: 1.8em;
-		max-width: 30em;
-		line-height: 1.4em;
-		font-weight: 400;
-		margin-bottom: 4em;
-		color: #8a6e46;
-		/* text-shadow: 0 0 10px rgba(65, 65, 65, 0.336); */
-	}
-	
-	#social-blurbs {
-		display: flex;
-		flex-wrap: wrap;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
-		gap: 4em;
-	}
-	
-	#social-blurbs > div {
-		height: 29em;
-		width: 25em;
-		background-image: url(https://everseed.com/08e5e6d51f187792a5de468480c603dc.webp);
-		background-size: contain;
-		background-repeat: no-repeat;
-		background-position: center center;
-		padding: 2.5em;
-	}
-	
-	#social-blurbs > div:nth-child(1) > svg,
-	#social-blurbs > div:nth-child(1) > img {
-		font-size: 0.9em;
-	}
-	
-	#social-blurbs > div:nth-child(3) > svg,
-	#social-blurbs > div:nth-child(3) > img {
-		font-size: 0.9em;
-		margin-bottom: 1em;
-	}
-	
-	#social-blurbs > div > svg,
-	#social-blurbs > div > img {
-		height: 11.5em;
-	}
-	
-	#social-blurbs > div > p {
-		font-size: 1.4em;
-		padding: 0 2em;
-		height: 4em;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		max-width: 90%;
-		margin: 0 auto;
-	}
-	
-	#social iframe {
-		width: 40em;
-		max-width: 80vw;
-		margin-bottom: -1em;
-	}
-	
-	#social-buttons {
-		height: 5em;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 3em;
-		margin-top: 3em;
-		margin-bottom: 3em;
-	}
-	
-	#social-buttons a {
-		width: 7em;
-		height: 7em;
-		background-color: currentColor;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		border-radius: 50%;
-		transition: transform 0.1s, filter 0.1s;
-	}
-	
-	#social-buttons a:hover {
-		transform: scale(1.1);
-		filter: brightness(1.2);
-	}
-	
-	#social-buttons svg {
-		height: 3em;
-		color: white;
-	}
-	
-	@media (min-width: 1401px) {
-		#social {
-			height: 165em;
-		}
-	}
-	
-	@media (max-width: 1400px) {
-		#social {
-			background-position-x: calc(50% + 15vw);
-		}
-	}
-	
-	@media (min-width: 921px) {
-		img#social-logo {
-			height: 18em;
-		}
-	}
-	
-	@media (max-width: 920px) {
-		#social-blurbs {
-			font-size: 0.9em;
-		}
-		#social {
-			background-position-x: calc(50% + 18.5vw);
-		}
-	}
-	
-	@media (max-width: 830px) {
-		#social-blurbs {
-			font-size: 0.9em;
-		}
-		#social {
-			background-position-x: calc(50% + 22vw);
-		}
-	}
-	
-	#newsletter {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		align-content: center;
-		/* flex-direction: column; */
-		flex-wrap: wrap;
-		width: 43em;
-		background-image: url(../everseed.com/8f5db96a16dc22c6bf4042bf775da9c7.png);
-		background-size: calc(100% + 1px) calc(100% + 1px - 5em);
-		background-position: center center;
-		background-repeat: no-repeat;
-		gap: 0.5em;
-		font-size: 1.2em;
-		position: relative;
-	}
-	
-	#newsletter::before {
-		content: "";
-		display: block;
-		width: 100%;
-		height: 2.8em;
-		background-image: url(../everseed.com/8747f887c7b1876d8ae1eb170955d033.png);
-		background-size: contain;
-		background-position: center bottom;
-		background-repeat: no-repeat;
-		top: -2.8em;
-		margin-bottom: 1em;
-	}
-	
-	#newsletter::after {
-		content: "";
-		display: block;
-		width: 100%;
-		height: 2.8em;
-		background-image: url(../everseed.com/1c937c09860b700be055a204c8814a67.png);
-		background-size: contain;
-		background-position: center top;
-		background-repeat: no-repeat;
-		bottom: -2.8em;
-	}
-	
-	#newsletter p {
-		background-image: url(https://everseed.com/6a106cd076059851137e1d2adb4e67fe.webp);
-		background-size: contain;
-		background-position: center center;
-		background-repeat: no-repeat;
-		width: 35em;
-		height: 8em;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		font-size: 1.03em;
-	}
-	/* #social > p a { text-decoration: underline; } */
-	
-	#newsletter p span {
-		font-size: 1.4em;
-	}
-	
-	#newsletter input {
-		background-image: url(../everseed.com/27d4267095e08120becfe5e3ccc16271.png);
-		background-size: contain;
-		background-position: center center;
-		background-color: transparent;
-		background-repeat: no-repeat;
-		width: 20em;
-		height: 2.5em;
-		padding: 0.5em;
-		font-size: 1.31em;
-		color: rgb(172, 115, 77);
-		font-weight: 400;
-	}
-	
-	#newsletter button {
-		background-image: url(../everseed.com/65a8490af40b0074afe5517f2467bf14.png);
-		background-size: contain;
-		background-position: center center;
-		background-color: transparent;
-		background-repeat: no-repeat;
-		width: 8.5em;
-		height: 3em;
-		font-weight: bold;
-		transform: translateY(-2px);
-		color: rgba(121, 66, 4, 0.8);
-		font-size: 1.1em;
-		text-transform: uppercase;
-	}
-	
-	#social-buttons a:nth-of-type(2) {
-		cursor: pointer;
-	}
-	
-	@media (max-width: 1000px) {
-		#newsletter {
-			font-size: 1em;
-			flex-direction: column;
-		}
-		#newsletter p span {
-			font-size: 1.6em;
-		}
-		#newsletter input {
-			font-size: 1.8em;
-		}
-		#newsletter button {
-			font-size: 1.5em;
-		}
-	}
-	
-	@media (max-width: 650px) {
-		#newsletter {
-			font-size: 0.97em;
-		}
-		#social iframe {
-			transform: scale(0.8);
-		}
-	}
-	
-	@media (max-width: 440px) {
-		#newsletter {
-			font-size: 0.85em;
-		}
-	}
-	
-	@media (max-width: 400px) {
-		#newsletter {
-			font-size: 0.8em;
-		}
-	}
-	/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9jb21wb25lbnRzL1NvY2lhbC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxhQUFhO0lBQ2IsMkJBQTJCO0lBQzNCLG1CQUFtQjtJQUNuQixzQkFBc0I7SUFDdEIsaUJBQWlCO0lBQ2pCLGtCQUFrQjtJQUNsQix3QkFBd0I7SUFDeEIsaUJBQWlCO0lBQ2pCLFFBQVE7SUFDUix3RUFBd0Y7SUFDeEYsc0JBQXNCO0lBQ3RCLGtCQUFrQjtJQUNsQixVQUFVO0FBQ2Q7O0FBRUE7SUFDSSxrQkFBa0I7QUFDdEI7O0FBRUE7SUFDSSxXQUFXO0lBQ1gsZUFBZTtJQUNmLGNBQWM7QUFDbEI7O0FBRUE7SUFDSSxnQkFBZ0I7SUFDaEIsZUFBZTtJQUNmLGtCQUFrQjtJQUNsQixnQkFBZ0I7SUFDaEIsa0JBQWtCO0lBQ2xCLGNBQWM7SUFDZCxtREFBbUQ7QUFDdkQ7O0FBRUE7SUFDSSxhQUFhO0lBQ2IsZUFBZTtJQUNmLG1CQUFtQjtJQUNuQix1QkFBdUI7SUFDdkIsbUJBQW1CO0lBQ25CLFFBQVE7QUFDWjs7QUFFQTtJQUNJLFlBQVk7SUFDWixXQUFXO0lBQ1gseURBQXFEO0lBQ3JELHdCQUF3QjtJQUN4Qiw0QkFBNEI7SUFDNUIsa0NBQWtDO0lBQ2xDLGNBQWM7QUFDbEI7O0FBRUE7SUFDSSxnQkFBZ0I7QUFDcEI7O0FBRUE7SUFDSSxnQkFBZ0I7SUFDaEIsa0JBQWtCO0FBQ3RCOztBQUVBO0lBQ0ksY0FBYztBQUNsQjs7QUFFQTtJQUNJLGdCQUFnQjtJQUNoQixjQUFjO0lBQ2QsV0FBVztJQUNYLGFBQWE7SUFDYix1QkFBdUI7SUFDdkIsbUJBQW1CO0lBQ25CLGNBQWM7SUFDZCxjQUFjO0FBQ2xCOztBQUVBO0lBQ0ksV0FBVztJQUNYLGVBQWU7SUFDZixtQkFBbUI7QUFDdkI7O0FBRUE7SUFDSSxXQUFXO0lBQ1gsYUFBYTtJQUNiLG1CQUFtQjtJQUNuQix1QkFBdUI7SUFDdkIsUUFBUTtJQUNSLGVBQWU7SUFDZixrQkFBa0I7QUFDdEI7O0FBRUE7SUFDSSxVQUFVO0lBQ1YsV0FBVztJQUNYLDhCQUE4QjtJQUM5QixhQUFhO0lBQ2IsbUJBQW1CO0lBQ25CLHVCQUF1QjtJQUN2QixrQkFBa0I7SUFDbEIsdUNBQXVDO0FBQzNDOztBQUVBO0lBQ0kscUJBQXFCO0lBQ3JCLHVCQUF1QjtBQUMzQjs7QUFFQTtJQUNJLFdBQVc7SUFDWCxZQUFZO0FBQ2hCOztBQUVBO0lBQ0k7UUFDSSxhQUFhO0lBQ2pCO0FBQ0o7O0FBRUE7SUFDSTtRQUNJLHVDQUF1QztJQUMzQztBQUNKOztBQUVBO0lBQ0k7UUFDSSxZQUFZO0lBQ2hCO0FBQ0o7O0FBRUE7SUFDSTtRQUNJLGdCQUFnQjtJQUNwQjs7SUFFQTtRQUNJLHlDQUF5QztJQUM3QztBQUNKOztBQUVBO0lBQ0k7UUFDSSxnQkFBZ0I7SUFDcEI7O0lBRUE7UUFDSSx1Q0FBdUM7SUFDM0M7QUFDSjs7QUFFQTtJQUNJLGFBQWE7SUFDYixtQkFBbUI7SUFDbkIsdUJBQXVCO0lBQ3ZCLHFCQUFxQjtJQUNyQiw0QkFBNEI7SUFDNUIsZUFBZTtJQUNmLFdBQVc7SUFDWCx5REFBNkQ7SUFDN0Qsd0RBQXdEO0lBQ3hELGtDQUFrQztJQUNsQyw0QkFBNEI7SUFDNUIsVUFBVTtJQUNWLGdCQUFnQjtJQUNoQixrQkFBa0I7QUFDdEI7O0FBRUE7SUFDSSxXQUFXO0lBQ1gsY0FBYztJQUNkLFdBQVc7SUFDWCxhQUFhO0lBQ2IseURBQTBEO0lBQzFELHdCQUF3QjtJQUN4QixrQ0FBa0M7SUFDbEMsNEJBQTRCO0lBQzVCLFdBQVc7SUFDWCxrQkFBa0I7QUFDdEI7O0FBRUE7SUFDSSxXQUFXO0lBQ1gsY0FBYztJQUNkLFdBQVc7SUFDWCxhQUFhO0lBQ2IseURBQTZEO0lBQzdELHdCQUF3QjtJQUN4QiwrQkFBK0I7SUFDL0IsNEJBQTRCO0lBQzVCLGNBQWM7QUFDbEI7O0FBRUE7SUFDSSx5REFBa0U7SUFDbEUsd0JBQXdCO0lBQ3hCLGtDQUFrQztJQUNsQyw0QkFBNEI7SUFDNUIsV0FBVztJQUNYLFdBQVc7SUFDWCxhQUFhO0lBQ2IsbUJBQW1CO0lBQ25CLHVCQUF1QjtJQUN2QixpQkFBaUI7QUFDckI7O0FBRUE7O0dBRUc7O0FBRUg7SUFDSSxnQkFBZ0I7QUFDcEI7O0FBRUE7SUFDSSx5REFBaUU7SUFDakUsd0JBQXdCO0lBQ3hCLGtDQUFrQztJQUNsQyw2QkFBNkI7SUFDN0IsNEJBQTRCO0lBQzVCLFdBQVc7SUFDWCxhQUFhO0lBQ2IsY0FBYztJQUNkLGlCQUFpQjtJQUNqQix3QkFBd0I7SUFDeEIsZ0JBQWdCO0FBQ3BCOztBQUVBO0lBQ0kseURBQTBEO0lBQzFELHdCQUF3QjtJQUN4QixrQ0FBa0M7SUFDbEMsNkJBQTZCO0lBQzdCLDRCQUE0QjtJQUM1QixZQUFZO0lBQ1osV0FBVztJQUNYLGlCQUFpQjtJQUNqQiwyQkFBMkI7SUFDM0IsNEJBQTRCO0lBQzVCLGdCQUFnQjtJQUNoQix5QkFBeUI7QUFDN0I7O0FBRUE7SUFDSSxlQUFlO0FBQ25COztBQUVBO0lBQ0k7UUFDSSxjQUFjO1FBQ2Qsc0JBQXNCO0lBQzFCOztJQUVBO1FBQ0ksZ0JBQWdCO0lBQ3BCOztJQUVBO1FBQ0ksZ0JBQWdCO0lBQ3BCOztJQUVBO1FBQ0ksZ0JBQWdCO0lBQ3BCO0FBQ0o7O0FBRUE7SUFDSTtRQUNJLGlCQUFpQjtJQUNyQjs7SUFFQTtRQUNJLHFCQUFxQjtJQUN6QjtBQUNKOztBQUVBO0lBQ0k7UUFDSSxpQkFBaUI7SUFDckI7QUFDSjs7QUFFQTtJQUNJO1FBQ0ksZ0JBQWdCO0lBQ3BCO0FBQ0oiLCJzb3VyY2VzQ29udGVudCI6WyIjc29jaWFsIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGp1c3RpZnktY29udGVudDogZmxleC1zdGFydDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gICAgcGFkZGluZzogMTZlbSA1ZW07XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIGNvbG9yOiByZ2IoMTY4LCAxMTQsIDE0KTtcbiAgICBmb250LXdlaWdodDogYm9sZDtcbiAgICBnYXA6IDNlbTtcbiAgICBiYWNrZ3JvdW5kOiB1cmwoXCIuLi9hc3NldHMvYmFja2dyb3VuZFxcIGFydC9CbHVyYnMgYmFja2dyb3VuZC53ZWJwXCIpIG5vLXJlcGVhdCBjZW50ZXIgdG9wO1xuICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIHotaW5kZXg6IDM7XG59XG5cbiNzb2NpYWwtbG9nbyB7XG4gICAgbWFyZ2luLWJvdHRvbTogMmVtO1xufVxuXG4jc29jaWFsLWxvZ28gc3ZnIHtcbiAgICB3aWR0aDogNDBlbTtcbiAgICBtYXgtd2lkdGg6IDgwdnc7XG4gICAgY29sb3I6ICM4YTZlNDY7XG59XG5cbiNzb2NpYWwgPiBwIHtcbiAgICBmb250LXNpemU6IDEuOGVtO1xuICAgIG1heC13aWR0aDogMzBlbTtcbiAgICBsaW5lLWhlaWdodDogMS40ZW07XG4gICAgZm9udC13ZWlnaHQ6IDQwMDtcbiAgICBtYXJnaW4tYm90dG9tOiA0ZW07XG4gICAgY29sb3I6ICM4YTZlNDY7XG4gICAgLyogdGV4dC1zaGFkb3c6IDAgMCAxMHB4IHJnYmEoNjUsIDY1LCA2NSwgMC4zMzYpOyAqL1xufVxuXG4jc29jaWFsLWJsdXJicyB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBmbGV4LXdyYXA6IHdyYXA7XG4gICAgZmxleC1kaXJlY3Rpb246IHJvdztcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGdhcDogNGVtO1xufVxuXG4jc29jaWFsLWJsdXJicyA+IGRpdiB7XG4gICAgaGVpZ2h0OiAyOWVtO1xuICAgIHdpZHRoOiAyNWVtO1xuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybChcIi4uL2Fzc2V0cy9CbHVyYnNfQmFubmVyLndlYnBcIik7XG4gICAgYmFja2dyb3VuZC1zaXplOiBjb250YWluO1xuICAgIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XG4gICAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyIGNlbnRlcjtcbiAgICBwYWRkaW5nOiAyLjVlbTtcbn1cblxuI3NvY2lhbC1ibHVyYnMgPiBkaXY6bnRoLWNoaWxkKDEpID4gc3ZnLCAjc29jaWFsLWJsdXJicyA+IGRpdjpudGgtY2hpbGQoMSkgPiBpbWcge1xuICAgIGZvbnQtc2l6ZTogMC45ZW07XG59XG5cbiNzb2NpYWwtYmx1cmJzID4gZGl2Om50aC1jaGlsZCgzKSA+IHN2ZywgI3NvY2lhbC1ibHVyYnMgPiBkaXY6bnRoLWNoaWxkKDMpID4gaW1nIHtcbiAgICBmb250LXNpemU6IDAuOWVtO1xuICAgIG1hcmdpbi1ib3R0b206IDFlbTtcbn1cblxuI3NvY2lhbC1ibHVyYnMgPiBkaXYgPiBzdmcsICNzb2NpYWwtYmx1cmJzID4gZGl2ID4gaW1nIHtcbiAgICBoZWlnaHQ6IDExLjVlbTtcbn1cblxuI3NvY2lhbC1ibHVyYnMgPiBkaXYgPiBwIHtcbiAgICBmb250LXNpemU6IDEuNGVtO1xuICAgIHBhZGRpbmc6IDAgMmVtO1xuICAgIGhlaWdodDogNGVtO1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBtYXgtd2lkdGg6IDkwJTtcbiAgICBtYXJnaW46IDAgYXV0bztcbn1cblxuI3NvY2lhbCBpZnJhbWUge1xuICAgIHdpZHRoOiA0MGVtO1xuICAgIG1heC13aWR0aDogODB2dztcbiAgICBtYXJnaW4tYm90dG9tOiAtMWVtO1xufVxuXG4jc29jaWFsLWJ1dHRvbnMge1xuICAgIGhlaWdodDogNWVtO1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBnYXA6IDNlbTtcbiAgICBtYXJnaW4tdG9wOiAzZW07XG4gICAgbWFyZ2luLWJvdHRvbTogM2VtO1xufVxuXG4jc29jaWFsLWJ1dHRvbnMgYSB7XG4gICAgd2lkdGg6IDdlbTtcbiAgICBoZWlnaHQ6IDdlbTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiBjdXJyZW50Q29sb3I7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgIGJvcmRlci1yYWRpdXM6IDUwJTtcbiAgICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMC4xcywgZmlsdGVyIDAuMXM7XG59XG5cbiNzb2NpYWwtYnV0dG9ucyBhOmhvdmVyIHtcbiAgICB0cmFuc2Zvcm06IHNjYWxlKDEuMSk7XG4gICAgZmlsdGVyOiBicmlnaHRuZXNzKDEuMik7XG59XG5cbiNzb2NpYWwtYnV0dG9ucyBzdmcge1xuICAgIGhlaWdodDogM2VtO1xuICAgIGNvbG9yOiB3aGl0ZTtcbn1cblxuQG1lZGlhIChtaW4td2lkdGg6IDE0MDFweCkge1xuICAgICNzb2NpYWwge1xuICAgICAgICBoZWlnaHQ6IDE2NWVtO1xuICAgIH1cbn1cblxuQG1lZGlhIChtYXgtd2lkdGg6IDE0MDBweCkge1xuICAgICNzb2NpYWwge1xuICAgICAgICBiYWNrZ3JvdW5kLXBvc2l0aW9uLXg6IGNhbGMoNTAlICsgMTV2dyk7XG4gICAgfVxufVxuXG5AbWVkaWEgKG1pbi13aWR0aDogOTIxcHgpIHtcbiAgICBpbWcjc29jaWFsLWxvZ28ge1xuICAgICAgICBoZWlnaHQ6IDE4ZW07XG4gICAgfVxufVxuXG5AbWVkaWEgKG1heC13aWR0aDogOTIwcHgpIHtcbiAgICAjc29jaWFsLWJsdXJicyB7XG4gICAgICAgIGZvbnQtc2l6ZTogMC45ZW07XG4gICAgfVxuXG4gICAgI3NvY2lhbCB7XG4gICAgICAgIGJhY2tncm91bmQtcG9zaXRpb24teDogY2FsYyg1MCUgKyAxOC41dncpO1xuICAgIH1cbn1cblxuQG1lZGlhIChtYXgtd2lkdGg6IDgzMHB4KSB7XG4gICAgI3NvY2lhbC1ibHVyYnMge1xuICAgICAgICBmb250LXNpemU6IDAuOWVtO1xuICAgIH1cblxuICAgICNzb2NpYWwge1xuICAgICAgICBiYWNrZ3JvdW5kLXBvc2l0aW9uLXg6IGNhbGMoNTAlICsgMjJ2dyk7XG4gICAgfVxufVxuXG4jbmV3c2xldHRlciB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgIGFsaWduLWNvbnRlbnQ6IGNlbnRlcjtcbiAgICAvKiBmbGV4LWRpcmVjdGlvbjogY29sdW1uOyAqL1xuICAgIGZsZXgtd3JhcDogd3JhcDtcbiAgICB3aWR0aDogNDNlbTtcbiAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoXCIuLi9hc3NldHMvd29vZGVuXFwgYmFubmVyXFwgbWlkZGxlLnBuZ1wiKTtcbiAgICBiYWNrZ3JvdW5kLXNpemU6IGNhbGMoMTAwJSArIDFweCkgY2FsYygxMDAlICsgMXB4IC0gNWVtKTtcbiAgICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXIgY2VudGVyO1xuICAgIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XG4gICAgZ2FwOiAwLjVlbTtcbiAgICBmb250LXNpemU6IDEuMmVtO1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbn1cblxuI25ld3NsZXR0ZXI6OmJlZm9yZSB7XG4gICAgY29udGVudDogXCJcIjtcbiAgICBkaXNwbGF5OiBibG9jaztcbiAgICB3aWR0aDogMTAwJTtcbiAgICBoZWlnaHQ6IDIuOGVtO1xuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybChcIi4uL2Fzc2V0cy93b29kZW5cXCBiYW5uZXJcXCB0b3AucG5nXCIpO1xuICAgIGJhY2tncm91bmQtc2l6ZTogY29udGFpbjtcbiAgICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXIgYm90dG9tO1xuICAgIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XG4gICAgdG9wOiAtMi44ZW07XG4gICAgbWFyZ2luLWJvdHRvbTogMWVtO1xufVxuXG4jbmV3c2xldHRlcjo6YWZ0ZXIge1xuICAgIGNvbnRlbnQ6IFwiXCI7XG4gICAgZGlzcGxheTogYmxvY2s7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgaGVpZ2h0OiAyLjhlbTtcbiAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoXCIuLi9hc3NldHMvd29vZGVuXFwgYmFubmVyXFwgYm90dG9tLnBuZ1wiKTtcbiAgICBiYWNrZ3JvdW5kLXNpemU6IGNvbnRhaW47XG4gICAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyIHRvcDtcbiAgICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xuICAgIGJvdHRvbTogLTIuOGVtO1xufVxuXG4jbmV3c2xldHRlciBwIHtcbiAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoXCIuLi9hc3NldHMvTmV3c2xldHRlcl9EZXNjcmlwdGlvbl9ib3gud2VicFwiKTtcbiAgICBiYWNrZ3JvdW5kLXNpemU6IGNvbnRhaW47XG4gICAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyIGNlbnRlcjtcbiAgICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xuICAgIHdpZHRoOiAzNWVtO1xuICAgIGhlaWdodDogOGVtO1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBmb250LXNpemU6IDEuMDNlbTtcbn1cblxuLyogI3NvY2lhbCA+IHAgYSB7XG4gICAgdGV4dC1kZWNvcmF0aW9uOiB1bmRlcmxpbmU7XG59ICovXG5cbiNuZXdzbGV0dGVyIHAgc3BhbiB7XG4gICAgZm9udC1zaXplOiAxLjRlbTtcbn1cblxuI25ld3NsZXR0ZXIgaW5wdXQge1xuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybChcIi4uL2Fzc2V0cy9OZXdzbGV0dGVyX2lucHV0LWVtYWlsX2JveC5wbmdcIik7XG4gICAgYmFja2dyb3VuZC1zaXplOiBjb250YWluO1xuICAgIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlciBjZW50ZXI7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdHJhbnNwYXJlbnQ7XG4gICAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcbiAgICB3aWR0aDogMjBlbTtcbiAgICBoZWlnaHQ6IDIuNWVtO1xuICAgIHBhZGRpbmc6IDAuNWVtO1xuICAgIGZvbnQtc2l6ZTogMS4zMWVtO1xuICAgIGNvbG9yOiByZ2IoMTcyLCAxMTUsIDc3KTtcbiAgICBmb250LXdlaWdodDogNDAwO1xufVxuXG4jbmV3c2xldHRlciBidXR0b24ge1xuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybChcIi4uL2Fzc2V0cy9OZXdzTGV0dGVyX2J1dHRvbl8yLnBuZ1wiKTtcbiAgICBiYWNrZ3JvdW5kLXNpemU6IGNvbnRhaW47XG4gICAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyIGNlbnRlcjtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB0cmFuc3BhcmVudDtcbiAgICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xuICAgIHdpZHRoOiA4LjVlbTtcbiAgICBoZWlnaHQ6IDNlbTsgICAgXG4gICAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKC0ycHgpO1xuICAgIGNvbG9yOiByZ2JhKDEyMSwgNjYsIDQsIDAuOCk7XG4gICAgZm9udC1zaXplOiAxLjFlbTtcbiAgICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xufVxuXG4jc29jaWFsLWJ1dHRvbnMgYTpudGgtb2YtdHlwZSgyKSB7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xufVxuXG5AbWVkaWEgKG1heC13aWR0aDogMTAwMHB4KSB7XG4gICAgI25ld3NsZXR0ZXIge1xuICAgICAgICBmb250LXNpemU6IDFlbTtcbiAgICAgICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICB9XG5cbiAgICAjbmV3c2xldHRlciBwIHNwYW4ge1xuICAgICAgICBmb250LXNpemU6IDEuNmVtO1xuICAgIH1cblxuICAgICNuZXdzbGV0dGVyIGlucHV0IHtcbiAgICAgICAgZm9udC1zaXplOiAxLjhlbTtcbiAgICB9XG5cbiAgICAjbmV3c2xldHRlciBidXR0b24ge1xuICAgICAgICBmb250LXNpemU6IDEuNWVtO1xuICAgIH1cbn1cblxuQG1lZGlhIChtYXgtd2lkdGg6IDY1MHB4KSB7XG4gICAgI25ld3NsZXR0ZXIge1xuICAgICAgICBmb250LXNpemU6IDAuOTdlbTtcbiAgICB9XG5cbiAgICAjc29jaWFsIGlmcmFtZSB7XG4gICAgICAgIHRyYW5zZm9ybTogc2NhbGUoMC44KTtcbiAgICB9XG59XG5cbkBtZWRpYSAobWF4LXdpZHRoOiA0NDBweCkge1xuICAgICNuZXdzbGV0dGVyIHtcbiAgICAgICAgZm9udC1zaXplOiAwLjg1ZW07XG4gICAgfVxufVxuXG5AbWVkaWEgKG1heC13aWR0aDogNDAwcHgpIHtcbiAgICAjbmV3c2xldHRlciB7XG4gICAgICAgIGZvbnQtc2l6ZTogMC44ZW07XG4gICAgfVxufSJdLCJzb3VyY2VSb290IjoiIn0= */
-	</style>
-	<style>
-	#overview {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-wrap: wrap;
-		width: 100%;
-		height: 100%;
-		padding: 25em 0;
-		gap: 5em;
-		/* background: url("../assets/background art/Trailer Background.jpg") no-repeat center bottom; */
-		background-size: cover;
-		align-content: center;
-		position: relative;
-		padding-top: 35em;
-	}
-	
-	#overview > h1 {
-		width: 100%;
-		font-weight: 700;
-		color: rgba(32, 0, 36, 0.637);
-		margin: 0;
-		padding: 0;
-		text-align: center;
-		background: url(../everseed.com/b383b705019be7a8658be606317a3f4c.png) no-repeat center;
-		background-size: auto 100%;
-		height: 4em;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		padding-top: 0.5em;
-	}
-	
-	#overview h1 span {
-		font-size: 1.5em;
-	}
-	
-	#overview > div {
-		width: 43em;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: column;
-		gap: 1em;
-		background: url(../everseed.com/3b79dc55af8c2d9b9c38cbf0398c8ca1.png) no-repeat center;
-		background-size: 100% 100%;
-		max-width: calc(100% - 4em);
-		margin-bottom: 2em;
-		padding: 3em 5em 2em 6.5em;
-		transform: translateY(1em);
-		position: relative;
-	}
-	
-	#overview > div::before,
-	#overview > div::after {
-		content: '';
-		position: absolute;
-		left: 0;
-		background-repeat: no-repeat;
-		background-position: center bottom;
-		background-size: 100% auto;
-		width: 100%;
-		height: 5em;
-	}
-	
-	#overview > div::before {
-		background-image: url(../everseed.com/25fea4907b4d91a7c9d6aa738c58be8f.png);
-		top: 0;
-		transform: translateY(calc(-100% + 2em));
-	}
-	
-	#overview > div::after {
-		background-image: url(../everseed.com/a25d6a1852ad47b79f08e6eb6b479e8e.png);
-		bottom: 0;
-		transform: translateY(calc(100% - 2em));
-	}
-	
-	#overview > video#trailer {
-		width: 70em;
-		max-width: calc(100% - 4em);
-		/* border: 3px solid rgb(112, 84, 61); */
-	}
-	
-	#overview > div > h1,
-	#overview > div > p {
-		width: 100%;
-		text-align: center;
-		color: rgb(32, 13, 4);
-		font-size: 1.6em;
-		opacity: 0.6;
-	}
-	
-	#overview > div > h1 {
-		font-size: 2.3em;
-	}
-	
-	@media (max-width: 1800px) {
-		#overview > video#trailer {
-			width: 50em;
-		}
-	}
-	
-	@media (max-width: 1500px) {
-		#overview {
-			height: auto;
-		}
-	}
-	
-	@media (max-width: 700px) {
-		#overview {
-			padding-top: 27em;
-		}
-	}
-	/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9jb21wb25lbnRzL092ZXJ2aWV3LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGFBQWE7SUFDYixtQkFBbUI7SUFDbkIsdUJBQXVCO0lBQ3ZCLGVBQWU7SUFDZixXQUFXO0lBQ1gsWUFBWTtJQUNaLGVBQWU7SUFDZixRQUFRO0lBQ1IsZ0dBQWdHO0lBQ2hHLHNCQUFzQjtJQUN0QixxQkFBcUI7SUFDckIsa0JBQWtCO0lBQ2xCLGlCQUFpQjtBQUNyQjs7QUFFQTtJQUNJLFdBQVc7SUFDWCxnQkFBZ0I7SUFDaEIsNkJBQTZCO0lBQzdCLFNBQVM7SUFDVCxVQUFVO0lBQ1Ysa0JBQWtCO0lBQ2xCLG9FQUFtRjtJQUNuRiwwQkFBMEI7SUFDMUIsV0FBVztJQUNYLGFBQWE7SUFDYixtQkFBbUI7SUFDbkIsdUJBQXVCO0lBQ3ZCLGtCQUFrQjtBQUN0Qjs7QUFFQTtJQUNJLGdCQUFnQjtBQUNwQjs7QUFFQTtJQUNJLFdBQVc7SUFDWCxhQUFhO0lBQ2IsbUJBQW1CO0lBQ25CLHVCQUF1QjtJQUN2QixzQkFBc0I7SUFDdEIsUUFBUTtJQUNSLG9FQUFvRjtJQUNwRiwwQkFBMEI7SUFDMUIsMkJBQTJCO0lBQzNCLGtCQUFrQjtJQUNsQiwwQkFBMEI7SUFDMUIsMEJBQTBCO0lBQzFCLGtCQUFrQjtBQUN0Qjs7QUFFQTtJQUNJLFdBQVc7SUFDWCxrQkFBa0I7SUFDbEIsT0FBTztJQUNQLDRCQUE0QjtJQUM1QixrQ0FBa0M7SUFDbEMsMEJBQTBCO0lBQzFCLFdBQVc7SUFDWCxXQUFXO0FBQ2Y7O0FBRUE7SUFDSSx5REFBc0U7SUFDdEUsTUFBTTtJQUNOLHdDQUF3QztBQUM1Qzs7QUFFQTtJQUNJLHlEQUF5RTtJQUN6RSxTQUFTO0lBQ1QsdUNBQXVDO0FBQzNDOztBQUVBO0lBQ0ksV0FBVztJQUNYLDJCQUEyQjtJQUMzQix3Q0FBd0M7QUFDNUM7O0FBRUE7SUFDSSxXQUFXO0lBQ1gsa0JBQWtCO0lBQ2xCLHFCQUFxQjtJQUNyQixnQkFBZ0I7SUFDaEIsWUFBWTtBQUNoQjs7QUFFQTtJQUNJLGdCQUFnQjtBQUNwQjs7QUFFQTtJQUNJO1FBQ0ksV0FBVztJQUNmO0FBQ0o7O0FBRUE7SUFDSTtRQUNJLFlBQVk7SUFDaEI7QUFDSjs7QUFFQTtJQUNJO1FBQ0ksaUJBQWlCO0lBQ3JCO0FBQ0oiLCJzb3VyY2VzQ29udGVudCI6WyIjb3ZlcnZpZXcge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBmbGV4LXdyYXA6IHdyYXA7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIHBhZGRpbmc6IDI1ZW0gMDtcbiAgICBnYXA6IDVlbTtcbiAgICAvKiBiYWNrZ3JvdW5kOiB1cmwoXCIuLi9hc3NldHMvYmFja2dyb3VuZCBhcnQvVHJhaWxlciBCYWNrZ3JvdW5kLmpwZ1wiKSBuby1yZXBlYXQgY2VudGVyIGJvdHRvbTsgKi9cbiAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xuICAgIGFsaWduLWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgcGFkZGluZy10b3A6IDM1ZW07XG59XG5cbiNvdmVydmlldyA+IGgxIHtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBmb250LXdlaWdodDogNzAwO1xuICAgIGNvbG9yOiByZ2JhKDMyLCAwLCAzNiwgMC42MzcpO1xuICAgIG1hcmdpbjogMDtcbiAgICBwYWRkaW5nOiAwO1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICBiYWNrZ3JvdW5kOiB1cmwoXCIuLi9hc3NldHMvVHJhaWxlcl9HYW1lcGxheV9UaXRsZV9GcmFtZSBjb3B5LnBuZ1wiKSBuby1yZXBlYXQgY2VudGVyO1xuICAgIGJhY2tncm91bmQtc2l6ZTogYXV0byAxMDAlO1xuICAgIGhlaWdodDogNGVtO1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBwYWRkaW5nLXRvcDogMC41ZW07XG59XG5cbiNvdmVydmlldyBoMSBzcGFuIHtcbiAgICBmb250LXNpemU6IDEuNWVtO1xufVxuXG4jb3ZlcnZpZXcgPiBkaXYge1xuICAgIHdpZHRoOiA0M2VtO1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgIGdhcDogMWVtO1xuICAgIGJhY2tncm91bmQ6IHVybChcIi4uL2Fzc2V0cy9iYWNrZ3JvdW5kIGFydC9zY3JvbGwgZnJhbWUgbWlkZGxlLnBuZ1wiKSBuby1yZXBlYXQgY2VudGVyO1xuICAgIGJhY2tncm91bmQtc2l6ZTogMTAwJSAxMDAlO1xuICAgIG1heC13aWR0aDogY2FsYygxMDAlIC0gNGVtKTtcbiAgICBtYXJnaW4tYm90dG9tOiAyZW07XG4gICAgcGFkZGluZzogM2VtIDVlbSAyZW0gNi41ZW07XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDFlbSk7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xufVxuXG4jb3ZlcnZpZXcgPiBkaXY6OmJlZm9yZSwgI292ZXJ2aWV3ID4gZGl2OjphZnRlciB7XG4gICAgY29udGVudDogJyc7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIGxlZnQ6IDA7XG4gICAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcbiAgICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXIgYm90dG9tO1xuICAgIGJhY2tncm91bmQtc2l6ZTogMTAwJSBhdXRvO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGhlaWdodDogNWVtO1xufVxuXG4jb3ZlcnZpZXcgPiBkaXY6OmJlZm9yZSB7XG4gICAgYmFja2dyb3VuZC1pbWFnZTogdXJsKFwiLi4vYXNzZXRzL2JhY2tncm91bmQgYXJ0L3Njcm9sbCBmcmFtZSB0b3AucG5nXCIpO1xuICAgIHRvcDogMDtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoY2FsYygtMTAwJSArIDJlbSkpO1xufVxuXG4jb3ZlcnZpZXcgPiBkaXY6OmFmdGVyIHtcbiAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoXCIuLi9hc3NldHMvYmFja2dyb3VuZCBhcnQvc2Nyb2xsIGZyYW1lIGJvdHRvbS5wbmdcIik7XG4gICAgYm90dG9tOiAwO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWShjYWxjKDEwMCUgLSAyZW0pKTtcbn1cblxuI292ZXJ2aWV3ID4gdmlkZW8jdHJhaWxlciB7XG4gICAgd2lkdGg6IDcwZW07XG4gICAgbWF4LXdpZHRoOiBjYWxjKDEwMCUgLSA0ZW0pO1xuICAgIC8qIGJvcmRlcjogM3B4IHNvbGlkIHJnYigxMTIsIDg0LCA2MSk7ICovXG59XG5cbiNvdmVydmlldyA+IGRpdiA+IGgxLCAjb3ZlcnZpZXcgPiBkaXYgPiBwIHtcbiAgICB3aWR0aDogMTAwJTtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgY29sb3I6IHJnYigzMiwgMTMsIDQpO1xuICAgIGZvbnQtc2l6ZTogMS42ZW07XG4gICAgb3BhY2l0eTogMC42O1xufVxuXG4jb3ZlcnZpZXcgPiBkaXYgPiBoMSB7XG4gICAgZm9udC1zaXplOiAyLjNlbTtcbn1cblxuQG1lZGlhIChtYXgtd2lkdGg6IDE4MDBweCkge1xuICAgICNvdmVydmlldyA+IHZpZGVvI3RyYWlsZXIge1xuICAgICAgICB3aWR0aDogNTBlbTtcbiAgICB9XG59XG5cbkBtZWRpYSAobWF4LXdpZHRoOiAxNTAwcHgpIHtcbiAgICAjb3ZlcnZpZXcge1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgfVxufVxuXG5AbWVkaWEgKG1heC13aWR0aDogNzAwcHgpIHtcbiAgICAjb3ZlcnZpZXcge1xuICAgICAgICBwYWRkaW5nLXRvcDogMjdlbTtcbiAgICB9XG59XG4iXSwic291cmNlUm9vdCI6IiJ9 */
-	</style>
-	<style>
-	#nft-showcase {
-		background: whitesmoke;
-		padding: 8em 0;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		text-align: center;
-		padding-bottom: 0;
-		color: rgb(99, 66, 6);
-		background: url(https://everseed.com/5714b0081a80c6ecfa630a2ff4564123.webp) no-repeat center 20em;
-		background-color: white;
-		background-size: 100%;
-		position: relative;
-	}
-	
-	#nft-showcase > * {
-		position: relative;
-	}
-	
-	#nft-showcase::before {
-		position: absolute;
-		top: -20vw;
-		left: 0;
-		width: 100vw;
-		height: 100%;
-		z-index: 0;
-		content: '';
-		background: url(https://everseed.com/b6c2e6bd81864e32e63dd9a9d4f7b651.webp) no-repeat center top;
-		background-size: 100% auto;
-	}
-	
-	#nft-showcase::after {
-		position: absolute;
-		content: '';
-		pointer-events: none;
-		height: 7em;
-		width: 100%;
-		bottom: -7em;
-		left: 0;
-		background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.3) 40%, transparent 80%);
-		z-index: 5;
-	}
-	
-	#nft-showcase > h1 {
-		background-image: url(../everseed.com/22175aa6b35cd66fec1e050a2d252569.png);
-		background-repeat: no-repeat;
-		background-size: auto 100%;
-		background-position: center center;
-		text-align: center;
-		position: relative;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		padding-top: 1.4em;
-		width: 100%;
-		margin: 0 auto;
-		height: 10rem;
-		margin-top: -10vw;
-		margin-bottom: calc(23vw - 10em);
-	}
-	
-	#nft-showcase > h1 span {
-		font-size: 1.7em;
-		color: rgb(68, 23, 23);
-		opacity: 0.6;
-	}
-	
-	#nft-pets-container {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
-		flex-wrap: wrap;
-		max-width: 80em;
-		gap: 2em;
-	}
-	
-	.nft-pet::before {
-		content: "";
-		display: block;
-		width: 100%;
-		height: 100%;
-		background-color: rgb(255, 233, 203);
-		position: absolute;
-		top: 0;
-		left: 0;
-		transform: scale(0.8);
-	}
-	
-	.nft-pet {
-		position: relative;
-		width: 25em;
-		height: 25em;
-	}
-	
-	.nft-pet button {
-		transition: transform 0.1s;
-	}
-	
-	.nft-pet button:hover {
-		transform: scale(0.802);
-	}
-	
-	.nft-pet-poster {
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
-		background-color: transparent;
-		transform: scale(0.7);
-	}
-	
-	.nft-pet-poster img {
-		width: 100%;
-		height: 100%;
-		object-fit: contain;
-		transform: scale(0.8);
-	}
-	
-	.nft-pet-frame {
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
-		object-fit: contain;
-		pointer-events: none;
-	}
-	
-	.nft-pet-title {
-		position: absolute;
-		bottom: 1.6em;
-		left: 0;
-		width: 100%;
-		color: rgb(71, 18, 14);
-		font-weight: bold;
-	}
-	
-	.nft-pet p span {
-		font-size: 1.4em;
-		opacity: 0.6;
-	}
-	
-	#nft-model-container {
-		position: fixed;
-		width: 100%;
-		height: 100vh;
-		top: 0;
-		left: 0;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background: linear-gradient(to top right, rgb(11, 1, 19), rgb(4, 26, 32));
-		z-index: 2000;
-	}
-	
-	#nft-model-container iframe,
-	#nft-model-container model-viewer {
-		width: 100%;
-		height: 100%;
-		border: none;
-		--poster-color: transparent;
-	}
-	
-	#nft-model-container > button {
-		position: absolute;
-		top: 3em;
-		left: 50%;
-		transform: translateX(-50%);
-	}
-	
-	#corgi-flower {
-		width: 32vw;
-		height: 32vw;
-		background: url(https://everseed.com/7ee672224f21d3d808563d0768e393ac.webp) no-repeat center bottom;
-		background-size: contain;
-		margin-bottom: 10vw;
-	}
-	
-	#corgi-flower > video {
-		height: 100%;
-		width: 100%;
-		transform: scale(0.9) translateY(-38.2%) translateX(-3%) rotate(-0deg);
-	}
-	
-	#nft-showcase-description {
-		display: flex;
-		width: 100%;
-		flex-wrap: wrap;
-		align-content: center;
-		justify-content: center;
-		align-items: center;
-		gap: 4em;
-		padding: 4em;
-	}
-	
-	#nft-showcase-description > img {
-		width: 40em;
-		justify-self: flex-end;
-	}
-	
-	#nft-showcase-description > div {
-		flex-grow: 1;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		font-size: 0.95em;
-		max-width: 100%;
-	}
-	
-	#nft-showcase-description > div > div {
-		display: flex;
-		flex-direction: column;
-		gap: 1.5em;
-		padding: 0 2em;
-		width: 70em;
-		max-width: 100%;
-	}
-	
-	#nft-showcase-description a {
-		color: rgb(0, 115, 192);
-	}
-	
-	#nft-showcase-description h1 {
-		font-size: 2.7em;
-	}
-	
-	#nft-showcase-description p {
-		font-size: 1.9em;
-		opacity: 0.8;
-	}
-	
-	#vines {
-		--size: calc(40vmin);
-		position: relative;
-		width: 100%;
-		height: var(--size);
-		margin-bottom: calc(var(--size) * -1);
-		transform: translateY(-11vmin);
-	}
-	
-	#vines::before,
-	#vines::after {
-		position: absolute;
-		top: 0;
-		width: var(--size);
-		height: var(--size);
-		content: '';
-		background: url(https://everseed.com/243ba13a18c98fe246dc51b402079360.webp) no-repeat 107% top;
-		background-size: contain;
-	}
-	
-	#vines::before {
-		transform: scaleX(-1);
-		left: 0;
-	}
-	
-	#vines::before,
-	#vines::after {
-		right: 0;
-	}
-	
-	.nft-pet-3d-icon {
-		display: block;
-		position: absolute;
-		top: 4.5em;
-		left: 4em;
-		color: black;
-		width: 2.5em;
-		opacity: 0.6;
-	}
-	
-	#nft-model-viewer-arrow {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100vw;
-		height: 100vh;
-		background: url(../everseed.com/9a63ae69bb2713129cc8775623fc191f.png) no-repeat center;
-		background-size: 70em auto;
-		transform: translateY(10em);
-	}
-	
-	@media (max-width: 1400px) {
-		#nft-showcase-description {
-			flex-direction: column;
-		}
-	}
-	
-	@media (max-width: 1200px) {
-		#nft-showcase::before {
-			background-size: 100em;
-			top: -15em;
-		}
-		#nft-showcase > h1 {
-			margin-top: -2em;
-			margin-bottom: 5em;
-		}
-		#corgi-flower {
-			width: 30em;
-			height: 30em;
-		}
-		#vines {
-			--size: calc(30em);
-			transform: translateY(-5em);
-		}
-	}
-	
-	@media (max-width: 750px) {
-		.nft-pet {
-			font-size: 0.85em;
-		}
-	}
-	
-	@media (max-width: 700px) {
-		#nft-pets-container {
-			gap: 1em;
-		}
-		.nft-pet {
-			font-size: 0.75em;
-		}
-	}
-	/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9jb21wb25lbnRzL05GVFNob3djYXNlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLHNCQUFzQjtJQUN0QixjQUFjO0lBQ2QsYUFBYTtJQUNiLHNCQUFzQjtJQUN0QixtQkFBbUI7SUFDbkIsdUJBQXVCO0lBQ3ZCLGtCQUFrQjtJQUNsQixpQkFBaUI7SUFDakIscUJBQXFCO0lBQ3JCLHlFQUF1RjtJQUN2Rix1QkFBdUI7SUFDdkIscUJBQXFCO0lBQ3JCLGtCQUFrQjtBQUN0Qjs7QUFFQTtJQUNJLGtCQUFrQjtBQUN0Qjs7QUFFQTtJQUNJLGtCQUFrQjtJQUNsQixVQUFVO0lBQ1YsT0FBTztJQUNQLFlBQVk7SUFDWixZQUFZO0lBQ1osVUFBVTtJQUNWLFdBQVc7SUFDWCx3RUFBcUY7SUFDckYsMEJBQTBCO0FBQzlCOztBQUVBO0lBQ0ksa0JBQWtCO0lBQ2xCLFdBQVc7SUFDWCxvQkFBb0I7SUFDcEIsV0FBVztJQUNYLFdBQVc7SUFDWCxZQUFZO0lBQ1osT0FBTztJQUNQLDRGQUE0RjtJQUM1RixVQUFVO0FBQ2Q7O0FBRUE7SUFDSSx5REFBNEU7SUFDNUUsNEJBQTRCO0lBQzVCLDBCQUEwQjtJQUMxQixrQ0FBa0M7SUFDbEMsa0JBQWtCO0lBQ2xCLGtCQUFrQjtJQUNsQixhQUFhO0lBQ2IsbUJBQW1CO0lBQ25CLHVCQUF1QjtJQUN2QixrQkFBa0I7SUFDbEIsV0FBVztJQUNYLGNBQWM7SUFDZCxhQUFhO0lBQ2IsaUJBQWlCO0lBQ2pCLGdDQUFnQztBQUNwQzs7QUFFQTtJQUNJLGdCQUFnQjtJQUNoQixzQkFBc0I7SUFDdEIsWUFBWTtBQUNoQjs7QUFFQTtJQUNJLGFBQWE7SUFDYixtQkFBbUI7SUFDbkIsdUJBQXVCO0lBQ3ZCLG1CQUFtQjtJQUNuQixlQUFlO0lBQ2YsZUFBZTtJQUNmLFFBQVE7QUFDWjs7QUFFQTtJQUNJLFdBQVc7SUFDWCxjQUFjO0lBQ2QsV0FBVztJQUNYLFlBQVk7SUFDWixvQ0FBb0M7SUFDcEMsa0JBQWtCO0lBQ2xCLE1BQU07SUFDTixPQUFPO0lBQ1AscUJBQXFCO0FBQ3pCOztBQUVBO0lBQ0ksa0JBQWtCO0lBQ2xCLFdBQVc7SUFDWCxZQUFZO0FBQ2hCOztBQUVBO0lBQ0ksMEJBQTBCO0FBQzlCOztBQUVBO0lBQ0ksdUJBQXVCO0FBQzNCOztBQUVBO0lBQ0ksV0FBVztJQUNYLFlBQVk7SUFDWixrQkFBa0I7SUFDbEIsTUFBTTtJQUNOLE9BQU87SUFDUCw2QkFBNkI7SUFDN0IscUJBQXFCO0FBQ3pCOztBQUVBO0lBQ0ksV0FBVztJQUNYLFlBQVk7SUFDWixtQkFBbUI7SUFDbkIscUJBQXFCO0FBQ3pCOztBQUVBO0lBQ0ksV0FBVztJQUNYLFlBQVk7SUFDWixrQkFBa0I7SUFDbEIsTUFBTTtJQUNOLE9BQU87SUFDUCxtQkFBbUI7SUFDbkIsb0JBQW9CO0FBQ3hCOztBQUVBO0lBQ0ksa0JBQWtCO0lBQ2xCLGFBQWE7SUFDYixPQUFPO0lBQ1AsV0FBVztJQUNYLHNCQUFzQjtJQUN0QixpQkFBaUI7QUFDckI7O0FBRUE7SUFDSSxnQkFBZ0I7SUFDaEIsWUFBWTtBQUNoQjs7QUFFQTtJQUNJLGVBQWU7SUFDZixXQUFXO0lBQ1gsYUFBYTtJQUNiLE1BQU07SUFDTixPQUFPO0lBQ1AsYUFBYTtJQUNiLG1CQUFtQjtJQUNuQix1QkFBdUI7SUFDdkIseUVBQXlFO0lBQ3pFLGFBQWE7QUFDakI7O0FBRUE7SUFDSSxXQUFXO0lBQ1gsWUFBWTtJQUNaLFlBQVk7SUFDWiwyQkFBMkI7QUFDL0I7O0FBRUE7SUFDSSxrQkFBa0I7SUFDbEIsUUFBUTtJQUNSLFNBQVM7SUFDVCwyQkFBMkI7QUFDL0I7O0FBRUE7SUFDSSxXQUFXO0lBQ1gsWUFBWTtJQUNaLDJFQUFnRTtJQUNoRSx3QkFBd0I7SUFDeEIsbUJBQW1CO0FBQ3ZCOztBQUVBO0lBQ0ksWUFBWTtJQUNaLFdBQVc7SUFDWCxzRUFBc0U7QUFDMUU7O0FBRUE7SUFDSSxhQUFhO0lBQ2IsV0FBVztJQUNYLGVBQWU7SUFDZixxQkFBcUI7SUFDckIsdUJBQXVCO0lBQ3ZCLG1CQUFtQjtJQUNuQixRQUFRO0lBQ1IsWUFBWTtBQUNoQjs7QUFFQTtJQUNJLFdBQVc7SUFDWCxzQkFBc0I7QUFDMUI7O0FBRUE7SUFDSSxZQUFZO0lBQ1osYUFBYTtJQUNiLG1CQUFtQjtJQUNuQix1QkFBdUI7SUFDdkIsaUJBQWlCO0lBQ2pCLGVBQWU7QUFDbkI7O0FBRUE7SUFDSSxhQUFhO0lBQ2Isc0JBQXNCO0lBQ3RCLFVBQVU7SUFDVixjQUFjO0lBQ2QsV0FBVztJQUNYLGVBQWU7QUFDbkI7O0FBRUE7SUFDSSx1QkFBdUI7QUFDM0I7O0FBRUE7SUFDSSxnQkFBZ0I7QUFDcEI7O0FBRUE7SUFDSSxnQkFBZ0I7SUFDaEIsWUFBWTtBQUNoQjs7QUFFQTtJQUNJLG9CQUFvQjs7SUFFcEIsa0JBQWtCO0lBQ2xCLFdBQVc7SUFDWCxtQkFBbUI7SUFDbkIscUNBQXFDO0lBQ3JDLDhCQUE4QjtBQUNsQzs7QUFFQTtJQUNJLGtCQUFrQjtJQUNsQixNQUFNO0lBQ04sa0JBQWtCO0lBQ2xCLG1CQUFtQjtJQUNuQixXQUFXO0lBQ1gsc0VBQTBEO0lBQzFELHdCQUF3QjtBQUM1Qjs7QUFFQTtJQUNJLHFCQUFxQjtJQUNyQixPQUFPO0FBQ1g7O0FBRUE7SUFDSSxRQUFRO0FBQ1o7O0FBRUE7SUFDSSxjQUFjO0lBQ2Qsa0JBQWtCO0lBQ2xCLFVBQVU7SUFDVixTQUFTO0lBQ1QsWUFBWTtJQUNaLFlBQVk7SUFDWixZQUFZO0FBQ2hCOztBQUVBO0lBQ0ksa0JBQWtCO0lBQ2xCLE1BQU07SUFDTixPQUFPO0lBQ1AsWUFBWTtJQUNaLGFBQWE7SUFDYixvRUFBbUU7SUFDbkUsMEJBQTBCO0lBQzFCLDJCQUEyQjtBQUMvQjs7QUFFQTtJQUNJO1FBQ0ksc0JBQXNCO0lBQzFCO0FBQ0o7O0FBRUE7SUFDSTtRQUNJLHNCQUFzQjtRQUN0QixVQUFVO0lBQ2Q7O0lBRUE7UUFDSSxnQkFBZ0I7UUFDaEIsa0JBQWtCO0lBQ3RCOztJQUVBO1FBQ0ksV0FBVztRQUNYLFlBQVk7SUFDaEI7O0lBRUE7UUFDSSxrQkFBa0I7UUFDbEIsMkJBQTJCO0lBQy9CO0FBQ0o7O0FBRUE7SUFDSTtRQUNJLGlCQUFpQjtJQUNyQjtBQUNKOztBQUVBO0lBQ0k7UUFDSSxRQUFRO0lBQ1o7O0lBRUE7UUFDSSxpQkFBaUI7SUFDckI7QUFDSiIsInNvdXJjZXNDb250ZW50IjpbIiNuZnQtc2hvd2Nhc2Uge1xuICAgIGJhY2tncm91bmQ6IHdoaXRlc21va2U7XG4gICAgcGFkZGluZzogOGVtIDA7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIHBhZGRpbmctYm90dG9tOiAwO1xuICAgIGNvbG9yOiByZ2IoOTksIDY2LCA2KTtcbiAgICBiYWNrZ3JvdW5kOiB1cmwoXCIuLi9hc3NldHMvYmFja2dyb3VuZFxcIGFydC9wZXQgYmcgZ3JhZGllbnQud2VicFwiKSBuby1yZXBlYXQgY2VudGVyIDIwZW07XG4gICAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XG4gICAgYmFja2dyb3VuZC1zaXplOiAxMDAlO1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbn1cblxuI25mdC1zaG93Y2FzZSA+ICoge1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbn1cblxuI25mdC1zaG93Y2FzZTo6YmVmb3JlIHtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgdG9wOiAtMjB2dztcbiAgICBsZWZ0OiAwO1xuICAgIHdpZHRoOiAxMDB2dztcbiAgICBoZWlnaHQ6IDEwMCU7XG4gICAgei1pbmRleDogMDtcbiAgICBjb250ZW50OiAnJztcbiAgICBiYWNrZ3JvdW5kOiB1cmwoXCIuLi9hc3NldHMvYmFja2dyb3VuZFxcIGFydC9QZXQgYmFja2dyb3VuZC53ZWJwXCIpIG5vLXJlcGVhdCBjZW50ZXIgdG9wO1xuICAgIGJhY2tncm91bmQtc2l6ZTogMTAwJSBhdXRvO1xufVxuXG4jbmZ0LXNob3djYXNlOjphZnRlciB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIGNvbnRlbnQ6ICcnO1xuICAgIHBvaW50ZXItZXZlbnRzOiBub25lO1xuICAgIGhlaWdodDogN2VtO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGJvdHRvbTogLTdlbTtcbiAgICBsZWZ0OiAwO1xuICAgIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCh0byBib3R0b20sIHdoaXRlLCByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMykgNDAlLCB0cmFuc3BhcmVudCA4MCUpO1xuICAgIHotaW5kZXg6IDU7XG59XG5cbiNuZnQtc2hvd2Nhc2UgPiBoMSB7XG4gICAgYmFja2dyb3VuZC1pbWFnZTogdXJsKFwiLi4vYXNzZXRzL1JvYWRtYXBfYW5kX1BldE5GVF9UaXRsZV9GcmFtZShzaG9ydCkucG5nXCIpO1xuICAgIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XG4gICAgYmFja2dyb3VuZC1zaXplOiBhdXRvIDEwMCU7XG4gICAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyIGNlbnRlcjtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBwYWRkaW5nLXRvcDogMS40ZW07XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgbWFyZ2luOiAwIGF1dG87XG4gICAgaGVpZ2h0OiAxMHJlbTtcbiAgICBtYXJnaW4tdG9wOiAtMTB2dztcbiAgICBtYXJnaW4tYm90dG9tOiBjYWxjKDIzdncgLSAxMGVtKTtcbn1cblxuI25mdC1zaG93Y2FzZSA+IGgxIHNwYW4ge1xuICAgIGZvbnQtc2l6ZTogMS43ZW07XG4gICAgY29sb3I6IHJnYig2OCwgMjMsIDIzKTtcbiAgICBvcGFjaXR5OiAwLjY7XG59XG5cbiNuZnQtcGV0cy1jb250YWluZXIge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgZmxleC1kaXJlY3Rpb246IHJvdztcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGZsZXgtd3JhcDogd3JhcDtcbiAgICBtYXgtd2lkdGg6IDgwZW07XG4gICAgZ2FwOiAyZW07XG59XG5cbi5uZnQtcGV0OjpiZWZvcmUge1xuICAgIGNvbnRlbnQ6IFwiXCI7XG4gICAgZGlzcGxheTogYmxvY2s7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYigyNTUsIDIzMywgMjAzKTtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgdG9wOiAwO1xuICAgIGxlZnQ6IDA7XG4gICAgdHJhbnNmb3JtOiBzY2FsZSgwLjgpO1xufVxuXG4ubmZ0LXBldCB7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIHdpZHRoOiAyNWVtO1xuICAgIGhlaWdodDogMjVlbTtcbn1cblxuLm5mdC1wZXQgYnV0dG9uIHtcbiAgICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMC4xcztcbn1cblxuLm5mdC1wZXQgYnV0dG9uOmhvdmVyIHtcbiAgICB0cmFuc2Zvcm06IHNjYWxlKDAuODAyKTtcbn1cblxuLm5mdC1wZXQtcG9zdGVyIHtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBoZWlnaHQ6IDEwMCU7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIHRvcDogMDtcbiAgICBsZWZ0OiAwO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50O1xuICAgIHRyYW5zZm9ybTogc2NhbGUoMC43KTtcbn1cblxuLm5mdC1wZXQtcG9zdGVyIGltZyB7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIG9iamVjdC1maXQ6IGNvbnRhaW47XG4gICAgdHJhbnNmb3JtOiBzY2FsZSgwLjgpO1xufVxuXG4ubmZ0LXBldC1mcmFtZSB7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICB0b3A6IDA7XG4gICAgbGVmdDogMDtcbiAgICBvYmplY3QtZml0OiBjb250YWluO1xuICAgIHBvaW50ZXItZXZlbnRzOiBub25lO1xufVxuXG4ubmZ0LXBldC10aXRsZSB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIGJvdHRvbTogMS42ZW07XG4gICAgbGVmdDogMDtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBjb2xvcjogcmdiKDcxLCAxOCwgMTQpO1xuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xufVxuXG4ubmZ0LXBldCBwIHNwYW4ge1xuICAgIGZvbnQtc2l6ZTogMS40ZW07XG4gICAgb3BhY2l0eTogMC42O1xufVxuXG4jbmZ0LW1vZGVsLWNvbnRhaW5lciB7XG4gICAgcG9zaXRpb246IGZpeGVkO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGhlaWdodDogMTAwdmg7XG4gICAgdG9wOiAwO1xuICAgIGxlZnQ6IDA7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCh0byB0b3AgcmlnaHQsIHJnYigxMSwgMSwgMTkpLCByZ2IoNCwgMjYsIDMyKSk7XG4gICAgei1pbmRleDogMjAwMDtcbn1cblxuI25mdC1tb2RlbC1jb250YWluZXIgaWZyYW1lLCAjbmZ0LW1vZGVsLWNvbnRhaW5lciBtb2RlbC12aWV3ZXIge1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGhlaWdodDogMTAwJTtcbiAgICBib3JkZXI6IG5vbmU7XG4gICAgLS1wb3N0ZXItY29sb3I6IHRyYW5zcGFyZW50O1xufVxuXG4jbmZ0LW1vZGVsLWNvbnRhaW5lciA+IGJ1dHRvbiB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIHRvcDogM2VtO1xuICAgIGxlZnQ6IDUwJTtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVgoLTUwJSk7XG59XG5cbiNjb3JnaS1mbG93ZXIge1xuICAgIHdpZHRoOiAzMnZ3O1xuICAgIGhlaWdodDogMzJ2dztcbiAgICBiYWNrZ3JvdW5kOiB1cmwoXCIuLi9hc3NldHMvZmxvd2VyLndlYnBcIikgbm8tcmVwZWF0IGNlbnRlciBib3R0b207XG4gICAgYmFja2dyb3VuZC1zaXplOiBjb250YWluO1xuICAgIG1hcmdpbi1ib3R0b206IDEwdnc7XG59XG5cbiNjb3JnaS1mbG93ZXIgPiB2aWRlbyB7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIHRyYW5zZm9ybTogc2NhbGUoMC45KSB0cmFuc2xhdGVZKC0zOC4yJSkgdHJhbnNsYXRlWCgtMyUpIHJvdGF0ZSgtMGRlZyk7XG59XG5cbiNuZnQtc2hvd2Nhc2UtZGVzY3JpcHRpb24ge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgZmxleC13cmFwOiB3cmFwO1xuICAgIGFsaWduLWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGdhcDogNGVtO1xuICAgIHBhZGRpbmc6IDRlbTtcbn1cblxuI25mdC1zaG93Y2FzZS1kZXNjcmlwdGlvbiA+IGltZyB7XG4gICAgd2lkdGg6IDQwZW07XG4gICAganVzdGlmeS1zZWxmOiBmbGV4LWVuZDtcbn1cblxuI25mdC1zaG93Y2FzZS1kZXNjcmlwdGlvbiA+IGRpdiB7XG4gICAgZmxleC1ncm93OiAxO1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBmb250LXNpemU6IDAuOTVlbTtcbiAgICBtYXgtd2lkdGg6IDEwMCU7XG59XG5cbiNuZnQtc2hvd2Nhc2UtZGVzY3JpcHRpb24gPiBkaXYgPiBkaXYge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICBnYXA6IDEuNWVtO1xuICAgIHBhZGRpbmc6IDAgMmVtO1xuICAgIHdpZHRoOiA3MGVtO1xuICAgIG1heC13aWR0aDogMTAwJTtcbn1cblxuI25mdC1zaG93Y2FzZS1kZXNjcmlwdGlvbiBhIHtcbiAgICBjb2xvcjogcmdiKDAsIDExNSwgMTkyKTtcbn1cblxuI25mdC1zaG93Y2FzZS1kZXNjcmlwdGlvbiBoMSB7XG4gICAgZm9udC1zaXplOiAyLjdlbTtcbn1cblxuI25mdC1zaG93Y2FzZS1kZXNjcmlwdGlvbiBwIHtcbiAgICBmb250LXNpemU6IDEuOWVtO1xuICAgIG9wYWNpdHk6IDAuODtcbn1cblxuI3ZpbmVzIHtcbiAgICAtLXNpemU6IGNhbGMoNDB2bWluKTtcblxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBoZWlnaHQ6IHZhcigtLXNpemUpO1xuICAgIG1hcmdpbi1ib3R0b206IGNhbGModmFyKC0tc2l6ZSkgKiAtMSk7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKC0xMXZtaW4pO1xufVxuXG4jdmluZXM6OmJlZm9yZSwgI3ZpbmVzOjphZnRlciB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIHRvcDogMDtcbiAgICB3aWR0aDogdmFyKC0tc2l6ZSk7XG4gICAgaGVpZ2h0OiB2YXIoLS1zaXplKTtcbiAgICBjb250ZW50OiAnJztcbiAgICBiYWNrZ3JvdW5kOiB1cmwoXCIuLi9hc3NldHMvdmluZXMud2VicFwiKSBuby1yZXBlYXQgMTA3JSB0b3A7XG4gICAgYmFja2dyb3VuZC1zaXplOiBjb250YWluO1xufVxuXG4jdmluZXM6OmJlZm9yZSB7XG4gICAgdHJhbnNmb3JtOiBzY2FsZVgoLTEpO1xuICAgIGxlZnQ6IDA7XG59XG5cbiN2aW5lczo6YmVmb3JlLCAjdmluZXM6OmFmdGVyIHtcbiAgICByaWdodDogMDtcbn1cblxuLm5mdC1wZXQtM2QtaWNvbiB7XG4gICAgZGlzcGxheTogYmxvY2s7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIHRvcDogNC41ZW07XG4gICAgbGVmdDogNGVtO1xuICAgIGNvbG9yOiBibGFjaztcbiAgICB3aWR0aDogMi41ZW07XG4gICAgb3BhY2l0eTogMC42O1xufVxuXG4jbmZ0LW1vZGVsLXZpZXdlci1hcnJvdyB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIHRvcDogMDtcbiAgICBsZWZ0OiAwO1xuICAgIHdpZHRoOiAxMDB2dztcbiAgICBoZWlnaHQ6IDEwMHZoO1xuICAgIGJhY2tncm91bmQ6IHVybChcIi4uL2Fzc2V0cy9hcnJvd1xcIHR1cm5hcm91YmQucG5nXCIpIG5vLXJlcGVhdCBjZW50ZXI7XG4gICAgYmFja2dyb3VuZC1zaXplOiA3MGVtIGF1dG87XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDEwZW0pO1xufVxuXG5AbWVkaWEgKG1heC13aWR0aDogMTQwMHB4KSB7XG4gICAgI25mdC1zaG93Y2FzZS1kZXNjcmlwdGlvbiB7XG4gICAgICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gICAgfVxufVxuXG5AbWVkaWEgKG1heC13aWR0aDogMTIwMHB4KSB7XG4gICAgI25mdC1zaG93Y2FzZTo6YmVmb3JlIHtcbiAgICAgICAgYmFja2dyb3VuZC1zaXplOiAxMDBlbTtcbiAgICAgICAgdG9wOiAtMTVlbTtcbiAgICB9XG5cbiAgICAjbmZ0LXNob3djYXNlID4gaDEge1xuICAgICAgICBtYXJnaW4tdG9wOiAtMmVtO1xuICAgICAgICBtYXJnaW4tYm90dG9tOiA1ZW07XG4gICAgfVxuXG4gICAgI2NvcmdpLWZsb3dlciB7XG4gICAgICAgIHdpZHRoOiAzMGVtO1xuICAgICAgICBoZWlnaHQ6IDMwZW07XG4gICAgfVxuXG4gICAgI3ZpbmVzIHtcbiAgICAgICAgLS1zaXplOiBjYWxjKDMwZW0pO1xuICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoLTVlbSk7XG4gICAgfVxufVxuXG5AbWVkaWEgKG1heC13aWR0aDogNzUwcHgpIHtcbiAgICAubmZ0LXBldCB7XG4gICAgICAgIGZvbnQtc2l6ZTogMC44NWVtO1xuICAgIH1cbn1cblxuQG1lZGlhIChtYXgtd2lkdGg6IDcwMHB4KSB7XG4gICAgI25mdC1wZXRzLWNvbnRhaW5lciB7XG4gICAgICAgIGdhcDogMWVtO1xuICAgIH1cblxuICAgIC5uZnQtcGV0IHtcbiAgICAgICAgZm9udC1zaXplOiAwLjc1ZW07XG4gICAgfVxufSJdLCJzb3VyY2VSb290IjoiIn0= */
-	</style>
-	<style>
-	footer {
-		padding: 4em;
-		text-align: center;
-		color: rgba(255, 255, 255, 0.8);
-		display: flex;
-		align-items: center;
-		/* justify-content: center; */
-		flex-direction: row;
-		/* background: url("../assets/Footer\ Frame.png") no-repeat center center; */
-		background-color: rgb(20, 20, 20);
-		background-size: cover;
-		gap: 1em;
-		/* border-top: 3px solid rgb(218, 163, 97); */
-	}
-	
-	footer > * {
-		font-size: 1.1em;
-	}
-	
-	footer .copyright-notice {
-		margin-left: auto;
-	}
-	
-	@media (max-width: 800px) {
-		footer {
-			flex-direction: column;
-		}
-		footer .copyright-notice {
-			margin-left: 0;
-			margin-top: 3em;
-		}
-	}
-	/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9jb21wb25lbnRzL0Zvb3Rlci5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxZQUFZO0lBQ1osa0JBQWtCO0lBQ2xCLCtCQUErQjtJQUMvQixhQUFhO0lBQ2IsbUJBQW1CO0lBQ25CLDZCQUE2QjtJQUM3QixtQkFBbUI7SUFDbkIsNEVBQTRFO0lBQzVFLGlDQUFpQztJQUNqQyxzQkFBc0I7SUFDdEIsUUFBUTtJQUNSLDZDQUE2QztBQUNqRDs7QUFFQTtJQUNJLGdCQUFnQjtBQUNwQjs7QUFFQTtJQUNJLGlCQUFpQjtBQUNyQjs7QUFFQTtJQUNJO1FBQ0ksc0JBQXNCO0lBQzFCOztJQUVBO1FBQ0ksY0FBYztRQUNkLGVBQWU7SUFDbkI7QUFDSiIsInNvdXJjZXNDb250ZW50IjpbImZvb3RlciB7XG4gICAgcGFkZGluZzogNGVtO1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICBjb2xvcjogcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjgpO1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAvKiBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjsgKi9cbiAgICBmbGV4LWRpcmVjdGlvbjogcm93O1xuICAgIC8qIGJhY2tncm91bmQ6IHVybChcIi4uL2Fzc2V0cy9Gb290ZXJcXCBGcmFtZS5wbmdcIikgbm8tcmVwZWF0IGNlbnRlciBjZW50ZXI7ICovXG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDIwLCAyMCwgMjApO1xuICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG4gICAgZ2FwOiAxZW07XG4gICAgLyogYm9yZGVyLXRvcDogM3B4IHNvbGlkIHJnYigyMTgsIDE2MywgOTcpOyAqL1xufVxuXG5mb290ZXIgPiAqIHtcbiAgICBmb250LXNpemU6IDEuMWVtO1xufVxuXG5mb290ZXIgLmNvcHlyaWdodC1ub3RpY2Uge1xuICAgIG1hcmdpbi1sZWZ0OiBhdXRvO1xufVxuXG5AbWVkaWEgKG1heC13aWR0aDogODAwcHgpIHtcbiAgICBmb290ZXIge1xuICAgICAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgIH1cblxuICAgIGZvb3RlciAuY29weXJpZ2h0LW5vdGljZSB7XG4gICAgICAgIG1hcmdpbi1sZWZ0OiAwO1xuICAgICAgICBtYXJnaW4tdG9wOiAzZW07XG4gICAgfVxufVxuIl0sInNvdXJjZVJvb3QiOiIifQ== */
-	</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REJECTED Philanthropist </title>
+
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/lightcase.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lemon&family=Ma+Shan+Zheng&family=Montserrat:wght@300;400;500;600&family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Varela+Round&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Acme&family=Lemon&family=Ma+Shan+Zheng&family=Montserrat:wght@300;400;500;600&family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Varela+Round&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Acme&family=Lemon&family=Ma+Shan+Zheng&family=Montserrat:wght@300;400;500;600&family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Varela+Round&display=swap" rel="stylesheet">
+
+    <!-- main css for template -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-	<div id="app">
-		<main id="landing">
-			<section id="splash">
-				 <video id="splash-background"  src="img/8bd6bbffbac854de2721c221f70f5a60.mp4" poster="img/bg.webp" onclick="location.href='home.html'" muted="" autoplay="" loop="" playsinline=""></video>
-				 <div id="splash-buttons-container">
-					<button class="plank-button" onclick="location.href='home.html';"><img src="img/d78508cd30d4163da9ed95ee86eb1d89.png">
-						<div><span>📚</span><span class="hover-text">ENTER</span></div>
-					</button>
-					<!-- <button class="plank-button" onclick="location.href='index_3.html';"><img src="img/d78508cd30d4163da9ed95ee86eb1d89.png">
-						<div>ABOUT</div>
-					</button> -->
-				</div>
-			</section>
-				
+
+        
+
+    <!-- ===============>> Preloader start here <<================= -->
+    <div class="preloader">
+        <img src="assets/images/logo/preloader.png" alt="REJECTED land">
+    </div>
+    <!-- ===============>> Preloader end here <<================= -->
+
+
+
+    <!-- ========== Multipage Header Section Starts Here========== -->
+    <header class="header-section">
+       
+        <div class="header-bottom">
+            <div class="container">
+                <div class="header-wrapper">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="assets/images/logo/logo.png" alt="logo">
+                        </a>
+                    </div>
+                    <div class="menu-area">
+                        <ul class="menu">
+                            <li>
+                                <a href="#home">Home</a>
+                            </li>
+
+                            <li>
+                                <a href="#about">About</a>
+                            </li>
+                            
+                            <li>
+                                <a href="#faq">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="#0">Pages</a>
+                                <ul class="submenu">
+                                    <li><a href="javsascript:void();">Home</a>
+                                        <ul class="submenu">
+                                            <li><a href="index.html">REJECTED HUNTER</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                    <li><a href="javsascript:void();">About</a>
+                                        <ul class="submenu">
+                                            <li><a href="about.html">About</a></li>
+                                            <li><a href="roadmap.html">Roadmap</a></li>
+                                            <li><a href="faq.html">FAQ</a></li>
+                                            <!--  -->
+                                        </ul>
+                                    </li>
+                                    <!--  <li><a href="javsascript:void();">Blog</a>
+                                        <ul class="submenu">
+                                            <li><a href="blog.html">Blog</a></li>
+                                            <li><a href="blog-single.html">Blog single</a></li>
+                                        </ul>
+                                    </li> -->
+                                    <li><a href="#">EXPLORER</a></li>
+                                    <li><a href="#">COMING SOON</a></li>
+                                    
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="header-btn">
+                           <a href="#" class="default-btn default-btn--secondary">
+                                <span>Join <i class="fa-brands fa-discord"></i></span>
+                            </a>
+                            <!-- -->
+                        </div>
+
+                        <!-- toggle icons -->
+                        <div class="header-bar d-lg-none">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ========== Multipage Header Section Ends Here========== -->
+
+
+
+
+
+    <!-- connect wallet modal start -->
+    <div class="wallet-modal modal fade" id="wallet-option" tabindex="-1" aria-labelledby="choose-wallet"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="choose-wallet">Connect Your Wallet</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Please select a wallet to connect for <br> Start Minting your NFTs</p>
+                    <ul class="wallet__list">
+                        <li class="wallet__list-item"><a href="#"> <span><img src="assets/images/wallet/metamask.jpg"
+                                        alt="metamask">
+                                </span> </a></li>
+                        <li class="wallet__list-item"><a href="#"> <span><img src="assets/images/wallet/coinbase.jpg"
+                                        alt="coinbase">
+                                </span> </a></li>
+                        <li class="wallet__list-item"><a href="#"> <span><img src="assets/images/wallet/bsc.jpg"
+                                        alt="bsc">
+                                </span></a></li>
+                        <li class="wallet__list-item"><a href="#"> <span><img src="assets/images/wallet/trust.jpg"
+                                        alt="Trust Wallet">
+                                </span></a></li>
+                    </ul>
+                    <p>By connecting your wallet, you agree to our Terms of Service and our Privacy Policy.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- connect wallet modal end -->
+
+
+
+
+
+
+    <!-- ================> Banner section start here <================== -->
+    <section id="home" class="banner" style="background-image: url(assets/images/banner/bg.png);">
+        <div class="container">
+            <div class="banner__wrapper">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="banner__content" data-aos="fade-right" data-aos-duration="2000">
+                            <h3>Our Mint is <span class="color--secondary-color">Live <i
+                                        class="fa-solid fa-wifi"></i></span></h3>
+                            <h1>REJECTED</h1>
+                            <p>3,333 Unique Undercover Creatures,  
+                              </p>
+                            <div class="btn-group">
+                                 <a href="#" class="default-btn default-btn--secondary">STAKE</a>
+                                <a href="#" class="default-btn">Whitelist Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="banner__thumb d-flex justify-content-center" data-aos="fade-left"
+                            data-aos-duration="2000">
+                            <img src="assets/images/banner/01.png" alt="banner Image">
+                            <!-- <a class="banner__video" href="https://www.youtube.com/embed/BKkc2v8echI"
+                                data-rel="lightcase">
+                                <div class="banner__video-inner">
+                                    <svg viewBox="0 0 100 100">
+                                        <defs>
+                                            <path id="circle" d="
+                                            M 50, 50
+                                            m -37, 0
+                                            a 37,37 0 1,1 74,0
+                                            a 37,37 0 1,1 -74,0" />
+                                        </defs>
+                                        <text>
+                                            <textPath xlink:href="#circle">
+                                                 *  * 
+                                            </textPath>
+                                        </text>
+                                    </svg>
+                                    <span><i class="fa-solid fa-play"></i></span>
+                                </div>
+                            </a> -->
+                            <div class="banner-shape">
+                                <img src="assets/images/banner/icon/01.png" alt="shape">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ================> Banner section end here <================== -->
+
+
+
+
+
+    <!-- ================> Counter section start here <================== -->
+    <section class="counter counter--uplifted">
+        <div class="container">
+            <div class="counter__wrapper">
+                <div class="row g-1">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="counter__item">
+                            <div class="counter__item-content">
+                                <h2><span class="purecounter" data-purecounter-start="0"
+                                        data-purecounter-end="3333">3333</span> </h2>
+                                <p>Total items</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="counter__item">
+                            <div class="counter__item-content">
+                                <h2><span class="purecounter" data-purecounter-start="0" data-purecounter-end="6"
+                                        data-purecounter-once="false">6</span></h2>
+                                <p>Total Owners</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="counter__item">
+                            <div class="counter__item-content">
+                                <h2>0.<span class="purecounter" data-purecounter-start="0.2" data-purecounter-end="200"
+                                        data-purecounter-once="false">0.2</span></h2>
+                                <p>floor price [SOL]</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="counter__item">
+                            <div class="counter__item-content">
+                                <h2><span class="purecounter" data-purecounter-start="0" data-purecounter-end="3.33"
+                                        data-purecounter-once="false">3.33</span>k</h2>
+                                <p>Volume Traded [SOL]</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ================> Counter section end here <================== -->
+
+
+
+
+
+    <!-- ================> About section start here <================== -->
+    <section class="about padding-top padding-bottom" id="about">
+        <div class="container">
+            <div class="about__wrapper">
+                <div class="row g-5">
+                    <div class="col-lg-6">
+                        <div class="about__thumb" data-aos="fade-up" data-aos-duration="1500">
+                            <img src="assets/images/about/01.png" alt="About Image">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about__content" data-aos="fade-up" data-aos-duration="2000">
+                            <p class="subtitle">The Story</p>
+                            <h2>About us</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quasi sit excepturi a, odit nam nemo cum voluptatum repudiandae nobis dignissimos placeat ullam at qui aut soluta culpa, magni autem!
+                            </p>
+
+                            <div class="mint-step">
+                                <p class="subtitle color--secondary-color">Easy Steps</p>
+                                <h3>HOW TO STAKE</h3>
+                                <p></p>
+                                <ul class="mint-step__list">
+                                    <li class="mint-step__list-item"><span class="color--secondary-color">1.</span>
+                                        connect Your Wallet</li>
+                                    <li class="mint-step__list-item"><span class="color--secondary-color">2.</span>
+                                        Select Your Quantity</li>
+                                    <li class="mint-step__list-item"><span class="color--theme-color">3.</span>
+                                        Confirm the transition</li>
+                                    <li class="mint-step__list-item"><span class="color--theme-color">4.</span>
+                                        Stake Your NFTs</li>
+                                </ul>
+                                <div class="btn-group">
+                                     <a href="#" class="default-btn default-btn--secondary">STAKE</a>
+                                    <a href="#" class="default-btn">Whitelist Now</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ================> About section end here <================== -->
+
+
+
+
+
+    <!-- ================>Roadmap section start here <================== -->
+    <section class="roadmap roadmap--style1 padding-top padding-bottom" id="roadmap"
+        style="background-image: url(assets/images/roadmap/bg.jpg);">
+        <div class="container">
+            <div class="section-header text-center">
+                <p class="subtitle">Roadmap</p>
+                <h2>How it all started</h2>
+            </div>
+            <div class="roadmap__wrapper">
+                <div class="row gy-4 gy-md-0 gx-5">
+                    <div class="col-md-6 offset-md-6">
+                        <div class=" roadmap__item ms-md-4 aos-init" data-aos="fade-left" data-aos-duration="800">
+                            <div class="roadmap__item-inner">
+                                <div class="roadmap__item-content">
+                                    <div class="roadmap__item-header">
+                                        <h4>Launched Initialized</h4>
+                                        <p>10%</p>
+                                    </div>
+                                    <p>Contrar to popular belief Lorem Ipsum is not simpy random text info has roots
+                                        info a piece of classical Latin literature
+                                        from 4BCS making it over 2000 years old looked upone of the more obscure latin
+                                        word consectetur cites of the word in</p>
+                                </div>
+                            </div>
+                            <span class="svg-shape"><svg xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="210px" height="10px">
+                                    <path fill-rule="evenodd" fill-opacity="0.102" d=" M5.000,-0.001 L30.000,-0.001 L25.000,9.999 L-0.000,9.999 L5.000,-0.001
+                                        Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.302" d=" M35.000,-0.001 L60.000,-0.001 L55.000,9.999 L30.000,9.999 L35.000,-0.001
+                                        Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.502" d=" M65.000,-0.001 L90.000,-0.001 L85.000,9.999 L60.000,9.999 L65.000,-0.001
+                                        Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.702" d=" M95.000,-0.001 L120.000,-0.001 L115.000,9.999 L90.000,9.999 L95.000,-0.001
+                                        Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.8" d=" M125.000,-0.001 L150.000,-0.001 L145.000,9.999 L120.000,9.999
+                                        L125.000,-0.001 Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.902" d=" M155.000,-0.001 L180.000,-0.001 L175.000,9.999 L150.000,9.999
+                                        L155.000,-0.001 Z" />
+                                    <path fill-rule="evenodd" d=" M185.000,-0.001 L210.000,-0.001 L210.000,9.999 L180.000,9.999
+                                        L185.000,-0.001 Z" />
+                                </svg></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class=" roadmap__item ms-auto me-md-4 aos-init" data-aos="fade-right"
+                            data-aos-duration="800">
+                            <div class="roadmap__item-inner">
+                                <div class="roadmap__item-content">
+                                    <div class="roadmap__item-header">
+                                        <h4>Physical Merch</h4>
+                                        <p>20%</p>
+                                    </div>
+                                    <p>Contrar to popular belief Lorem Ipsum is not simpy random text info has roots
+                                        info a piece of classical Latin literature
+                                        from 4BCS making it over 2000 years old looked upone of the more obscure latin
+                                        word consectetur cites of the word in</p>
+                                </div>
+                            </div>
+                            <span class="svg-shape"><svg xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="210px" height="10px">
+                                    <path fill-rule="evenodd" fill-opacity="0.102" d=" M5.000,-0.001 L30.000,-0.001 L25.000,9.999 L-0.000,9.999 L5.000,-0.001
+                                                                Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.302" d=" M35.000,-0.001 L60.000,-0.001 L55.000,9.999 L30.000,9.999 L35.000,-0.001
+                                                                Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.502" d=" M65.000,-0.001 L90.000,-0.001 L85.000,9.999 L60.000,9.999 L65.000,-0.001
+                                                                Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.702" d=" M95.000,-0.001 L120.000,-0.001 L115.000,9.999 L90.000,9.999 L95.000,-0.001
+                                                                Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.8" d=" M125.000,-0.001 L150.000,-0.001 L145.000,9.999 L120.000,9.999
+                                                                L125.000,-0.001 Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.902" d=" M155.000,-0.001 L180.000,-0.001 L175.000,9.999 L150.000,9.999
+                                                                L155.000,-0.001 Z" />
+                                    <path fill-rule="evenodd" d=" M185.000,-0.001 L210.000,-0.001 L210.000,9.999 L180.000,9.999
+                                                                L185.000,-0.001 Z" />
+                                </svg></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 offset-md-6">
+                        <div class="roadmap__item ms-md-4  aos-init" data-aos="fade-left" data-aos-duration="800">
+                            <div class="roadmap__item-inner">
+                                <div class="roadmap__item-content">
+                                    <div class="roadmap__item-header">
+                                        <h4>REJECTED Philanthropist</h4>
+                                        <p>50%</p>
+                                    </div>
+                                    <p>Contrar to popular belief Lorem Ipsum is not simpy random text info has roots
+                                        info a piece of classical Latin literature
+                                        from 4BCS making it over 2000 years old looked upone of the more obscure latin
+                                        word consectetur cites of the word in</p>
+                                </div>
+                            </div>
+                            <span class="svg-shape"><svg xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="210px" height="10px">
+                                    <path fill-rule="evenodd" fill-opacity="0.102" d=" M5.000,-0.001 L30.000,-0.001 L25.000,9.999 L-0.000,9.999 L5.000,-0.001
+                                                                Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.302" d=" M35.000,-0.001 L60.000,-0.001 L55.000,9.999 L30.000,9.999 L35.000,-0.001
+                                                                Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.502" d=" M65.000,-0.001 L90.000,-0.001 L85.000,9.999 L60.000,9.999 L65.000,-0.001
+                                                                Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.702" d=" M95.000,-0.001 L120.000,-0.001 L115.000,9.999 L90.000,9.999 L95.000,-0.001
+                                                                Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.8" d=" M125.000,-0.001 L150.000,-0.001 L145.000,9.999 L120.000,9.999
+                                                                L125.000,-0.001 Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.902" d=" M155.000,-0.001 L180.000,-0.001 L175.000,9.999 L150.000,9.999
+                                                                L155.000,-0.001 Z" />
+                                    <path fill-rule="evenodd" d=" M185.000,-0.001 L210.000,-0.001 L210.000,9.999 L180.000,9.999
+                                                                L185.000,-0.001 Z" />
+                                </svg></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="roadmap__item ms-auto me-md-4  aos-init" data-aos="fade-right"
+                            data-aos-duration="800">
+                            <div class="roadmap__item-inner">
+                                <div class="roadmap__item-content">
+                                    <div class="roadmap__item-header">
+                                        <h4>NFT 333</h4>
+                                        <p>70%</p>
+                                    </div>
+                                    <p>Contrar to popular belief Lorem Ipsum is not simpy random text info has roots
+                                        info a piece of classical Latin literature
+                                        from 4BCS making it over 2000 years old looked upone of the more obscure latin
+                                        word consectetur cites of the word in</p>
+                                </div>
+                            </div>
+                            <span class="svg-shape"><svg xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="210px" height="10px">
+                                    <path fill-rule="evenodd" fill-opacity="0.102" d=" M5.000,-0.001 L30.000,-0.001 L25.000,9.999 L-0.000,9.999 L5.000,-0.001
+                                                                Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.302" d=" M35.000,-0.001 L60.000,-0.001 L55.000,9.999 L30.000,9.999 L35.000,-0.001
+                                                                Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.502" d=" M65.000,-0.001 L90.000,-0.001 L85.000,9.999 L60.000,9.999 L65.000,-0.001
+                                                                Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.702" d=" M95.000,-0.001 L120.000,-0.001 L115.000,9.999 L90.000,9.999 L95.000,-0.001
+                                                                Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.8" d=" M125.000,-0.001 L150.000,-0.001 L145.000,9.999 L120.000,9.999
+                                                                L125.000,-0.001 Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.902" d=" M155.000,-0.001 L180.000,-0.001 L175.000,9.999 L150.000,9.999
+                                                                L155.000,-0.001 Z" />
+                                    <path fill-rule="evenodd" d=" M185.000,-0.001 L210.000,-0.001 L210.000,9.999 L180.000,9.999
+                                                                L185.000,-0.001 Z" />
+                                </svg></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 offset-md-6">
+                        <div class="roadmap__item ms-md-4  aos-init" data-aos="fade-left" data-aos-duration="800">
+                            <div class="roadmap__item-inner">
+                                <div class="roadmap__item-content">
+                                    <div class="roadmap__item-header">
+                                        <h4>Launched Metaverse</h4>
+                                        <p>80%</p>
+                                    </div>
+                                    <p>Contrar to popular belief Lorem Ipsum is not simpy random text info has roots
+                                        info a piece of classical Latin literature
+                                        from 4BCS making it over 2000 years old looked upone of the more obscure latin
+                                        word consectetur cites of the word in</p>
+                                </div>
+                            </div>
+                            <span class="svg-shape"><svg xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="210px" height="10px">
+                                    <path fill-rule="evenodd" fill-opacity="0.102" d=" M5.000,-0.001 L30.000,-0.001 L25.000,9.999 L-0.000,9.999 L5.000,-0.001
+                                                                Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.302" d=" M35.000,-0.001 L60.000,-0.001 L55.000,9.999 L30.000,9.999 L35.000,-0.001
+                                                                Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.502" d=" M65.000,-0.001 L90.000,-0.001 L85.000,9.999 L60.000,9.999 L65.000,-0.001
+                                                                Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.702" d=" M95.000,-0.001 L120.000,-0.001 L115.000,9.999 L90.000,9.999 L95.000,-0.001
+                                                                Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.8" d=" M125.000,-0.001 L150.000,-0.001 L145.000,9.999 L120.000,9.999
+                                                                L125.000,-0.001 Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.902" d=" M155.000,-0.001 L180.000,-0.001 L175.000,9.999 L150.000,9.999
+                                                                L155.000,-0.001 Z" />
+                                    <path fill-rule="evenodd" d=" M185.000,-0.001 L210.000,-0.001 L210.000,9.999 L180.000,9.999
+                                                                L185.000,-0.001 Z" />
+                                </svg></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="roadmap__item ms-auto me-md-4  aos-init" data-aos="fade-right"
+                            data-aos-duration="800">
+                            <div class="roadmap__item-inner">
+                                <div class="roadmap__item-content">
+                                    <div class="roadmap__item-header">
+                                        <h4>Upcoming Dapps</h4>
+                                        <p>100%</p>
+                                    </div>
+                                    <p>Contrar to popular belief Lorem Ipsum is not simpy random text info has roots
+                                        info a piece of classical Latin literature
+                                        from 4BCS making it over 2000 years old looked upone of the more obscure latin
+                                        word consectetur cites of the word in</p>
+                                </div>
+                            </div>
+                            <span class="svg-shape"><svg xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="210px" height="10px">
+                                    <path fill-rule="evenodd" fill-opacity="0.102" d=" M5.000,-0.001 L30.000,-0.001 L25.000,9.999 L-0.000,9.999 L5.000,-0.001
+                                                                Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.302" d=" M35.000,-0.001 L60.000,-0.001 L55.000,9.999 L30.000,9.999 L35.000,-0.001
+                                                                Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.502" d=" M65.000,-0.001 L90.000,-0.001 L85.000,9.999 L60.000,9.999 L65.000,-0.001
+                                                                Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.702" d=" M95.000,-0.001 L120.000,-0.001 L115.000,9.999 L90.000,9.999 L95.000,-0.001
+                                                                Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.8" d=" M125.000,-0.001 L150.000,-0.001 L145.000,9.999 L120.000,9.999
+                                                                L125.000,-0.001 Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.902" d=" M155.000,-0.001 L180.000,-0.001 L175.000,9.999 L150.000,9.999
+                                                                L155.000,-0.001 Z" />
+                                    <path fill-rule="evenodd" d=" M185.000,-0.001 L210.000,-0.001 L210.000,9.999 L180.000,9.999
+                                                                L185.000,-0.001 Z" />
+                                </svg></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ================>Roadmap section end here <================== -->
+
+
+
+
+
+    <!-- ================>collection section start here <================== -->
+    <section class="collection padding-top padding-bottom">
+        <div class="container">
+            <div class="collection__wrapper">
+                <div class="row g-4">
+                    <div class="col-lg-3">
+                        <div class="collection__header">
+                            <div class="collection__header-content">
+                                <p class="subtitle">Collection</p>
+                                <h2>REJECTED NFT items</h2>
+                                <p>3333 Unique Undercover Creatues Start Minting</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="swiper collection__slider1">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="collection__item">
+                                        <div class="collection__item-thumb"><img src="assets/images/collection/01.jpg"
+                                                alt="NFT Image"></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="collection__item">
+                                        <div class="collection__item-thumb"><img src="assets/images/collection/02.jpg"
+                                                alt="NFT Image"></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="collection__item">
+                                        <div class="collection__item-thumb"><img src="assets/images/collection/03.jpg"
+                                                alt="NFT Image"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="swiper collection__slider2">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="collection__item">
+                                        <div class="collection__item-thumb"><img src="assets/images/collection/04.jpg"
+                                                alt="NFT Image">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="collection__item">
+                                        <div class="collection__item-thumb"><img src="assets/images/collection/05.jpg"
+                                                alt="NFT Image">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="collection__item">
+                                        <div class="collection__item-thumb"><img src="assets/images/collection/06.jpg"
+                                                alt="NFT Image">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="collection__btn">
+                            <a href="#" class="default-btn default-btn--secondary"> <span><img
+                                        src="assets/images/opensea.svg" alt="opensea icon" width="24" height="24"> View
+                                    On Opensea</span> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ================>collection section end here <================== -->
+
+
+
+
+
+    <!-- ================>Team section start here <================== -->
+    <!-- <section class="team padding-top padding-bottom" style="background-image: url(assets/images/team/bg.jpg);"
+        id="team">
+        <div class="container">
+            <div class="section-header text-center">
+                <p class="subtitle">Team Member</p>
+                <h2>Meet the Crew</h2>
+            </div>
+            <div class="team__wrapper">
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="team__item">
+                            <div class="team__item-inner">
+                                <div class="team__item-thumb">
+                                    <img src="assets/images/team/01.jpg" alt="Team Image">
+                                </div>
+                                <div class="team__item-content">
+                                    <div class="team__item-author">
+                                        <h4><a href="team-single.html">Harry Abraham</a> </h4>
+                                        <p>Founder</p>
+                                    </div>
+                                    <p>Contrar info popular belief is not simp
+                                        has roots info piece arei classica from
+                                        looked upone info the more obsc latin
+                                        cites of the word in</p>
+                                    <ul class="social">
+                                        <li><a href="#" class="social__link"><i class="fa-brands fa-twitter"></i></a>
+                                        </li>
+                                        <li><a href="#" class="social__link"><i class="fa-brands fa-facebook-f"></i></a>
+                                        </li>
+                                        <li><a href="#" class="social__link"><i
+                                                    class="fa-brands fa-linkedin-in"></i></a>
+                                        </li>
+                                        <li><a href="#" class="social__link"><i class="fa-brands fa-instagram"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <span class="svg-shape"><svg xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="210px" height="10px">
+                                    <path fill-rule="evenodd" fill-opacity="0.102" d=" M5.000,-0.001 L30.000,-0.001 L25.000,9.999 L-0.000,9.999 L5.000,-0.001
+                                                                    Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.302" d=" M35.000,-0.001 L60.000,-0.001 L55.000,9.999 L30.000,9.999 L35.000,-0.001
+                                                                    Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.502" d=" M65.000,-0.001 L90.000,-0.001 L85.000,9.999 L60.000,9.999 L65.000,-0.001
+                                                                    Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.702" d=" M95.000,-0.001 L120.000,-0.001 L115.000,9.999 L90.000,9.999 L95.000,-0.001
+                                                                    Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.8" d=" M125.000,-0.001 L150.000,-0.001 L145.000,9.999 L120.000,9.999
+                                                                    L125.000,-0.001 Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.902" d=" M155.000,-0.001 L180.000,-0.001 L175.000,9.999 L150.000,9.999
+                                                                    L155.000,-0.001 Z" />
+                                    <path fill-rule="evenodd" d=" M185.000,-0.001 L210.000,-0.001 L210.000,9.999 L180.000,9.999
+                                                                    L185.000,-0.001 Z" />
+                                </svg></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="team__item">
+                            <div class="team__item-inner">
+                                <div class="team__item-thumb">
+                                    <img src="assets/images/team/02.jpg" alt="Team Image">
+                                </div>
+                                <div class="team__item-content">
+                                    <div class="team__item-author">
+                                        <h4><a href="team-single.html">Anne Haiwk</a> </h4>
+                                        <p>Co Founder</p>
+                                    </div>
+                                    <p>Contrar info popular belief is not simp
+                                        has roots info piece arei classica from
+                                        looked upone info the more obsc latin
+                                        cites of the word in</p>
+                                    <ul class="social">
+                                        <li><a href="#" class="social__link"><i class="fa-brands fa-twitter"></i></a>
+                                        </li>
+                                        <li><a href="#" class="social__link"><i class="fa-brands fa-facebook-f"></i></a>
+                                        </li>
+                                        <li><a href="#" class="social__link"><i
+                                                    class="fa-brands fa-linkedin-in"></i></a>
+                                        </li>
+                                        <li><a href="#" class="social__link"><i class="fa-brands fa-instagram"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <span class="svg-shape"><svg xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="210px" height="10px">
+                                    <path fill-rule="evenodd" fill-opacity="0.102" d=" M5.000,-0.001 L30.000,-0.001 L25.000,9.999 L-0.000,9.999 L5.000,-0.001
+                                                                    Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.302" d=" M35.000,-0.001 L60.000,-0.001 L55.000,9.999 L30.000,9.999 L35.000,-0.001
+                                                                    Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.502" d=" M65.000,-0.001 L90.000,-0.001 L85.000,9.999 L60.000,9.999 L65.000,-0.001
+                                                                    Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.702" d=" M95.000,-0.001 L120.000,-0.001 L115.000,9.999 L90.000,9.999 L95.000,-0.001
+                                                                    Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.8" d=" M125.000,-0.001 L150.000,-0.001 L145.000,9.999 L120.000,9.999
+                                                                    L125.000,-0.001 Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.902" d=" M155.000,-0.001 L180.000,-0.001 L175.000,9.999 L150.000,9.999
+                                                                    L155.000,-0.001 Z" />
+                                    <path fill-rule="evenodd" d=" M185.000,-0.001 L210.000,-0.001 L210.000,9.999 L180.000,9.999
+                                                                    L185.000,-0.001 Z" />
+                                </svg></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="team__item">
+                            <div class="team__item-inner">
+                                <div class="team__item-thumb">
+                                    <img src="assets/images/team/03.jpg" alt="Team Image">
+                                </div>
+                                <div class="team__item-content">
+                                    <div class="team__item-author">
+                                        <h4><a href="team-single.html">Jebeca Rio</a> </h4>
+                                        <p>Marketer</p>
+                                    </div>
+                                    <p>Contrar info popular belief is not simp
+                                        has roots info piece arei classica from
+                                        looked upone info the more obsc latin
+                                        cites of the word in</p>
+                                    <ul class="social">
+                                        <li><a href="#" class="social__link"><i class="fa-brands fa-twitter"></i></a>
+                                        </li>
+                                        <li><a href="#" class="social__link"><i class="fa-brands fa-facebook-f"></i></a>
+                                        </li>
+                                        <li><a href="#" class="social__link"><i
+                                                    class="fa-brands fa-linkedin-in"></i></a>
+                                        </li>
+                                        <li><a href="#" class="social__link"><i class="fa-brands fa-instagram"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <span class="svg-shape"><svg xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="210px" height="10px">
+                                    <path fill-rule="evenodd" fill-opacity="0.102" d=" M5.000,-0.001 L30.000,-0.001 L25.000,9.999 L-0.000,9.999 L5.000,-0.001
+                                                                    Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.302" d=" M35.000,-0.001 L60.000,-0.001 L55.000,9.999 L30.000,9.999 L35.000,-0.001
+                                                                    Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.502" d=" M65.000,-0.001 L90.000,-0.001 L85.000,9.999 L60.000,9.999 L65.000,-0.001
+                                                                    Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.702" d=" M95.000,-0.001 L120.000,-0.001 L115.000,9.999 L90.000,9.999 L95.000,-0.001
+                                                                    Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.8" d=" M125.000,-0.001 L150.000,-0.001 L145.000,9.999 L120.000,9.999
+                                                                    L125.000,-0.001 Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.902" d=" M155.000,-0.001 L180.000,-0.001 L175.000,9.999 L150.000,9.999
+                                                                    L155.000,-0.001 Z" />
+                                    <path fill-rule="evenodd" d=" M185.000,-0.001 L210.000,-0.001 L210.000,9.999 L180.000,9.999
+                                                                    L185.000,-0.001 Z" />
+                                </svg></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="team__item">
+                            <div class="team__item-inner">
+                                <div class="team__item-thumb">
+                                    <img src="assets/images/team/04.jpg" alt="Team Image">
+                                </div>
+                                <div class="team__item-content">
+                                    <div class="team__item-author">
+                                        <h4><a href="team-single.html">Anderson Leo</a> </h4>
+                                        <p>Advisor</p>
+                                    </div>
+                                    <p>Contrar info popular belief is not simp
+                                        has roots info piece arei classica from
+                                        looked upone info the more obsc latin
+                                        cites of the word in</p>
+                                    <ul class="social">
+                                        <li><a href="#" class="social__link"><i class="fa-brands fa-twitter"></i></a>
+                                        </li>
+                                        <li><a href="#" class="social__link"><i class="fa-brands fa-facebook-f"></i></a>
+                                        </li>
+                                        <li><a href="#" class="social__link"><i
+                                                    class="fa-brands fa-linkedin-in"></i></a>
+                                        </li>
+                                        <li><a href="#" class="social__link"><i class="fa-brands fa-instagram"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <span class="svg-shape"><svg xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="210px" height="10px">
+                                    <path fill-rule="evenodd" fill-opacity="0.102" d=" M5.000,-0.001 L30.000,-0.001 L25.000,9.999 L-0.000,9.999 L5.000,-0.001
+                                                                    Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.302" d=" M35.000,-0.001 L60.000,-0.001 L55.000,9.999 L30.000,9.999 L35.000,-0.001
+                                                                    Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.502" d=" M65.000,-0.001 L90.000,-0.001 L85.000,9.999 L60.000,9.999 L65.000,-0.001
+                                                                    Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.702" d=" M95.000,-0.001 L120.000,-0.001 L115.000,9.999 L90.000,9.999 L95.000,-0.001
+                                                                    Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.8" d=" M125.000,-0.001 L150.000,-0.001 L145.000,9.999 L120.000,9.999
+                                                                    L125.000,-0.001 Z" />
+                                    <path fill-rule="evenodd" fill-opacity="0.902" d=" M155.000,-0.001 L180.000,-0.001 L175.000,9.999 L150.000,9.999
+                                                                    L155.000,-0.001 Z" />
+                                    <path fill-rule="evenodd" d=" M185.000,-0.001 L210.000,-0.001 L210.000,9.999 L180.000,9.999
+                                                                    L185.000,-0.001 Z" />
+                                </svg></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- ================>Team section end here <================== -->
+
+
+
+
+
+    <!-- ================FAQ section start here <================== -->
+    <section id="faq" class="faq padding-top padding-bottom">
+        <div class="container">
+            <div class="section-header text-center">
+                <p class="subtitle">Questions & Answers</p>
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="faq__wrapper">
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="accordion" id="faqAccordion1">
+                            <div class="row g-4">
+                                <div class="col-12">
+                                    <div class="accordion__item" data-aos="fade-up" data-aos-duration="1000">
+                                        <div class="accordion__header" id="faq1">
+                                            <button class="accordion__button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#faqBody1"
+                                                aria-expanded="false" aria-controls="faqBody1">
+                                                What is REJECTED <span class="plus-icon"></span>
+                                            </button>
+                                        </div>
+                                        <div id="faqBody1" class="accordion-collapse collapse" aria-labelledby="faq1"
+                                            data-bs-parent="#faqAccordion1">
+                                            <div class="accordion__body">
+                                               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quasi sit excepturi a, odit nam nemo cum voluptatum repudiandae nobis dignissimos placeat ullam at qui aut soluta culpa, magni autem!
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="accordion__item" data-aos="fade-up" data-aos-duration="1100">
+                                        <div class="accordion__header" id="faq2">
+                                            <button class="accordion__button" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#faqBody2" aria-expanded="true"
+                                                aria-controls="faqBody2">
+                                                Why we should choose REJECTED? <span class="plus-icon"></span>
+                                            </button>
+                                        </div>
+                                        <div id="faqBody2" class="accordion-collapse collapse show"
+                                            aria-labelledby="faq2" data-bs-parent="#faqAccordion1">
+                                            <div class="accordion__body">
+                                               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quasi sit excepturi a, odit nam nemo cum voluptatum repudiandae nobis dignissimos placeat ullam at qui aut soluta culpa, magni autem!
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="accordion__item" data-aos="fade-up" data-aos-duration="1200">
+                                        <div class="accordion__header" id="faq3">
+                                            <button class="accordion__button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#faqBody3"
+                                                aria-expanded="false" aria-controls="faqBody3">
+                                                how secure is this token<span class="plus-icon"></span>
+                                            </button>
+                                        </div>
+                                        <div id="faqBody3" class="accordion-collapse collapse" aria-labelledby="faq3"
+                                            data-bs-parent="#faqAccordion1">
+                                            <div class="accordion__body">
+                                               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quasi sit excepturi a, odit nam nemo cum voluptatum repudiandae nobis dignissimos placeat ullam at qui aut soluta culpa, magni autem!
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="accordion" id="faqAccordion2">
+                            <div class="row g-4">
+                                <div class="col-12">
+                                    <div class="accordion__item" data-aos="fade-up" data-aos-duration="1000">
+                                        <div class="accordion__header" id="faq1-two">
+                                            <button class="accordion__button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#faqBody1-two"
+                                                aria-expanded="false" aria-controls="faqBody1-two">
+
+                                                When is the official launch? <span class="plus-icon"></span>
+                                            </button>
+                                        </div>
+                                        <div id="faqBody1-two" class="accordion-collapse collapse"
+                                            aria-labelledby="faq1-two" data-bs-parent="#faqAccordion2">
+                                            <div class="accordion__body">
+                                               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quasi sit excepturi a, odit nam nemo cum voluptatum repudiandae nobis dignissimos placeat ullam at qui aut soluta culpa, magni autem!
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="accordion__item" data-aos="fade-up" data-aos-duration="1100">
+                                        <div class="accordion__header" id="faq2-two">
+                                            <button class="accordion__button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#faqBody2-two"
+                                                aria-expanded="true" aria-controls="faqBody2-two">
+
+                                                What will the mint price be? <span class="plus-icon"></span>
+                                            </button>
+                                        </div>
+                                        <div id="faqBody2-two" class="accordion-collapse collapse"
+                                            aria-labelledby="faq2-two" data-bs-parent="#faqAccordion2">
+                                            <div class="accordion__body">
+                                               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quasi sit excepturi a, odit nam nemo cum voluptatum repudiandae nobis dignissimos placeat ullam at qui aut soluta culpa, magni autem!
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="accordion__item" data-aos="fade-up" data-aos-duration="1200">
+                                        <div class="accordion__header" id="faq3-two">
+                                            <button class="accordion__button" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#faqBody3-two" aria-expanded="false"
+                                                aria-controls="faqBody3-two">
+
+                                                How does the raffle work?<span class="plus-icon"></span>
+                                            </button>
+                                        </div>
+                                        <div id="faqBody3-two" class="accordion-collapse collapse show"
+                                            aria-labelledby="faq3-two" data-bs-parent="#faqAccordion2">
+                                            <div class="accordion__body">
+                                               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quasi sit excepturi a, odit nam nemo cum voluptatum repudiandae nobis dignissimos placeat ullam at qui aut soluta culpa, magni autem!
+                                                
+                                                you will bee rewarded with FEE  Land approximatey 6-8 weeks after
+                                                the official launch
+                                                03
+                                                How does the raffle work?
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ================FAQ section end here <================== -->
+
+
+
+    <!-- ================Blog section start here <================== -->
+    <!-- <section class="blog padding-top padding-bottom" style="background-image: url(assets/images/blog/bg.jpg);">
+        <div class="container">
+            <div class="section-header text-center">
+                <p class="subtitle">Latest Articles</p>
+                <h2>Our Recent Blog Post</h2>
+            </div>
+            <div class="blog__wrapper">
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="blog__item">
+                            <div class="blog__inner">
+                                <div class="blog__thumb">
+                                    <img src="assets/images/blog/01.jpg" alt="Blog Images">
+                                </div>
+                                <div class="blog__content">
+                                    <div class="blog__content-top">
+                                        <span class="blog__meta-tag">NFT</span>
+                                        <h4><a href="blog-single.html">Distinct Resource Maximizing Minting</a></h4>
+                                        <ul class="blog__meta d-flex flex-wrap align-items-center">
+                                            <li class="blog__meta-author">
+                                                <a href="#"><span><i class="fa-solid fa-user"></i></span> Jhon
+                                                    Doe</a>
+                                            </li>
+                                            <li class="blog__meta-date">
+                                                <a href="#"><span><i class="fa-solid fa-calendar-days"></i></span>
+                                                    30
+                                                    December 2022</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <p>Contrar to popuar belieif loreme Ipsum is an not
+                                        consectetur cites of the word in...</p>
+                                    <div class="blog__content-bottom">
+                                        <a href="blog-single.html" class="text-btn">Read More</a>
+                                        <a href="#" class="blog__meta-comment">
+                                            <i class="fa-solid fa-message"></i>
+                                            <span
+                                                class="position-absolute top-0 start-100 translate-middle rounded-circle">
+                                                2
+                                            </span>
+
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="blog__item">
+                            <div class="blog__inner">
+                                <div class="blog__thumb">
+                                    <img src="assets/images/blog/02.jpg" alt="Blog Images">
+                                </div>
+                                <div class="blog__content">
+                                    <div class="blog__content-top">
+                                        <span class="blog__meta-tag">MINTING</span>
+                                        <h4><a href="blog-single.html">Make 100% profit by minting nft</a></h4>
+                                        <ul class="blog__meta d-flex flex-wrap align-items-center">
+                                            <li class="blog__meta-author">
+                                                <a href="#"><span><i class="fa-solid fa-user"></i></span> rasselmrh
+                                                </a>
+                                            </li>
+                                            <li class="blog__meta-date">
+                                                <a href="#"><span><i class="fa-solid fa-calendar-days"></i></span>
+                                                    30
+                                                    December 2022</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <p>Contrar to popuar belieif loreme Ipsum is an not
+                                        consectetur cites of the word in...</p>
+                                    <div class="blog__content-bottom">
+                                        <a href="blog-single.html" class="text-btn">Read More</a>
+                                        <a href="#" class="blog__meta-comment">
+                                            <i class="fa-solid fa-message"></i>
+                                            <span
+                                                class="position-absolute top-0 start-100 translate-middle rounded-circle">
+                                                2
+                                            </span>
+
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="blog__item">
+                            <div class="blog__inner">
+                                <div class="blog__thumb">
+                                    <img src="assets/images/blog/03.jpg" alt="Blog Images">
+                                </div>
+                                <div class="blog__content">
+                                    <div class="blog__content-top">
+                                        <span class="blog__meta-tag">Crypto</span>
+                                        <h4><a href="blog-single.html">Purchase your 1st Nft Crypto here</a></h4>
+                                        <ul class="blog__meta d-flex flex-wrap align-items-center">
+                                            <li class="blog__meta-author">
+                                                <a href="#"><span><i class="fa-solid fa-user"></i></span> Alex
+                                                    Cary</a>
+                                            </li>
+                                            <li class="blog__meta-date">
+                                                <a href="#"><span><i class="fa-solid fa-calendar-days"></i></span>
+                                                    30
+                                                    December 2022</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <p>Contrar to popuar belieif loreme Ipsum is an not
+                                        consectetur cites of the word in...</p>
+                                    <div class="blog__content-bottom">
+                                        <a href="blog-single.html" class="text-btn">Read More</a>
+                                        <a href="#" class="blog__meta-comment">
+                                            <i class="fa-solid fa-message"></i>
+                                            <span
+                                                class="position-absolute top-0 start-100 translate-middle rounded-circle">
+                                                2
+                                            </span>
+
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="mt-5 text-center">
+                    <a href="blog.html" class="default-btn"><span>View all blog post</span></a>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- ================Blog section end here <================== -->
+
+
+
+
+
+    <!-- ================Partner section start here <================== -->
+    <!--  -->
+    <!-- ================Partner section end here <================== -->
+
+
+
+
+
+
+    <!-- ================>Community section start here <================== -->
+    <section class="community padding-top padding-bottom" style="background-image:url(assets/images/community/bg.jpg)">
+        <div class="container">
+            <div class="comminity__wrapper">
+                <div class="section-header text-center">
+                    
+                    <h2></h2>
+                </div>
+                <div class="btn-group justify-content-center">
+                    <a href="#" class="default-btn default-btn--secondary"><span><i class="fab fa-discord"></i> Join
+                            Discord</span></a>
+                    <a href="#" class="default-btn"> <span><img src="assets/images/opensea.svg" alt="opensea icon"
+                                width="20" height="20"> Join Opensea</span> </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ================>Community section end here <================== -->
+
+
+
+
+
+
+
+
+    <!-- ================> Footer section start here <================== -->
+    <footer class="footer" style="background-image: url(assets/images/footer/bg.png);">
+        <div class="footer__wrapper padding-top padding-bottom">
+            <div class="container">
+                <div class="footer__content text-center">
+                    <a class="mb-4 d-inline-block" href="index.html"><img src="assets/images/logo/logo.png"
+                            alt="Logo"></a>
+                    <ul class="social justify-content-center">
+                        <li class="social__item">
+                            <a href="#" class="social__link"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li class="social__item">
+                            <a href="#" class="social__link"><i class="fab fa-discord"></i></a>
+                        </li>
+                        <li class="social__item">
+                            <a href="#" class="social__link"><i class="fab fa-telegram"></i></a>
+                        </li>
+                        <li class="social__item">
+                            <a href="#" class="social__link"><i class="fab fa-mail"></i></a>
+                        </li>
+                       
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copyright">
+       
+        </div>
+    </footer>
+    <!-- ================> Footer section end here <================== -->
+
+
+    <!-- vendor plugins -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/all.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/countdown.min.js"></script>
+    <script src="assets/js/lightcase.js"></script>
+    <script src="assets/js/purecounter_vanilla.js"></script>
+    <script src="assets/js/custom.js"></script>
 </body>
 
 
+<!-- Mirrored from template.labartisan.net/demos/nftport/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 08 Jul 2024 02:47:54 GMT -->
 </html>

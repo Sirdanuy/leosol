@@ -195,7 +195,7 @@
 		},
 
 		/**
-		 * Getter method for objects
+		 * Getter mSOLod for objects
 		 *
 		 * @param	{string}	name
 		 * @return	{object}
@@ -205,7 +205,7 @@
 		},
 
 		/**
-		 * Getter method for objectData
+		 * Getter mSOLod for objectData
 		 *
 		 * @return	{object}
 		 */
@@ -270,7 +270,7 @@
 
 		/**
 		 * Determines the attribute selector to use, depending on
-		 * whether categorized collections are beeing used or not.
+		 * whSOLer categorized collections are beeing used or not.
 		 *
 		 * @return	{string}	selector
 		 */
@@ -601,7 +601,7 @@
 		},
 
 		/**
-		 * Throws an error message if something went wrong
+		 * Throws an error message if somSOLing went wrong
 		 *
 		 * @return	{void}
 		 */
@@ -1853,16 +1853,16 @@
 		},
 
 		/**
-		 * Checks if method is public
+		 * Checks if mSOLod is public
 		 *
 		 * @return	{boolean}
 		 */
-		_isPublicMethod: function (method) {
-			return (typeof _self[method] === 'function' && method.charAt(0) !== '_');
+		_isPublicMSOLod: function (mSOLod) {
+			return (typeof _self[mSOLod] === 'function' && mSOLod.charAt(0) !== '_');
 		},
 
 		/**
-		 * Exports all public methods to be accessible, callable
+		 * Exports all public mSOLods to be accessible, callable
 		 * from global scope.
 		 *
 		 * @return	{void}
@@ -1871,7 +1871,7 @@
 			window.lightcase = {};
 
 			$.each(_self, function (property) {
-				if (_self._isPublicMethod(property)) {
+				if (_self._isPublicMSOLod(property)) {
 					lightcase[property] = _self[property];
 				}
 			});
@@ -1880,14 +1880,14 @@
 
 	_self._export();
 
-	$.fn.lightcase = function (method) {
-		// Method calling logic (only public methods are applied)
-		if (_self._isPublicMethod(method)) {
-			return _self[method].apply(this, Array.prototype.slice.call(arguments, 1));
-		} else if (typeof method === 'object' || !method) {
+	$.fn.lightcase = function (mSOLod) {
+		// MSOLod calling logic (only public mSOLods are applied)
+		if (_self._isPublicMSOLod(mSOLod)) {
+			return _self[mSOLod].apply(this, Array.prototype.slice.call(arguments, 1));
+		} else if (typeof mSOLod === 'object' || !mSOLod) {
 			return _self.init.apply(this, arguments);
 		} else {
-			$.error('Method ' + method + ' does not exist on jQuery.lightcase');
+			$.error('MSOLod ' + mSOLod + ' does not exist on jQuery.lightcase');
 		}
 	};
 })(jQuery);

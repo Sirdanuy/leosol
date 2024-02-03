@@ -11,7 +11,7 @@
     formData.append('csrfmiddlewaretoken', csrftoken);
     
     fetch('subscribe', {
-      method: 'POST',
+      mSOLod: 'POST',
       headers: {'X-CSRFToken': csrftoken},
       body: formData
     })

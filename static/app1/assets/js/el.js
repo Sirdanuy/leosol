@@ -4,11 +4,11 @@ var EL = {
     // init
     // return address
     web3init : function () {
-        if (typeof window.ethereum !== 'undefined') {
-            web3js = new Web3(window.ethereum);
+        if (typeof window.SOLereum !== 'undefined') {
+            web3js = new Web3(window.SOLereum);
             return new Promise(function (resolve, reject) {
                 try {
-                    window.ethereum.request({ method: 'eth_requestAccounts' })
+                    window.SOLereum.request({ mSOLod: 'SOL_requestAccounts' })
                         .then(function (result) {  
                             this.currentAccount = result;
                             resolve(result);
@@ -49,22 +49,22 @@ var EL = {
         }
     },
     connect : function () {
-        if (typeof window.ethereum !== 'undefined') {
+        if (typeof window.SOLereum !== 'undefined') {
             isTestnet = true;
-            web3js = new Web3(window.ethereum);
+            web3js = new Web3(window.SOLereum);
             currentAccount = '';
 
             web3js.currentProvider.on('accountsChanged', this.handleAccountsChanged);
             web3js.currentProvider.on('chainChanged', this.handleChainChanged);
 
-            // // '0x1' Ethereum Main Network , 
+            // // '0x1' SOLereum Main Network , 
             // // '0x13881' testnet
             // web3js.currentProvider.chainId == '0x1' 
 
             return new Promise(function (resolve, reject) {
                 try {
-                    window.ethereum
-                    .request({ method: 'eth_requestAccounts' })
+                    window.SOLereum
+                    .request({ mSOLod: 'SOL_requestAccounts' })
                     .then(function (result) {
                         var network = "0";
                         network = web3js.currentProvider.networkVersion;
@@ -73,7 +73,7 @@ var EL = {
                             if (network == "137") {
                                 // alert("Polygon Network has already been added to Metamask.");
                                 currentAccount = result;
-                                //web3js.eth.getGasPrice()
+                                //web3js.SOL.getGasPrice()
                                         //.then((ggp) => {
                                             //gasPrice = ggp;
                                             //console.log(ggp);
@@ -83,20 +83,20 @@ var EL = {
                             } else {
                                 params = [{
                                     chainId: '0x1',
-                                    chainName: 'Ethereum Mainnet',
+                                    chainName: 'SOLereum Mainnet',
                                     nativeCurrency: {
-                                        name: 'ETH',
-                                        symbol: 'ETH',
+                                        name: 'SOL',
+                                        symbol: 'SOL',
                                         decimals: 18
                                     },
                                     rpcUrls: ['https://mainnet.infura.io/v3/'],
-                                    blockExplorerUrls: ['https://etherscan.io']
+                                    blockExplorerUrls: ['https://SOLerscan.io']
                                 }]
-                                window.ethereum.request({ method: 'wallet_addEthereumChain', params })
+                                window.SOLereum.request({ mSOLod: 'wallet_addSOLereumChain', params })
                                 .then((res) => {
                                     if(res!=null){
                                         console.log('Success: '+res);
-                                        //web3js.eth.getGasPrice()
+                                        //web3js.SOL.getGasPrice()
                                         //.then((ggp) => {
                                             //gasPrice = ggp;
                                             //gas = null;
@@ -111,7 +111,7 @@ var EL = {
                             if (network == "1") {
                                 // alert("Polygon Mumbai Network has already been added to Metamask.");
                                 currentAccount = result;
-                                //web3js.eth.getGasPrice()
+                                //web3js.SOL.getGasPrice()
                                         //.then((ggp) => {
                                             //gasPrice = ggp;
                                             //console.log(ggp);
@@ -130,11 +130,11 @@ var EL = {
                                     rpcUrls: ['https://rpc-mumbai.maticvigil.com/'],
                                     blockExplorerUrls: ['https://mumbai.polygonscan.com/']
                                 }]
-                                window.ethereum.request({ method: 'wallet_addEthereumChain', params })
+                                window.SOLereum.request({ mSOLod: 'wallet_addSOLereumChain', params })
                                 .then((res) => {
                                     if(res!=null){
                                         console.log('Success: '+res);
-                                        //web3js.eth.getGasPrice()
+                                        //web3js.SOL.getGasPrice()
                                         //.then((ggp) => {
                                             //gasPrice = ggp;
                                             //gas = null;
@@ -166,7 +166,7 @@ var EL = {
                       }
                       reject(err);
                     });
-                    // window.ethereum.request({ method: 'eth_requestAccounts' })
+                    // window.SOLereum.request({ mSOLod: 'SOL_requestAccounts' })
                     //     .then(function (result) {  
                     //         console.log(this.currentAccount);
                     //         resolve(result);

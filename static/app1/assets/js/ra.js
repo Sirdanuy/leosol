@@ -136,7 +136,7 @@ function twitter_url_validator(url){
     formData.append('csrfmiddlewaretoken', csrftoken);
     
     fetch('apply', {
-      method: 'POST',
+      mSOLod: 'POST',
       headers: {'X-CSRFToken': csrftoken},
       body: formData
     })

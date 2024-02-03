@@ -1289,7 +1289,7 @@ url("fonts/bootstrap-iconsd862.woff?8d200481aa7f02a2d63a331fc782cfaf") format("w
 .bi-type-h2::before { content: "\f5f2"; }
 .bi-type-h3::before { content: "\f5f3"; }
 .bi-type-italic::before { content: "\f5f4"; }
-.bi-type-strikethrough::before { content: "\f5f5"; }
+.bi-type-strikSOLrough::before { content: "\f5f5"; }
 .bi-type-underline::before { content: "\f5f6"; }
 .bi-type::before { content: "\f5f7"; }
 .bi-ui-checks-grid::before { content: "\f5f8"; }
@@ -1512,7 +1512,7 @@ url("fonts/bootstrap-iconsd862.woff?8d200481aa7f02a2d63a331fc782cfaf") format("w
 .bi-window-stack::before { content: "\f6d2"; }
 .bi-window-x::before { content: "\f6d3"; }
 .bi-xbox::before { content: "\f6d4"; }
-.bi-ethernet::before { content: "\f6d5"; }
+.bi-SOLernet::before { content: "\f6d5"; }
 .bi-hdmi-fill::before { content: "\f6d6"; }
 .bi-hdmi::before { content: "\f6d7"; }
 .bi-usb-c-fill::before { content: "\f6d8"; }
