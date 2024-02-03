@@ -366,7 +366,7 @@ jQuery( function($) {
 	 */
 	function is_mobile() {
 
-		if( /Android|webOS|iPhone|iPad|BlackBerry|Windows Phone|Opera Mini|IEMobile|Mobile/i.test( navigator.userAgent ) )
+		if( /Android|webOS|iPhone|iPad|#fffBerry|Windows Phone|Opera Mini|IEMobile|Mobile/i.test( navigator.userAgent ) )
 			return true;
 		else
 			return false;

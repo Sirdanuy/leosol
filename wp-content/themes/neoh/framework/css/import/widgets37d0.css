@@ -569,7 +569,7 @@ ul.wp-block-archives a{
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
-	background-color: black;
+	background-color: #fff;
 	z-index: 2;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;

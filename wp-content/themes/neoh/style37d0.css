@@ -81,7 +81,7 @@ Tags: custom-header, custom-background, threaded-comments, custom-menu, featured
 /*	01) Root
 /*------------------------------------------------------------------*/
 :root{
-	--sbc: #c9c3bc; 				/* Website Background Color */
+	--sbc: #915511; 				/* Website Background Color */
 	--pbc: #111;					/* Page Background Color */
 	--mc: #78f701;					/* Main Color */
 	--hc: #fff;						/* Heading Color */
@@ -91,7 +91,7 @@ Tags: custom-header, custom-background, threaded-comments, custom-menu, featured
 	--iff: 'Heebo', sans-serif;		/* Input Font Family */
 	--hff: 'Heebo', sans-serif;		/* Heading Font Family */
 	--bff: 'Nunito', sans-serif;	/* Body Font Family */
-	--eff: 'LemonOpen Sans', sans-serif; /* Extra Font Family */
+	--eff: 'Open Sans', sans-serif; /* Extra Font Family */
 }
 *:after,*:before,*{
 	-webkit-box-sizing: border-box;
@@ -177,7 +177,7 @@ body{
 	font-weight: 400;
 	color: black;
 	position: relative;
-	background-color: var(--sbc);
+	background: linear-gradient(90deg, rgba(27,18,29,1) 0%, rgb(124 75 40) 50%, rgb(74 3 22) 100%);
 	min-height: 100vh;
 	
 	word-break: break-word;
@@ -372,7 +372,10 @@ input[type="text"]:focus{
 	padding-bottom: 35px;
 	overflow-y: scroll;
 	overflow-x: hidden;
-	background-color: #c9c3bc;
+	background: -moz-linear-gradient(90deg, rgba(27,18,29,1) 0%, rgba(18,15,47,1) 50%, rgba(27,18,29,1) 100%);
+	background: linear-gradient(90deg, rgba(27,18,29,1) 0%, rgb(124 75 40) 50%, rgb(74 3 22) 100%);
+	/* background: linear-gradient(90deg, rgba(27,18,29,1) 0%, rgba(18,15,47,1) 50%, rgba(27,18,29,1) 100%); */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1b121d",endColorstr="#1b121d",GradientType=1);;
 }
 .neoh_fn_nav .nav_content{
 	scrollbar-width: thin;
@@ -804,7 +807,10 @@ input[type="text"]:focus{
 	content: '';
 }
 .neoh_fn_pagetitle .bg_color{
-	background-color: #c9c3bc;
+	background: -moz-linear-gradient(90deg, rgba(27,18,29,1) 0%, rgba(18,15,47,1) 50%, rgba(27,18,29,1) 100%);
+	background: linear-gradient(90deg, rgba(27,18,29,1) 0%, rgb(124 75 40) 50%, rgb(74 3 22) 100%);
+	/* background: linear-gradient(90deg, rgba(27,18,29,1) 0%, rgba(18,15,47,1) 50%, rgba(27,18,29,1) 100%); */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1b121d",endColorstr="#1b121d",GradientType=1);;
 }
 .neoh_fn_pagetitle .pt_content{
 	position: relative;
@@ -1029,7 +1035,10 @@ a.full_link{
 .neoh_fn_moving_blog .item{
 	width: 100%;
 	padding: 30px;
-	background-color: #c9c3bc;
+	background: -moz-linear-gradient(90deg, rgba(27,18,29,1) 0%, rgba(18,15,47,1) 50%, rgba(27,18,29,1) 100%);
+	background: linear-gradient(90deg, rgba(27,18,29,1) 0%, rgb(124 75 40) 50%, rgb(74 3 22) 100%);
+	/* background: linear-gradient(90deg, rgba(27,18,29,1) 0%, rgba(18,15,47,1) 50%, rgba(27,18,29,1) 100%); */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1b121d",endColorstr="#1b121d",GradientType=1);;
 	border-radius: 5px;
 	overflow: hidden;
 }
@@ -1287,7 +1296,10 @@ a.full_link{
 }
 .neoh_fn_footer .footer_top{
 	padding: 10px 0;
-	background-color: #c9c3bc
+	background: -moz-linear-gradient(90deg, rgba(27,18,29,1) 0%, rgba(18,15,47,1) 50%, rgba(27,18,29,1) 100%);
+	background: linear-gradient(90deg, rgba(27,18,29,1) 0%, rgb(124 75 40) 50%, rgb(74 3 22) 100%);
+	/* background: linear-gradient(90deg, rgba(27,18,29,1) 0%, rgba(18,15,47,1) 50%, rgba(27,18,29,1) 100%); */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1b121d",endColorstr="#1b121d",GradientType=1);
 }
 .neoh_fn_footer .ft_in{
 	max-width: 670px;
@@ -1367,7 +1379,9 @@ a.full_link{
 .neoh_fn_footer .footer_bottom{
 	border-top: 1px solid rgba(255,255,255,.1);
 	padding: 31px 0 28px;
-background-color: #c9c3bc
+background: -moz-linear-gradient(90deg, rgb(60 43 11) 0%, rgba(18,15,47,1) 50%, rgba(27,18,29,1) 100%);
+	background: linear-gradient(90deg, rgba(27,18,29,1) 0%, rgb(124 75 40) 50%, rgb(74 3 22) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1b121d",endColorstr="#1b121d",GradientType=1);
 }
 .neoh_fn_footer .fb_in{
 	display: -webkit-flex;
@@ -1842,7 +1856,10 @@ body.elementor-editor-active .frenify-cursor{
 .neoh_fn_single .single_bg:before{
 	height: 500px;
 	top: 0;
-	background-color: #c9c3bc;
+	background: -moz-linear-gradient(90deg, rgba(27,18,29,1) 0%, rgba(18,15,47,1) 50%, rgba(27,18,29,1) 100%);
+	background: linear-gradient(90deg, rgba(27,18,29,1) 0%, rgb(124 75 40) 50%, rgb(74 3 22) 100%);
+	/* background: linear-gradient(90deg, rgba(27,18,29,1) 0%, rgba(18,15,47,1) 50%, rgba(27,18,29,1) 100%); */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1b121d",endColorstr="#1b121d",GradientType=1);;
 }
 .neoh_fn_single .single_bg:after{
 	top: 500px;
@@ -2788,7 +2805,10 @@ body.elementor-editor-active .frenify-cursor{
 .neoh_fn_comments .comment .comment-respond{
 	width: 100%;
     padding: 30px;
-    background-color: #c9c3bc;
+    background: -moz-linear-gradient(90deg, rgba(27,18,29,1) 0%, rgba(18,15,47,1) 50%, rgba(27,18,29,1) 100%);
+	background: linear-gradient(90deg, rgba(27,18,29,1) 0%, rgb(124 75 40) 50%, rgb(74 3 22) 100%);
+	/* background: linear-gradient(90deg, rgba(27,18,29,1) 0%, rgba(18,15,47,1) 50%, rgba(27,18,29,1) 100%); */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1b121d",endColorstr="#1b121d",GradientType=1);;
     border-radius: 5px;
     overflow: hidden;
     margin-top: 30px;
@@ -3286,7 +3306,10 @@ body.elementor-editor-active .frenify-cursor{
 }
 .neoh_fn_filters .filter_item{
 	margin-bottom: 10px;
-	background-color: #c9c3bc;
+	background: -moz-linear-gradient(90deg, rgba(27,18,29,1) 0%, rgba(18,15,47,1) 50%, rgba(27,18,29,1) 100%);
+	background: linear-gradient(90deg, rgba(27,18,29,1) 0%, rgb(124 75 40) 50%, rgb(74 3 22) 100%);
+	/* background: linear-gradient(90deg, rgba(27,18,29,1) 0%, rgba(18,15,47,1) 50%, rgba(27,18,29,1) 100%); */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1b121d",endColorstr="#1b121d",GradientType=1);;
 	border-radius: 5px;
 	overflow: hidden;
 }
@@ -3441,7 +3464,10 @@ body.elementor-editor-active .frenify-cursor{
 /*------------------------------------------------------------------*/
 .neoh_fn_result_box{
 	width: 100%;
-	background-color: #c9c3bc;
+	background: -moz-linear-gradient(90deg, rgba(27,18,29,1) 0%, rgba(18,15,47,1) 50%, rgba(27,18,29,1) 100%);
+	background: linear-gradient(90deg, rgba(27,18,29,1) 0%, rgb(124 75 40) 50%, rgb(74 3 22) 100%);
+	/* background: linear-gradient(90deg, rgba(27,18,29,1) 0%, rgba(18,15,47,1) 50%, rgba(27,18,29,1) 100%); */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1b121d",endColorstr="#1b121d",GradientType=1);;
 	min-height: 70px;
 	display: -webkit-flex;
 	display: -moz-flex;
