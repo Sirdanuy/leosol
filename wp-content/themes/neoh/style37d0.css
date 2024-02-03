@@ -91,7 +91,7 @@ Tags: custom-header, custom-background, threaded-comments, custom-menu, featured
 	--iff: 'Heebo', sans-serif;		/* Input Font Family */
 	--hff: 'Heebo', sans-serif;		/* Heading Font Family */
 	--bff: 'Nunito', sans-serif;	/* Body Font Family */
-	--eff: 'LemonOpen Sans', sans-serif; /* Extra Font Family */
+	--eff: 'Open Sans', sans-serif; /* Extra Font Family */
 }
 *:after,*:before,*{
 	-webkit-box-sizing: border-box;
